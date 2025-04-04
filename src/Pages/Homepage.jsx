@@ -252,6 +252,28 @@ const Homepage = () => {
 
         {/* Trusted Partners */}
         <Partner />
+
+        {/* For Further Enquiries */}
+        <div className='mt-[50px] md:mt-[100px] xl:mt-[150px] px-[20px] md:px-[30px] xl:px-[150px]'>
+            <h4 className='text-[30px] text-center font-semibold md:text-[48px]'>For Further Enquiries</h4>
+            <div className='pt-[20px] md:pt-[28px] lg:w-1/2'>
+                <form action="submit">
+                    <input type="email" placeholder='Email Address' 
+                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium'/>
+                    <input type="text" placeholder='Full Name' 
+                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5'/>
+                    <textarea name="message" id="message" placeholder='Message' rows='4'
+                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 resize-none'></textarea>
+                    <div className=''>
+                        <button className='font-primary text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
+                        rounded-lg cursor-pointer mt-[10px] w-full lg:w-[162px]'>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
     </>
   )
 }
