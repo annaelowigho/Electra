@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgMenu } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
-import { Link} from 'react-scroll'
+// import { Link} from 'react-scroll'
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -26,8 +27,14 @@ const Nav = () => {
       transition-all duration-500 ${isFixed ? "fixed top-0 left-0 shadow-lg z-50" : "" }`}>
         <img src="/assets/logo.svg" alt="" />
         <ul className='hidden xl:flex text-white gap-[45px] text-[18px] font-semibold font-primary'>
-          <li>Home</li>
-          <li>About Us</li>
+          <li className="hover:text-[#2FEAE4]">
+            <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              Home
+            </NavLink>
+          </li>
+          <li className='hover:text-[#2FEAE4]'>
+            <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>About Us</NavLink>
+          </li>
           <li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
             <div className='flex items-center'>
               <p>CNG</p>
@@ -76,8 +83,14 @@ const Nav = () => {
             {isMenuOpen && (
               <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/50 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
-                  <li>Home</li>
-                  <li>About Us</li>
+                <li className="hover:text-[#2FEAE4]">
+                  <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                    Home
+                  </NavLink>
+                </li>
+                <li className='hover:text-[#2FEAE4]'>
+                  <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>About Us</NavLink>
+                </li>
                   <li>
                     <div className='flex items-center'>
                       <p>CNG</p>

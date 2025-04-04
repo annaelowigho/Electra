@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
+import Map from '../Components/Map';
 // import DatePicker from "react-date-picker"; 
 // import "react-date-picker/dist/DatePicker.css"; 
 // import "react-calendar/dist/Calendar.css";
@@ -68,8 +69,8 @@ const Homepage = () => {
                     {/* <p className='text-[24px] font-medium py-[15px] w-[508px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p> */}
-                    <h1 className='text-[60px] font-bold text-[#111111] leading-[60px] md:text-[80px] md:leading-[81px]'>
-                        Convert to CNG and  Save Up to 40%
+                    <h1 className='text-[60px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px]'>
+                        Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
                     <p className='text-[20px] pt-[15px] font-medium md:text-[24px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
@@ -254,23 +255,28 @@ const Homepage = () => {
         <Partner />
 
         {/* For Further Enquiries */}
-        <div className='mt-[50px] md:mt-[100px] xl:mt-[150px] px-[20px] md:px-[30px] xl:px-[150px]'>
+        <div className='mt-[50px] md:mt-[100px] xl:mt-[150px] px-[20px] pb-[50px] md:px-[30px] md:pb-[100px] xl:px-[150px] xl:pb-[150px]'>
             <h4 className='text-[30px] text-center font-semibold md:text-[48px]'>For Further Enquiries</h4>
-            <div className='pt-[20px] md:pt-[28px] lg:w-1/2'>
-                <form action="submit">
-                    <input type="email" placeholder='Email Address' 
-                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium'/>
-                    <input type="text" placeholder='Full Name' 
-                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5'/>
-                    <textarea name="message" id="message" placeholder='Message' rows='4'
-                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 resize-none'></textarea>
-                    <div className=''>
-                        <button className='font-primary text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
-                        rounded-lg cursor-pointer mt-[10px] w-full lg:w-[162px]'>
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+            <div className='pt-[20px] md:pt-[28px] flex flex-col items-center lg:flex-row gap-10 xl:gap-[79px]'>
+                <div className='lg:w-1/2'>
+                    <form action="submit">
+                        <input type="email" placeholder='Email Address' 
+                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium'/>
+                        <input type="text" placeholder='Full Name' 
+                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px]'/>
+                        <textarea name="message" id="message" placeholder='Message' rows='4'
+                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px] resize-none'></textarea>
+                        <div className=''>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
+                            rounded-lg cursor-pointer mt-[10px] xl:mt-[30px] w-full lg:w-[162px]'>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div className='w-full lg:w-1/2 md:px-[20px] lg:px-0'>
+                    <Map />
+                </div>
             </div>
             
         </div>
