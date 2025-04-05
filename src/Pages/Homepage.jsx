@@ -110,8 +110,8 @@ const Homepage = () => {
                                     <option value="" disabled hidden>
                                     Service Type
                                     </option>
-                                    <option value="web-dev">CNG</option>
-                                    <option value="design">Gas Refill</option>
+                                    <option value="CNG">CNG</option>
+                                    <option value="gas-refill">Gas Refill</option>
                                     <option value="consulting">Consulting</option>
                                 </select>
                             </div>

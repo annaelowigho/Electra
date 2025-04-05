@@ -4,6 +4,7 @@ import { RiGasStationLine } from "react-icons/ri";
 import { TbBuildingBridge } from "react-icons/tb";
 import { FiTool } from "react-icons/fi";
 import ProgressBar from '../Components/ProgressBar';
+import Partner from '../Components/Partner';
 
 
 
@@ -41,7 +42,26 @@ const SpecializeIn = [
 ]
 
 const Team = [
-    
+    {
+        image: "/assets/ceo.svg",
+        name: "Charles Omordia ",
+        position:"CEO"
+    },
+    {
+        image: "/assets/coo.svg",
+        name: "Engr. Ikechukwu Okafor",
+        position:"COO"
+    },
+    {
+        image: "/assets/cfo.svg",
+        name: "Chidimma Ifiora ",
+        position:"CFO"
+    },
+    {
+        image: "/assets/cmo.svg",
+        name: "Joshua Eromon",
+        position:"CMO"
+    }
 ]
 
 const AboutUs = () => {
@@ -169,8 +189,21 @@ const AboutUs = () => {
         </div>
 
         {/* Meet the Team */}
-        <div className='mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+        <div className='mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                {Team.map((item, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                    <img src={item.image} alt={item.name} className="" />
+                    <p className="text-center">{item.name}</p>
+                    <p className="text-center">{item.position}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
 
+        {/* Trusted Partners */}
+        <div className='mb-[50px] xl:mb-[100px]'>
+            <Partner />
         </div>
     </>
   )

@@ -33,14 +33,21 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className='hover:text-[#2FEAE4]'>
-            <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>About Us</NavLink>
+            <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              About Us
+            </NavLink>
           </li>
-          <li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
+          <li className='hover:text-[#2FEAE4]'>
+            <NavLink to='/cng' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              CNG
+            </NavLink>
+          </li>
+          {/* <li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
             <div className='flex items-center'>
               <p>CNG</p>
               <MdKeyboardArrowDown className='text-[24px]'/>
             </div>
-            {/* {isDropdownOpen && (
+            {isDropdownOpen && (
               <ul
                 className="absolute left-0 w-[200px] bg-white shadow-md rounded-md p-2"
                 onClick={() => setIsDropdownOpen(false)} // Close on click
@@ -55,8 +62,8 @@ const Nav = () => {
                   <Link smooth to="#services">Services</Link>
                 </li>
               </ul>
-            )} */}
-          </li>
+            )}
+          </li> */}
           <li>
             <div className='flex items-center'>
               <p>Services</p>
@@ -83,19 +90,20 @@ const Nav = () => {
             {isMenuOpen && (
               <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/50 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
-                <li className="hover:text-[#2FEAE4]">
-                  <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
-                    Home
-                  </NavLink>
-                </li>
-                <li className='hover:text-[#2FEAE4]'>
-                  <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>About Us</NavLink>
-                </li>
-                  <li>
-                    <div className='flex items-center'>
-                      <p>CNG</p>
-                      <MdKeyboardArrowDown className='text-[24px]'/>
-                    </div>
+                  <li className="hover:text-[#2FEAE4]">
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                      Home
+                    </NavLink>
+                  </li>
+                  <li className='hover:text-[#2FEAE4]'>
+                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                      About Us
+                    </NavLink>
+                  </li>
+                  <li className='hover:text-[#2FEAE4]'>
+                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                      CNG
+                    </NavLink>
                   </li>
                   <li>
                     <div className='flex items-center'>
