@@ -3,6 +3,7 @@ import { FaCarRear, FaHelmetSafety } from "react-icons/fa6";
 import { RiGasStationLine } from "react-icons/ri";
 import { TbBuildingBridge } from "react-icons/tb";
 import { FiTool } from "react-icons/fi";
+import ProgressBar from '../Components/ProgressBar';
 
 
 
@@ -37,6 +38,10 @@ const SpecializeIn = [
         heading: "CNG conversion of petrol vehicles",
         description: "Transforming Petrol Cars to Cleaner CNG Technology"
     },
+]
+
+const Team = [
+    
 ]
 
 const AboutUs = () => {
@@ -86,7 +91,86 @@ const AboutUs = () => {
                 })}
             </div>
         </div>
-        <div> 
+        <div className='mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'> 
+            <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Our Mission & Vision</h3>
+            <div className='pt-[30px] lg:pt-[50px] flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-center'>
+                <img src="/assets/refilling.svg" alt="" className='lg:w-1/2 xl:w-[580px] xl:h-[458px]'/>
+                <div className='flex flex-col gap-3 lg:gap-5 xl:justify-between xl:w-[610px]'>
+                    <div className='bg-[#2FEAE4] px-[20px] py-[15px] rounded-xl h-[210px] md:h-[180px] xl:h-[220px]
+                    xl:px-[30px] xl:py-[35px]'>
+                        <h5 className='text-[24px] font-semibold'>Our Mission</h5>
+                        <p className='text-[18px]'>
+                            To empower Nigerians with affordable, reliable, and eco-friendly 
+                            transport solutions through innovation in CNG and EV technologies.
+                        </p>
+                    </div>
+                    <div className='bg-[#002748] px-[20px] py-[15px] rounded-xl h-[210px] md:h-[180px] xl:h-[220px] text-white
+                    xl:px-[30px] xl:py-[35px]'>
+                        <h5 className='text-[24px] font-semibold'>Our Vision</h5>
+                        <p className='text-[18px]'>
+                            To become Africa’s leading clean mobility provider, transforming transportation with sustainable 
+                            energy and empowering thousands with green jobs
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* CNG Project Scope */}
+        <div className='bg-[#002748] mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+            <h4 className='text-[30px] text-center font-semibold md:text-[48px] text-white'>CNG Project Scope</h4>
+            <div className='pt-[30px] lg:pt-[50px] flex flex-col gap-6 md:gap-4 md:flex-row '>
+                <div className='flex flex-col gap-4 md:w-1/2'>
+                    <div className='bg-white p-[15px] rounded-xl h-[180px] md:h-[180px] xl:h-[220px] xl:px-[30px] xl:py-[35px]'>
+                        <div className='flex items-center gap-4'>
+                            <div className='bg-[#D9D9D9] w-[50px] h-[50px] rounded-full flex justify-center items-center'>
+                                <FaCarRear className='text-[22px]'/>
+                            </div>
+                            <h5 className='text-[18px] md:text-[24px] font-semibold'>Vehicle Conversion Program</h5>
+                        </div>
+                        <p className='text-[16px] px-[10px] pt-3'>
+                            Professional conversion of petrol vehicles too cng-powered systems, 
+                            ensuring optimal performance and safety standards
+                        </p>
+                    </div>
+                    <div className='bg-white p-[15px] rounded-xl h-[180px] md:h-[180px] xl:h-[220px] xl:px-[30px] xl:py-[35px]'>
+                        <div className='flex items-center gap-4'>
+                            <div className='bg-[#D9D9D9] w-[50px] h-[50px] rounded-full flex justify-center items-center'>
+                                <RiGasStationLine className='text-[22px]'/>
+                            </div>
+                            <h5 className='text-[18px] md:text-[24px] font-semibold'>Refueling Infrastructure</h5>
+                        </div>
+                        <p className='text-[16px] px-[10px] pt-3'>
+                            Strategic deployment of CNG refueling stations across key urban 
+                            locations to ensure convenient access
+                        </p>
+                    </div>
+                    <div className='bg-white p-[15px] rounded-xl h-[180px] md:h-[180px] xl:h-[220px] xl:px-[30px] xl:py-[35px]'>
+                        <div className='flex items-center gap-4'>
+                            <div className='bg-[#D9D9D9] w-[50px] h-[50px] rounded-full flex justify-center items-center'>
+                                <FiTool className='text-[22px]'/>
+                            </div>
+                            <h5 className='text-[18px] md:text-[24px] font-semibold'>Technical Training Program</h5>
+                        </div>
+                        <p className='text-[16px] px-[10px] pt-3'>
+                            State-of-the-art facility developing the next generation of CNG 
+                            conversion specialists 
+                        </p>
+                    </div>
+                </div>
+
+                <div className='bg-white rounded-xl px-[20px] py-16 md:py-[15px] md:w-1/2'>
+                    <h5 className='text-[24px] font-semibold'>Project Targets</h5>
+                    <div className='md:pt-10'>
+                        <ProgressBar />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Meet the Team */}
+        <div className='mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+
         </div>
     </>
   )
