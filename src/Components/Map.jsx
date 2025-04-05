@@ -3,7 +3,7 @@ import React from 'react'
 const Map = ({ 
     query = '1 dbs rd',
     width = 'w-[100%]',
-    height = 'h-[441px]'
+    height = 'h-[100%]'
   }) => {
   return (
     <div className={`max-w-full overflow-hidden text-red-500 ${width} ${height}`}>
@@ -24,7 +24,6 @@ const Map = ({
         href="https://www.bootstrapskins.com/themes"
         id="inject-map-data"
       >
-        premium bootstrap themes
       </a>
     </div>
   )

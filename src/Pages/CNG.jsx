@@ -5,6 +5,10 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BsTools } from "react-icons/bs";
 import { GrCertificate } from "react-icons/gr";
 import { RiGasStationLine } from "react-icons/ri";
+import { LuPhone } from "react-icons/lu";
+import { RxEnvelopeClosed } from "react-icons/rx";
+import Map from '../Components/Map';
+import { LuPlus } from "react-icons/lu";
 
 
 
@@ -50,6 +54,8 @@ const Process = [
 const CNG = () => {
 
     const [vehicleType, setVehicleType] = useState("");
+    const [cylinderType, setCylinderType] = useState("");
+    const [date, setDate] = useState("");
   return (
     <>
         <div className="bg-[url(/assets/cng-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
@@ -96,7 +102,7 @@ const CNG = () => {
         <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[150px] xl:py-[150px]'>
             <h2 className='text-[30px] text-center font-semibold md:text-[48px]'>Service Calculator</h2>
             <p className="text-center text-[20px] md:text-[24px]">Instantly estimate your CNG Conversion based on your vehicle's details.</p>
-            <div className='pt-[30px] lg:pt-[30px] flex flex-col lg:flex-row lg:gap-10'>
+            <div className='pt-[30px] flex flex-col lg:flex-row lg:gap-10'>
                 <img src="/assets/refilling.svg" alt="" className='lg:w-1/2'/>
                 <div className='lg:w-1/2 flex flex-col justify-between xl:justify-center xl:gap-10 pt-8 lg:pt-0'>
                     <div>
@@ -122,24 +128,154 @@ const CNG = () => {
                         <h5 className='text-[24px] font-semibold'>Cylinder Type</h5>
                         <div className="rounded-3xl bg-[#D9D9D9] w-full p-[20px] md:p-[30px] mt-3 text-[24px] ">
                             <select
-                                name="serviceType"
-                                id="serviceType"
-                                value={vehicleType}
-                                onChange={(e) => setVehicleType(e.target.value)}
+                                name="cylinderType"
+                                id="cylinderType"
+                                value={cylinderType}
+                                onChange={(e) => setCylinderType(e.target.value)}
                                 className="outline-none w-full text-gray-700 bg-transparent"
                             >
                             <option value="" disabled hidden>
                                 Select Cylinder Type
                             </option>
-                            <option value="toyota">Toyota</option>
-                            <option value="lexus">Lexus</option>
-                            <option value="tricycle">Tricycle</option>
+                            <option value="50kg">50kg</option>
+                            <option value="100kg">100kg</option>
+                            <option value="70kg">70kg</option>
                             </select>
                         </div>
                     </div>
                     <button className='bg-[#002748] text-white p-[20px] md:p-[25px] text-center text-[18px] font-semibold rounded-3xl mt-8 lg:mt-0'>
                         Calculate Estimate
                     </button>
+                </div>
+            </div>
+        </div>
+
+        {/* Appointment Scheduling */}
+        <div className='bg-[#002748] px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[150px]'>
+            <h2 className='text-[30px] text-center font-semibold md:text-[48px] text-white'>Schedule Appointment</h2>
+            <p className="text-[20px] md:text-[24px] text-center text-white">
+                Book your CNG Conversion in a single process
+            </p>
+            <div className='bg-white p-5 md:p-10 mt-[30px] rounded-xl'>
+                <div className='flex flex-col md:flex-row md:gap-5 xl:gap-10'>
+                    <div className='pb-[30px] md:w-1/2'>
+                        <p className="text-[20px] md:text-[24px] font-semibold pb-[14px]">
+                            Choose Location
+                        </p>
+                        <div className='w-full md:h-[180px]'>
+                            <Map />
+                        </div>
+                        <div className='pt-[30px]'>
+                            <div className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] font-semibold
+                            w-full'>
+                                <input type="radio" id='asaba' name='location' value='Asaba'/>
+                                <div>
+                                    <p className='leading-4'>Delta State Innovation Hub</p>
+                                    <p className='text-[#a09e9e]'>Asaba</p>
+                                </div>
+                            </div>
+                            <div className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] font-semibold
+                            w-full mt-[30px]'>
+                                <input type="radio" id='ibusa' name='location' value='Ibusa'/>
+                                <div>
+                                    <p className='leading-4'>Delta State Industrial Estate</p>
+                                    <p className='text-[#a09e9e]'>Ibusa Road, Asaba</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='md:w-1/2'>
+                        <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">
+                            Select Date and Time
+                        </p>
+                        <div className='flex flex-col space-y-5'>
+                            <div>
+                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Date</p>
+                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl'>
+                                    <select
+                                        name="date"
+                                        id="date"
+                                        value={date}
+                                        onChange={(e) => setDate(e.target.value)}
+                                        className="outline-none w-full text-gray-700 bg-transparent"
+                                    >
+                                    <option value="" disabled hidden>
+                                        Select Date
+                                    </option>
+                                    <option value="toyota">Tuesday</option>
+                                    <option value="lexus">Thursday</option>
+                                    <option value="tricycle">Saturday</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Time</p>
+                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl w-[225px]'>
+                                    <input type="time" />
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Contact Information</p>
+                                <input type="text" className='bg-[#D9D9D9] px-5 py-3 rounded-2xl w-full xl:w-[385px]'/>
+                            </div>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
+                            cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0'>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <hr className='border-[#D9D9D9]'/>
+                    <div className='pt-[10px] md:pt-[30px] xl:pt-[50px] px-[5px] md:px-[30px] flex flex-col gap-3 md:flex-row 
+                    justify-between md:gap-0'>
+                        <div className='flex items-center gap-3 text-[18px]'>
+                            <LuPhone />
+                            <div>
+                                <p className='leading-4'>Call us at</p>
+                                <p className='font-semibold'>+234 814 536 2548</p>
+                            </div>
+                        </div>
+                        <div className='flex items-center gap-3 text-[18px]'>
+                            <RxEnvelopeClosed />
+                            <div>
+                                <p className='leading-4'>Email us at</p>
+                                <p className='font-semibold'>bookings@electramotors.ng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[200px] xl:py-[150px]'>
+            <h2 className='text-[30px] text-center font-semibold md:text-[48px]'>Frequently Asked Questions</h2>
+            <p className="text-center text-[20px] md:text-[24px]">Find answers to common questions  about CNG  Conversion and its Benefits </p>
+            <div className='pt-[30px] flex flex-col gap-5 md:gap-10 xl:gap-14'>
+                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
+                    <p className='text-[16px] md:text-[24px] font-semibold'>How much can I save on fuel with CNG?</p>
+                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
+                        <LuPlus className='text-white'/>
+                    </div>
+                </div>
+                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
+                    <p className='text-[16px] md:text-[24px] font-semibold'>Is the conversion safe for my engine?</p>
+                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
+                        <LuPlus className='text-white'/>
+                    </div>
+                </div>
+                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
+                    <p className='text-[16px] md:text-[24px] font-semibold'>What happens if I run out of CNG?</p>
+                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
+                        <LuPlus className='text-white'/>
+                    </div>
+                </div>
+                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
+                    <p className='text-[16px] md:text-[24px] font-semibold'>Will I get a certificate?</p>
+                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
+                        <LuPlus className='text-white'/>
+                    </div>
                 </div>
             </div>
         </div>

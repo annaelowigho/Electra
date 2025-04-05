@@ -274,7 +274,7 @@ const Homepage = () => {
                         </div>
                     </form>
                 </div>
-                <div className='w-full lg:w-1/2 md:px-[20px] lg:px-0'>
+                <div className='w-full lg:w-1/2 md:px-[20px] lg:px-0 h-[441px]'>
                     <Map />
                 </div>
             </div>

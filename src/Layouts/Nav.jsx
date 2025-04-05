@@ -91,17 +91,20 @@ const Nav = () => {
               <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/50 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
                   <li className="hover:text-[#2FEAE4]">
-                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
                       Home
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]'>
-                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
                       About Us
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]'>
-                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
                       CNG
                     </NavLink>
                   </li>
