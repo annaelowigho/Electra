@@ -65,10 +65,13 @@ const Nav = () => {
             )}
           </li> */}
           <li>
-            <div className='flex items-center'>
-              <p>Services</p>
-              <MdKeyboardArrowDown className='text-[24px]'/>
-            </div>
+            <NavLink to='/services' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              <div className='flex items-center hover:text-[#2FEAE4]'>
+                <p>Services</p>
+                <MdKeyboardArrowDown className='text-[24px]'/>
+              </div>
+            </NavLink>
+            
           </li>
           <li>Training</li>
           <li>Contact Us</li>

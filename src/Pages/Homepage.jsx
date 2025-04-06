@@ -146,7 +146,7 @@ const Homepage = () => {
                 <div className='flex flex-col md:flex-row gap-[20px]'>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
-                        <img src="/assets/cng-gas.svg" alt="" className='w-[120px] lg:w-[176px]'/>
+                        <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Book CNG Conversion</h4>
                             <p className='text-[12px] xl:text-[17px]'>
@@ -187,7 +187,7 @@ const Homepage = () => {
                     </div>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
-                        <img src="/assets/cng-gas.station" alt="" className='w-[120px] lg:w-[176px]'/>
+                        <img src="/assets/cng-station.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Find CNG Refuelling Station</h4>
                             <p className='text-[12px] xl:text-[17px]'>
