@@ -6,6 +6,7 @@ import { BsTools } from "react-icons/bs";
 import { LuBadgeCheck } from "react-icons/lu";
 import { FaRegCalendarCheck } from "react-icons/fa";
 import { IoTimeOutline } from "react-icons/io5";
+import { MdInfoOutline } from "react-icons/md";
 
 
 
@@ -186,7 +187,9 @@ const Training = () => {
                             </td>
                             <td className='px-3'>
                                 <button className="font-primary text-[12px] md:text-[18px] text-white font-semibold bg-[#002748] rounded-lg 
-                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px]">
+                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px] hover:bg-[#2FEAE4]
+                                hover:border-[3px] hover:border-[#002748] hover:text-[#002748] hover:shadow-lg
+                                transition-transform-y duration-500 hover:scale-105">
                                     Enroll
                                 </button>
                             </td>
@@ -203,7 +206,9 @@ const Training = () => {
                             </td>
                             <td className='px-3'>
                                 <button className="font-primary text-[12px] md:text-[18px] text-white font-semibold bg-[#002748] rounded-lg 
-                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px]">
+                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px] hover:bg-[#2FEAE4]
+                                hover:border-[3px] hover:border-[#002748] hover:text-[#002748] hover:shadow-lg
+                                transition-transform-y duration-500 hover:scale-105">
                                     Enroll
                                 </button>
                             </td>
@@ -220,7 +225,9 @@ const Training = () => {
                             </td>
                             <td className='px-3'>
                                 <button className="font-primary text-[12px] md:text-[18px] text-white font-semibold bg-[#002748] rounded-lg 
-                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px]">
+                                cursor-pointer w-[80px] h-[30px] md:w-[89px] md:h-[40px] hover:bg-[#2FEAE4]
+                                hover:border-[3px] hover:border-[#002748] hover:text-[#002748] hover:shadow-lg
+                                transition-transform-y duration-500 hover:scale-105">
                                     Enroll
                                 </button>
                             </td>
@@ -232,7 +239,7 @@ const Training = () => {
 
         {/* Course duration */}
         <div className='py-[20px] md:py-[50px] px-[20px] md:px-[30px] xl:px-[150px]'>
-            <div className='shadow-lg px-[20px] py-[40px] md:p-[30px] xl:px-[50px] xl:pl-[50px] xl:pb-[100px] rounded-2xl'>
+            <div className='shadow-lg px-[20px] py-[40px] md:p-[30px] xl:px-[50px] xl:pl-[50px] xl:pb-[50px] rounded-2xl'>
                 <div className='flex flex-col gap-6 md:gap-7 md:flex-row lg:justify-between'>
                     <div>
                         <div className='flex items-center gap-5'>
@@ -264,11 +271,15 @@ const Training = () => {
                         <p className='pt-[15px] text-[18px] font-semibold'>Evening Session - (4pm-7pm)</p>
                     </div>
                 </div>
+                <div className='bg-[#002748] text-white flex items-center gap-3 px-4 py-2 rounded-2xl mt-20 xl:w-[755px]'>
+                    <MdInfoOutline className='text-[24px]'/>
+                    <p className='text-[12px] md:text-[20px]'>Discount Available for Early-birds and group registration (5%)</p>
+                </div>
             </div>
         </div>
 
         {/* Graduate testimonials */}
-        <div className='py-[20px] md:py-[50px] xl:py-[100px] px-[20px] md:px-[30px] xl:px-[150px]'>
+        <div className='py-[20px] md:py-[50px] xl:pt-[100px] px-[20px] md:px-[30px] xl:px-[150px]'>
             <h2 className="text-[30px] text-center font-semibold md:text-[48px]">
                 Testimonials from Graduates
             </h2>
@@ -280,7 +291,7 @@ const Training = () => {
                     key={index}
                     className='bg-white flex flex-col items-center justify-center px-[31px] py-[24px] rounded-2xl gap-[15px] 
                     w-full md:w-[384px] shadow-lg'>
-                    <img src={item.image} alt={`${item.customer}'s feedback`} />
+                    <img src={item.image} alt={`${item.feedback}'s feedback`} />
                     <p className='text-[16px] text-center'>{item.feedback}</p>
                     <div className='text-center'>
                         <p className='text-[18px] font-semibold'>{item.customer}</p>
@@ -293,6 +304,23 @@ const Training = () => {
         </div>
 
         {/* Start CNG journey */}
+        <div className='bg-[#2FEAE4] my-[20px] md:my-[50px] xl:my-[100px] mx-[20px] md:mx-[30px] xl:mx-[150px] 
+        px-[10px] py-[30px] rounded-2xl'>
+            <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-9 md:leading-12 xl:leading-14 text-black">
+                Ready  To Start Your CNG Technician Journey
+            </h2>
+            <p className="text-[20px] md:text-[24px] md:px-5 text-center leading-6 pt-[25px] md:leading-8 xl:leading-9 text-black">
+                Join our next cohort and help shape Nigeria's clean energy future
+            </p>
+            <div className='flex items-center justify-center'>
+                <button className='font-primary text-[18px] md:text-[22px] text-white font-semibold bg-[#002748] rounded-lg 
+                cursor-pointer w-[203px] h-[52px] mt-[25px] hover:bg-[#2FEAE4]
+                hover:border-[3px] hover:border-[#002748] hover:text-[#002748] hover:shadow-lg
+                transition-transform-y duration-500 hover:scale-105'>
+                    Register Now
+                </button>
+            </div>
+        </div>
     </>
   )
 }

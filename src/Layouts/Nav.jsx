@@ -78,7 +78,11 @@ const Nav = () => {
               Training
             </NavLink>
           </li>
-          <li>Contact Us</li>
+          <li className='hover:text-[#2FEAE4]'>
+            <NavLink to="/contact-us" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              Contact Us
+            </NavLink>
+          </li>
         </ul>
         <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
         hidden xl:block'>
@@ -130,7 +134,12 @@ const Nav = () => {
                       Training
                     </NavLink>
                   </li>
-                  <li>Contact Us</li>
+                  <li className='hover:text-[#2FEAE4]'>
+                    <NavLink to='/contact-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
+                      Contact Us
+                    </NavLink>
+                  </li>
                 </ul>
 
                 <div className='py-[30px] flex items-center justify-center'>

@@ -7,6 +7,7 @@ import AboutUs from './Pages/AboutUs'
 import CNG from './Pages/CNG'
 import Services from './Pages/Services'
 import Training from './Pages/Training'
+import ContactUs from './Pages/ContactUs'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/cng' element={<CNG />}/>
         <Route path='/services' element={<Services />} />
         <Route path='/training' element={<Training />} />
+        <Route path='/contact-us' element={<ContactUs />} />
       </Routes>
       <Footer />
     </>
