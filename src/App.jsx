@@ -6,6 +6,7 @@ import Homepage from './Pages/Homepage'
 import AboutUs from './Pages/AboutUs'
 import CNG from './Pages/CNG'
 import Services from './Pages/Services'
+import Training from './Pages/Training'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/about-us' element={<AboutUs />}/>
         <Route path='/cng' element={<CNG />}/>
         <Route path='/services' element={<Services />} />
+        <Route path='/training' element={<Training />} />
       </Routes>
       <Footer />
     </>

@@ -71,18 +71,20 @@ const Services = () => {
         <div className="bg-[url(/assets/services-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
             <div className="text-center">
                 <h2 className="text-white text-[60px] font-bold">Services</h2>
-                <p className="text-white text-[20px] md:text-[24px]">
+                <p className="text-white text-[20px] md:text-[24px] md:px-5">
                     We specialize in CNG solutions and quality care for your vehicle, from maintenance to major repairs
                 </p>
             </div>
         </div>
         <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[100px] xl:py-[100px]'>
-            <h2 className='text-[30px] text-center font-semibold md:text-[48px] leading-10 md:leading-12'>Explore Some of Our Unique Services</h2>
+            <h2 className='text-[30px] text-center font-semibold md:text-[48px] leading-10 md:leading-12'>
+                Explore Some of Our Unique Services
+            </h2>
             <div className='pt-[30px] grid grid-cols-1 md:grid-cols-2 gap-[20px] xl:gap-[30px]'>
                 {Service.map((item, index) => {
                     return (
                         <div key={index} className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex 
-                        items-center gap-5 w-full md:w-[370px] lg:w-[470px] xl:w-full h-[200px] xl:h-[250px] shadow-md'>
+                        items-center gap-5 w-full md:w-full lg:w-[470px] xl:w-full h-[200px] xl:h-[250px] shadow-md'>
                             <img src={item.image} alt="" className='w-[120px] lg:w-[176px]'/>
                             <div >
                                 <h4 className='text-[18px] xl:text-[24px] font-semibold'>{item.heading}</h4>
@@ -101,7 +103,7 @@ const Services = () => {
         </div>
         <div className='bg-[#002748] mx-[20px] my-[20px] md:mx-[30px] md:my-[50px] xl:mx-[100px] rounded-xl 
         p-[10px] md:p-[30px] xl:p-[60px]'>
-            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center md:gap-10'>
+            <div className='flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-4'>
                 <div>
                     <h2 className='text-[30px] text-white font-medium md:text-[48px]  leading-14'>
                         Considering CNG Conversion? <br /> We're the experts!

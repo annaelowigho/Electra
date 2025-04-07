@@ -73,7 +73,11 @@ const Nav = () => {
             </NavLink>
             
           </li>
-          <li>Training</li>
+          <li className='hover:text-[#2FEAE4]'>
+            <NavLink to="/training" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+              Training
+            </NavLink>
+          </li>
           <li>Contact Us</li>
         </ul>
         <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
@@ -106,18 +110,26 @@ const Nav = () => {
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]'>
-                    <NavLink to='/about-us' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    <NavLink to='/cng' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
                     onClick={() => setIsMenuOpen(false)}>
                       CNG
                     </NavLink>
                   </li>
-                  <li>
-                    <div className='flex items-center'>
-                      <p>Services</p>
-                      <MdKeyboardArrowDown className='text-[24px]'/>
-                    </div>
+                  <li className='hover:text-[#2FEAE4]'>
+                    <NavLink to='/services' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
+                      <div className='flex items-center'>
+                        <p>Services</p>
+                        <MdKeyboardArrowDown className='text-[24px]'/>
+                      </div>
+                    </NavLink>
                   </li>
-                  <li>Training</li>
+                  <li className='hover:text-[#2FEAE4]'>
+                    <NavLink to='/training' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    onClick={() => setIsMenuOpen(false)}>
+                      Training
+                    </NavLink>
+                  </li>
                   <li>Contact Us</li>
                 </ul>
 
