@@ -75,7 +75,9 @@ const Homepage = () => {
                     <p className='text-[20px] pt-[15px] font-medium md:text-[24px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p>
-                    <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] h-[52px] mt-[15px]'>
+                    <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] 
+                    h-[52px] mt-[15px] hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px]
+                    hover:border-[#002748] hover:text-black'>
                         Read More
                     </button>
                 </div>

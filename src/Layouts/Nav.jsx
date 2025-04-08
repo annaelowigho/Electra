@@ -85,7 +85,8 @@ const Nav = () => {
           </li>
         </ul>
         <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
-        hidden xl:block'>
+        hidden xl:block hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px]
+        hover:border-[#2FEAE4] hover:text-white'>
           Book Now
         </button>
 
@@ -144,7 +145,8 @@ const Nav = () => {
 
                 <div className='py-[30px] flex items-center justify-center'>
                   <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
-                    '>
+                  hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px]
+                hover:border-[#2FEAE4] hover:text-white'>
                     Book Now
                   </button>
                 </div>
