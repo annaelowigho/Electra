@@ -1,14 +1,14 @@
 import React from 'react'
 import { BiCalendarCheck, BiSupport } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
+import { IoTimeOutline } from "react-icons/io5";
 import { useState } from 'react';
 import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
 import Map from '../Components/Map';
-// import DatePicker from "react-date-picker"; 
-// import "react-date-picker/dist/DatePicker.css"; 
-// import "react-calendar/dist/Calendar.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Choose = [
     {
@@ -53,12 +53,15 @@ const Feedback = [
 
 const Homepage = () => {
 
-    // const [date, setDate] = useState("");
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState("")
     const [serviceType, setServiceType] = useState("");
 
   return (
     <>
         <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] xl:px-[150px] xl:py-[100px] relative'>
+
+            {/* Hero Section */}
             <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
                 <img src="/assets/arrow12.svg" alt="" className='absolute top-[-50px] left-[620px] hidden min-[1300px]:block min-[1900px]:left-[940px]'/>
                 <img src="/assets/dots.svg" alt="" className='absolute top-[470px] left-[318px] hidden xl:block'/>
@@ -77,12 +80,14 @@ const Homepage = () => {
                     </p>
                     <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] 
                     h-[52px] mt-[15px] hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px]
-                    hover:border-[#002748] hover:text-black'>
+                    hover:border-[#002748] hover:text-[#002748]'>
                         Read More
                     </button>
                 </div>
                 <img src="/assets/hero-img.svg" alt="" />
             </div>
+
+            {/* Book Services */}
             <div className='mx-auto mt-[20px] md:mt-[40px] lg:mt-[50px] min-[1280px]:mt-[100px] xl:mt-0'>
                 <div className='bg-[#002748] mx-auto text-white px-[20px] xl:px-[50px] pt-[15px] pb-[46px] rounded-2xl w-full xl:w-[921px]
                 min-[1300px]:absolute bottom-[-50px] left-[290px] right-[290px] min-[1900px]:left-[310px] min-[1900px]:right-[310px] min-[1900px]:bottom-[10px]'>
@@ -90,13 +95,30 @@ const Homepage = () => {
                     <div className='flex flex-col md:flex-row gap-4 xl:justify-between pt-[15px]'>
                         <div className='bg-white xl:py-2 px-5 rounded-md text-gray-500 flex items-center gap-4 text-[18px] w-full h-[60px]
                         xl:w-[210px]'>
-                            <BiCalendarCheck />
-                            <p>Choose Date</p>
+                            <BiCalendarCheck className='text-[28px]'/>
+                            <DatePicker 
+                            selected={date} 
+                            onChange={(date) => setDate(date)}
+                            placeholderText='Choose Date'
+                            isClearable
+                            className="w-full bg-transparent outline-none"
+                            />
                         </div>
-                        <div className='bg-white py-2 px-5 rounded-md text-gray-500 flex items-center gap-4 text-[18px] h-[60px]
-                        w-full xl:w-[210px]'>
-                            <BiCalendarCheck />
-                            <p>Choose Date</p>
+                        <div className='bg-white xl:py-2 px-5 rounded-md text-gray-500 flex items-center gap-4 text-[18px] w-full h-[60px]
+                        xl:w-[210px]'>
+                        <IoTimeOutline className='text-[28px]' />
+                        <DatePicker
+                            selected={time}
+                            onChange={(time) => setTime(time)}
+                            showTimeSelect
+                            showTimeSelectOnly
+                            timeFormat="h:mm aa" // 12-hour format with AM/PM
+                            // timeIntervals={15} // 15-minute intervals
+                            dateFormat="h:mm aa" // Display format (e.g., "2:30 PM")
+                            placeholderText="Choose time"
+                            isClearable
+                            className="w-full bg-transparent outline-none"
+                        />
                         </div>
                         <div className='bg-white py-2 pl-5 pr-3  rounded-md text-gray-500 flex items-center gap-4 text-[18px] h-[60px]
                         w-full xl:w-[210px]'>
@@ -118,23 +140,12 @@ const Homepage = () => {
                                 </select>
                             </div>
                         </div>
-                        <button className='font-primary text-[16px] font-semibold bg-[#2FEAE4] px-[20px] xl:px-[30px] py-[15px] 
-                        rounded-lg cursor-pointer md:w-[400px] xl:w-[135px]'>
+                        <button className='font-primary text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px]
+                        rounded-lg cursor-pointer md:w-[400px] xl:w-[135px] text-[#002748] hover:shadow-lg transition-transform-y duration-500 
+                        hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
                             Book Now
                         </button>
                     </div>
-                    {/* <div>
-                        <BiCalendarCheck className="text-gray-500 text-xl absolute left-2 z-10" />
-                        <DatePicker
-                            onChange={(newDate) => setDate(newDate)} 
-                            value={date}
-                            format="dd/MM/yyyy" 
-                            className="outline-none text-gray-700 bg-white border-none"
-                            calendarClassName="border-none" 
-                            // clearIcon={null} 
-                            placeholderText="Choose Date" 
-                        />
-                    </div> */}
                 </div>
             </div>
         </div>
@@ -154,7 +165,9 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Save on fuel and go green with our certified CNG conversion service.
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px]'>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Book Now
                             </button>
                         </div>
@@ -167,7 +180,9 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Master CNG conversion with our expert training. Get certified
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px]'>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Join Now
                             </button>
                         </div>
@@ -182,7 +197,9 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px]'>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Buy Now
                             </button>
                         </div>
@@ -195,7 +212,9 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Locate convenient and reliable CNG refueling stations near you. Fuel up and stay eco-friendly today!
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[170px] h-[40px] xl:h-[52px] mt-[10px]'>
+                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Find Station Now
                             </button>
                         </div>
@@ -269,10 +288,15 @@ const Homepage = () => {
                         <textarea name="message" id="message" placeholder='Message' rows='4'
                         className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px] resize-none'></textarea>
                         <div className=''>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
-                            rounded-lg cursor-pointer mt-[10px] xl:mt-[30px] w-full lg:w-[162px]'>
-                                Send Message
-                            </button>
+                        <button
+                        className="font-primary text-[16px] md:text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
+                            rounded-lg cursor-pointer mt-[10px] xl:mt-[30px] w-full lg:w-[162px] hover:shadow-lg 
+                            transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                            hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 
+                            focus:outline-none focus:ring-2 focus:ring-[#2FEAE4]"
+                        >
+                            Send Message
+                        </button>
                         </div>
                     </form>
                 </div>
