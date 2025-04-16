@@ -6,3 +6,33 @@
 @theme {
     --font-primary: "Lato", sans-serif;
 }
+
+@keyframes colorChange {
+    0%, 100% {
+      background-color: #2FEAE4;
+      color: #002748;
+    }
+    50% {
+      background-color: #002748;
+      color: white;
+    }
+  }
+  
+  @keyframes colorChangeReverse {
+    0%, 100% {
+        background-color: #002748;
+        color: white;
+    }
+    50% {
+        background-color: #2FEAE4;
+        color: #002748;
+    }
+  }
+  
+  .animate-colorChange {
+    animation: colorChange 5s infinite;
+  }
+  
+  .animate-colorChangeReverse {
+    animation: colorChangeReverse 5s infinite;
+  }

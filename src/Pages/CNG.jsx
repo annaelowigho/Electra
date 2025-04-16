@@ -9,6 +9,9 @@ import { LuPhone } from "react-icons/lu";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import Map from '../Components/Map';
 import { LuPlus } from "react-icons/lu";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { IoTimeOutline } from "react-icons/io5";
 
 
 
@@ -56,6 +59,7 @@ const CNG = () => {
     const [vehicleType, setVehicleType] = useState("");
     const [cylinderType, setCylinderType] = useState("");
     const [date, setDate] = useState("");
+    const [time, setTime] = useState("")
   return (
     <>
         <div className="bg-[url(/assets/cng-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
@@ -77,7 +81,7 @@ const CNG = () => {
                 {Process.map((item, index) => {
                     const Icon = item.Icon
                     return (
-                        <div key={index} className="bg-white px-[20px] py-[30px] relative rounded-xl h-[200px] md:h-[180px] xl:h-[220px] ">
+                        <div key={index} className="bg-white px-[20px] py-[30px] relative rounded-xl h-[200px] md:h-[180px] xl:h-[220px]">
                             <div className="bg-[#2FEAE4] w-[50px] h-[50px] flex items-center justify-center rounded-full absolute top-[-12px] right-[30px]">
                                 <p className="text-[20px] lg:text-[24px] font-semibold">{item.number}</p>
                             </div>
@@ -143,7 +147,10 @@ const CNG = () => {
                             </select>
                         </div>
                     </div>
-                    <button className='bg-[#002748] text-white p-[20px] md:p-[25px] text-center text-[18px] font-semibold rounded-3xl mt-8 lg:mt-0'>
+                    <button className='bg-[#002748] text-white p-[20px] md:p-[25px] text-center text-[18px] font-semibold rounded-3xl 
+                    mt-8 lg:mt-0 cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                    hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent focus:outline-none focus:ring-2 
+                    focus:ring-[#2FEAE4]'>
                         Calculate Estimate
                     </button>
                 </div>
@@ -210,16 +217,31 @@ const CNG = () => {
                             </div>
                             <div>
                                 <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Time</p>
-                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl w-[225px]'>
-                                    <input type="time" />
+                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl text-gray-500 flex items-center gap-4 text-[18px] w-[225px]'>
+                                    <IoTimeOutline className='text-[28px]' />
+                                    <DatePicker
+                                    selected={time}
+                                    onChange={(time) => setTime(time)}
+                                    showTimeSelect
+                                    showTimeSelectOnly
+                                    timeFormat="h:mm aa" // 12-hour format with AM/PM
+                                    // timeIntervals={15} // 15-minute intervals
+                                    dateFormat="h:mm aa" // Display format (e.g., "2:30 PM")
+                                    placeholderText="Choose time"
+                                    isClearable
+                                    className="w-full bg-transparent outline-none"
+                                    />
                                 </div>
-                            </div>
+                                </div>
                             <div>
                                 <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Contact Information</p>
                                 <input type="text" className='bg-[#D9D9D9] px-5 py-3 rounded-2xl w-full xl:w-[385px]'/>
                             </div>
                             <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
-                            cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0'>
+                            cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0 lg:w-[162px] hover:shadow-lg 
+                            transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                            hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 
+                            focus:outline-none focus:ring-2 focus:ring-[#2FEAE4]'>
                                 Book Now
                             </button>
                         </div>

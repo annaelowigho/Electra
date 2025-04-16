@@ -20,9 +20,9 @@ const Footer = () => {
                 Committed to sustainability and exceptional service, it aims to lead the Nigerian automotive sector
               </p>
               <div className='text-white text-[25px] flex gap-5 items-center'>
-                <FaInstagram />
-                <SlSocialYoutube />
-                <BsTwitterX />
+                <FaInstagram className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                <SlSocialYoutube className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />
+                <BsTwitterX className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />
               </div>
             </div>
             <div className='text-white'>
@@ -30,6 +30,7 @@ const Footer = () => {
               <div className='pt-4 flex flex-col gap-3'>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>About Us</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Services</a>
+                <a href="/careers" className='text-[18px] hover:text-[#2FEAE4]'>Careers</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>FAQs</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Privacy Policy</a>

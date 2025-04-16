@@ -96,7 +96,8 @@ const AboutUs = () => {
                 {SpecializeIn.map((item, index) => {
                     const Icon = item.icon
                     return (
-                        <div key={index} className='bg-white px-[15px] py-[35px] w-full rounded-xl md:w-[360px] lg:w-[400px]'>
+                        <div key={index} className='bg-white px-[15px] py-[35px] w-full rounded-xl md:w-[360px] lg:w-[400px]
+                        cursor-pointer transition-all duration-300 hover:-translate-y-2'>
                             <div className='flex items-center gap-[20px]'>
                                 <div className='bg-[#002748] w-[50px] h-[50px] flex items-center justify-center rounded-full'>
                                     <Icon className='text-white text-[22px]'/>
@@ -111,13 +112,15 @@ const AboutUs = () => {
                 })}
             </div>
         </div>
+
+        {/* Mission and Vision */}
         <div className='mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'> 
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Our Mission & Vision</h3>
             <div className='pt-[30px] lg:pt-[50px] flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-center'>
                 <img src="/assets/refilling.svg" alt="" className='lg:w-1/2 xl:w-[580px] xl:h-[458px]'/>
                 <div className='flex flex-col gap-3 lg:gap-5 xl:justify-between xl:w-[610px]'>
                     <div className='bg-[#2FEAE4] px-[20px] py-[15px] rounded-xl h-[210px] md:h-[180px] xl:h-[220px]
-                    xl:px-[30px] xl:py-[35px]'>
+                    xl:px-[30px] xl:py-[35px] text-[#002748] animate-colorChange'>
                         <h5 className='text-[24px] font-semibold'>Our Mission</h5>
                         <p className='text-[18px]'>
                             To empower Nigerians with affordable, reliable, and eco-friendly 
@@ -125,7 +128,7 @@ const AboutUs = () => {
                         </p>
                     </div>
                     <div className='bg-[#002748] px-[20px] py-[15px] rounded-xl h-[210px] md:h-[180px] xl:h-[220px] text-white
-                    xl:px-[30px] xl:py-[35px]'>
+                    xl:px-[30px] xl:py-[35px] animate-colorChangeReverse'>
                         <h5 className='text-[24px] font-semibold'>Our Vision</h5>
                         <p className='text-[18px]'>
                             To become Africa’s leading clean mobility provider, transforming transportation with sustainable 
@@ -192,10 +195,12 @@ const AboutUs = () => {
         <div className='mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {Team.map((item, index) => (
-                    <div key={index} className="flex flex-col items-center">
-                    <img src={item.image} alt={item.name} className="" />
-                    <p className="text-center">{item.name}</p>
-                    <p className="text-center">{item.position}</p>
+                    <div key={index} className="flex flex-col items-center transition-all duration-500 ease-linear 
+                    hover:-translate-y-2">
+                        <img src={item.image} alt={item.name} className="object-cover transition-all duration-500 
+                        ease-linear hover:scale-105 hover:shadow-[3px_3px_7px_#2FEAE4] hover:rounded-2xl hover:-translate-y-3" />
+                        <p className="text-center text-[20px] font-bold pt-2">{item.name}</p>
+                        <p className="text-center font-semibold text-[#2FEAE4]">{item.position}</p>
                     </div>
                 ))}
             </div>

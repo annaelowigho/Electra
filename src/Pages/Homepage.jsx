@@ -119,7 +119,7 @@ const Homepage = () => {
                             isClearable
                             className="w-full bg-transparent outline-none"
                         />
-                        </div>
+                        </div> 
                         <div className='bg-white py-2 pl-5 pr-3  rounded-md text-gray-500 flex items-center gap-4 text-[18px] h-[60px]
                         w-full xl:w-[210px]'>
                             <FiTool className='text-[25px]'/>
@@ -158,7 +158,8 @@ const Homepage = () => {
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px]'>
                 <div className='flex flex-col md:flex-row gap-[20px]'>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    hover:-translate-y-2'>
                         <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Book CNG Conversion</h4>
@@ -173,7 +174,8 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    hover:-translate-y-2'>
                         <img src="/assets/cng-training.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Join CNG Training</h4>
@@ -190,7 +192,8 @@ const Homepage = () => {
                 </div>
                 <div className='flex flex-col md:flex-row gap-[20px]'>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    hover:-translate-y-2'>
                         <img src="/assets/cng-kits.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Buy CNG Kits</h4>
@@ -205,7 +208,8 @@ const Homepage = () => {
                         </div>
                     </div>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px]'>
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    hover:-translate-y-2'>
                         <img src="/assets/cng-station.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] xl:text-[24px] font-semibold'>Find CNG Refuelling Station</h4>
@@ -233,13 +237,14 @@ const Homepage = () => {
                 </div>
                 <img src="/assets/straight-dots.svg" alt="" />
             </div>
-            <div className="pt-[50px] flex flex-col md:flex-row flex-wrap items-center justify-center gap-[30px] justify-between">
+            <div className="pt-[50px] flex flex-col md:flex-row flex-wrap items-center justify-center gap-[30px]">
                 {Choose.map((item, index) => {
                     const Icon = item.icon; // Store the icon component
                     return (
                     <div
                         key={index}
-                        className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5"
+                        className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
+                         cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#002748] hover:text-white"
                     >
                         <div className="bg-[#2FEAE4] w-[50px] h-[50px] rounded-full flex items-center justify-center">
                         <Icon className="text-[24px]" /> 
@@ -261,7 +266,8 @@ const Homepage = () => {
                 {Feedback.map((item, index) => (
                 <div
                     key={index}
-                    className='bg-white flex flex-col items-center justify-center px-[31px] py-[24px] rounded-lg gap-[15px] w-full md:w-[384px] '
+                    className='bg-white flex flex-col items-center justify-center px-[31px] py-[24px] rounded-lg gap-[15px] w-full md:w-[384px]
+                    cursor-pointer hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'
                 >
                     <img src={item.image} alt={`${item.customer}'s feedback`} />
                     <p className='text-[16px] text-center'>{item.feedback}</p>

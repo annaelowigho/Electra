@@ -91,8 +91,9 @@ const Services = () => {
                                 <p className='text-[12px] xl:text-[15px]'>
                                     {item.description}
                                 </p>
-                                <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
-                                cursor-pointer w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px]'>
+                                <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                     {item.button}
                                 </button>
                             </div>
@@ -123,7 +124,8 @@ const Services = () => {
                             </div>
                         </div>
                         <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] rounded-lg px-[20px] py-[10px] 
-                        cursor-pointer'>
+                        cursor-pointer text-[#002748] hover:shadow-lg transition-all duration-500 
+                        hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
                             Book Appointment
                         </button>
                     </div>
