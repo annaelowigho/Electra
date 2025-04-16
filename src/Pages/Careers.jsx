@@ -15,7 +15,7 @@ const Positions = [
 
 
 const Careers = () => {   
-
+  
     const [departments, setDepartments] = useState("");
 
   return (
