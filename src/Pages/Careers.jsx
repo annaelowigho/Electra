@@ -9,12 +9,12 @@ import { FaChevronDown } from "react-icons/fa";
 const Positions = [
     {
         title: "CNG Conversion Technician",
-        
+
     }
 ]
 
 
-const Careers = () => {
+const Careers = () => {   
 
     const [departments, setDepartments] = useState("");
 
