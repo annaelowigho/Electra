@@ -123,7 +123,6 @@ const CNG = () => {
     const [cylinderType, setCylinderType] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
-    const [isOpen, setIsOpen] = useState(false);
 
     
 
@@ -380,7 +379,7 @@ const CNG = () => {
                     {FAQs.map((item, index) => (
                     <FAQItem key={index} question={item.question} answer={item.answer} />
                     ))}
-                </div>
+                </div> 
             </div>
         </div>
     </>

@@ -116,7 +116,7 @@ const Nav = () => {
                         <p>Services</p>
                         <MdKeyboardArrowDown className='text-[24px]'/>
                       </div>
-                    </NavLink>
+                    </NavLink>  
                     {isDropdownOpen && (
                       <ul className=' bg-white text-black w-[300px] shadow-lg z-50 px-6 py-5 mt-2'
                       onClick={() => setIsMenuOpen(false)}>
