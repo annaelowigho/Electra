@@ -59,12 +59,13 @@ const Homepage = () => {
 
   return (
     <>
+        
         <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] xl:px-[150px] xl:py-[100px] relative'>
 
             {/* Hero Section */}
             <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
-                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-50px] left-[620px] hidden min-[1300px]:block min-[1900px]:left-[940px]'/>
-                <img src="/assets/dots.svg" alt="" className='absolute top-[470px] left-[318px] hidden xl:block'/>
+                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-60px] left-[620px] hidden min-[1300px]:block min-[1900px]:left-[940px]'/>
+                <img src="/assets/dots.svg" alt="" className='absolute top-[470px] left-[318px] hidden min-[1300px]:block'/>
                 <div className='flex flex-col '>
                     {/* <h1 className='text-[60px] md:text-[80px] font-bold text-[#111111] leading-[50px] md:leading-[81px]'>
                         Convert to CNG and  Save Up to 40%
@@ -78,19 +79,20 @@ const Homepage = () => {
                     <p className='text-[20px] pt-[15px] font-medium md:text-[24px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p>
-                    <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] 
+                    <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] 
                     h-[52px] mt-[15px] hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px]
                     hover:border-[#002748] hover:text-[#002748]'>
                         Read More
                     </button>
                 </div>
-                <img src="/assets/hero-img.svg" alt="" />
+                <img src="/assets/hero-new.svg" alt="" />
             </div>
 
             {/* Book Services */}
             <div className='mx-auto mt-[20px] md:mt-[40px] lg:mt-[50px] min-[1280px]:mt-[100px] xl:mt-0'>
                 <div className='bg-[#002748] mx-auto text-white px-[20px] xl:px-[50px] pt-[15px] pb-[46px] rounded-2xl w-full xl:w-[921px]
-                min-[1300px]:absolute bottom-[-50px] left-[290px] right-[290px] min-[1900px]:left-[310px] min-[1900px]:right-[310px] min-[1900px]:bottom-[10px]'>
+                min-[1300px]:absolute bottom-[-50px] left-[290px] right-[290px] min-[1900px]:left-[310px] min-[1900px]:right-[310px] 
+                min-[1900px]:bottom-[10px]'>
                     <h3 className='text-[30px] font-semibold text-center'>Book Services</h3>
                     <div className='flex flex-col md:flex-row gap-4 xl:justify-between pt-[15px]'>
                         <div className='bg-white xl:py-2 px-5 rounded-md text-gray-500 flex items-center gap-4 text-[18px] w-full h-[60px]
@@ -99,8 +101,7 @@ const Homepage = () => {
                             <DatePicker 
                             selected={date} 
                             onChange={(date) => setDate(date)}
-                            placeholderText='Choose Date'
-                            isClearable
+                            placeholderText='Available Date'
                             className="w-full bg-transparent outline-none"
                             />
                         </div>
@@ -116,7 +117,6 @@ const Homepage = () => {
                             // timeIntervals={15} // 15-minute intervals
                             dateFormat="h:mm aa" // Display format (e.g., "2:30 PM")
                             placeholderText="Choose time"
-                            isClearable
                             className="w-full bg-transparent outline-none"
                         />
                         </div> 
@@ -140,7 +140,7 @@ const Homepage = () => {
                                 </select>
                             </div>
                         </div>
-                        <button className='font-primary text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px]
+                        <button className='text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0
                         rounded-lg cursor-pointer md:w-[400px] xl:w-[135px] text-[#002748] hover:shadow-lg transition-transform-y duration-500 
                         hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
                             Book Now
@@ -149,16 +149,14 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
-        
-        
         {/* Services */}
         <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px]'>
                 <div className='flex flex-col md:flex-row gap-[20px]'>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
@@ -166,15 +164,15 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Save on fuel and go green with our certified CNG conversion service.
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                             w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                             hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Book Now
                             </button>
                         </div>
                     </div>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-training.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
@@ -182,7 +180,7 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Master CNG conversion with our expert training. Get certified
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                             w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                             hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Join Now
@@ -191,8 +189,8 @@ const Homepage = () => {
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row gap-[20px]'>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-kits.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
@@ -200,15 +198,15 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                             w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                             hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Buy Now
                             </button>
                         </div>
                     </div>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[40px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[230px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-station.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
@@ -216,7 +214,7 @@ const Homepage = () => {
                             <p className='text-[12px] xl:text-[17px]'>
                                 Locate convenient and reliable CNG refueling stations near you. Fuel up and stay eco-friendly today!
                             </p>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                             w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                             hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Find Station Now
@@ -295,7 +293,7 @@ const Homepage = () => {
                         className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px] resize-none'></textarea>
                         <div className=''>
                         <button
-                        className="font-primary text-[16px] md:text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
+                        className="text-[16px] md:text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
                             rounded-lg cursor-pointer mt-[10px] xl:mt-[30px] w-full lg:w-[162px] hover:shadow-lg 
                             transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
                             hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 

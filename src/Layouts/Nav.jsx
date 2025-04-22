@@ -5,6 +5,7 @@ import { CgMenu } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
 // import { Link} from 'react-scroll'
 import { Link, NavLink } from 'react-router-dom';
+// import { ul } from 'framer-motion/client';
 
 
 const Nav = () => {
@@ -25,7 +26,7 @@ const Nav = () => {
     <>
       <header className={`bg-[#002748] w-full flex items-center justify-between px-[20px] md:px-[50px] xl:px-[101px] py-[20px]
       transition-all duration-500 ${isFixed ? "fixed top-0 left-0 shadow-lg z-50" : "" }`}>
-        <img src="/assets/logo.svg" alt="" />
+        <img src="/assets/electra-logo.svg" alt="" />
         <ul className='hidden xl:flex text-white gap-[45px] text-[18px] font-semibold font-primary'>
           <li className="hover:text-[#2FEAE4]">
             <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
@@ -42,35 +43,23 @@ const Nav = () => {
               CNG
             </NavLink>
           </li>
-          {/* <li className="relative" onMouseEnter={() => setIsDropdownOpen(true)} onMouseLeave={() => setIsDropdownOpen(false)}>
-            <div className='flex items-center'>
-              <p>CNG</p>
-              <MdKeyboardArrowDown className='text-[24px]'/>
-            </div>
-            {isDropdownOpen && (
-              <ul
-                className="absolute left-0 w-[200px] bg-white shadow-md rounded-md p-2"
-                onClick={() => setIsDropdownOpen(false)} // Close on click
-              >
-                <li className="hover:bg-gray-200 p-2">
-                  <Link smooth to="#users">For Customers</Link>
-                </li>
-                <li className="hover:bg-gray-200 p-2">
-                  <Link smooth to="#laundry-shops">Laundry Shops</Link>
-                </li>
-                <li className="hover:bg-gray-200 p-2">
-                  <Link smooth to="#services">Services</Link>
-                </li>
-              </ul>
-            )}
-          </li> */}
-          <li>
-            <NavLink to='/services' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
+          <li className='relative' onMouseEnter={() => setIsDropdownOpen(true)}>
+            <NavLink to='' >
               <div className='flex items-center hover:text-[#2FEAE4]'>
                 <p>Services</p>
                 <MdKeyboardArrowDown className='text-[24px]'/>
               </div>
             </NavLink>
+            {isDropdownOpen && (
+              <ul className='absolute top-[60px] bg-white text-black w-[300px] shadow-lg z-50 px-10 py-10 '
+              onClick={() => setIsDropdownOpen(false)} onMouseLeave={() => setIsDropdownOpen(false)}>
+                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
+                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
+                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
+                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
+                <Link to='/services'><li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link>
+              </ul>
+            )}
             
           </li>
           <li className='hover:text-[#2FEAE4]'>
@@ -100,7 +89,7 @@ const Nav = () => {
             </button>
 
             {isMenuOpen && (
-              <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/50 rounded-b-3xl z-50">
+              <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/70 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
                   <li className="hover:text-[#2FEAE4]">
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
@@ -120,14 +109,24 @@ const Nav = () => {
                       CNG
                     </NavLink>
                   </li>
-                  <li className='hover:text-[#2FEAE4]'>
-                    <NavLink to='/services' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
-                    onClick={() => setIsMenuOpen(false)}>
+                  <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(true)}>
+                    <NavLink className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
+                    >
                       <div className='flex items-center'>
                         <p>Services</p>
                         <MdKeyboardArrowDown className='text-[24px]'/>
                       </div>
                     </NavLink>
+                    {isDropdownOpen && (
+                      <ul className=' bg-white text-black w-[300px] shadow-lg z-50 px-6 py-5 mt-2'
+                      onClick={() => setIsMenuOpen(false)}>
+                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
+                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
+                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
+                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
+                        <Link to='/services'><li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link>
+                      </ul>
+                    )}
                   </li>
                   <li className='hover:text-[#2FEAE4]'>
                     <NavLink to='/training' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}

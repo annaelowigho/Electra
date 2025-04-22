@@ -12,7 +12,7 @@ import { LuPlus } from "react-icons/lu";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { IoTimeOutline } from "react-icons/io5";
-
+import { LiaTimesSolid } from "react-icons/lia";
 
 
 const Process = [
@@ -54,12 +54,79 @@ const Process = [
     },
 ]
 
+const FAQs = [
+    {
+        question: "How much can I save on fuel with CNG?",
+        answer: "CNG fuel costs up to 40% less than petrol and is more efficient for long-lasting driving."
+    },
+    {
+        question: "Is the conversion safe for my engine?",
+        answer: "Yes, we use government-approved kits and follow the NADDC-certified installation process"
+    },
+    {
+        question: "What happens if I run out of CNG?",
+        answer: "Your vehicle can automatically switch to petrol, as our systems are bi-fuel compatible."
+    },
+    {
+        question: "Will I get a certificate?",
+        answer: "Yes. All converted vehicles receive a CNG"
+    }
+]
+
+// FAQ Item Component
+function FAQItem({ question, answer }) {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleAnswer = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    // Create a unique ID for accessibility (use question as base, sanitized)
+    const answerId = `faq-answer-${question.toLowerCase().replace(/\s+/g, '-')}`;
+  
+    return (
+      <div className="bg-[#2FEAE4] rounded-xl">
+        <div className="p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center">
+          <p className="text-[16px] md:text-[24px] font-semibold">{question}</p>
+          <button
+            onClick={toggleAnswer}
+            className="bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center cursor-pointer transition-transform duration-200"
+            aria-expanded={isOpen}
+            aria-controls={answerId}
+            type="button"
+          >
+            <span
+              className={`text-white text-xl md:text-2xl transition-transform duration-200 ${
+                isOpen ? 'rotate-45' : 'rotate-0'
+              }`}
+            >
+              <LuPlus />
+            </span>
+          </button>
+        </div>
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          id={answerId}
+        >
+          <p className="py-1 px-3 md:p-5 xl:px-[50px] xl:py-[22px] text-[16px] md:text-[24px] font-medium">
+            {answer}
+          </p>
+        </div>
+      </div>
+    );
+  }
 const CNG = () => {
 
     const [vehicleType, setVehicleType] = useState("");
     const [cylinderType, setCylinderType] = useState("");
     const [date, setDate] = useState("");
-    const [time, setTime] = useState("")
+    const [time, setTime] = useState("");
+    const [isOpen, setIsOpen] = useState(false);
+
+    
+
   return (
     <>
         <div className="bg-[url(/assets/cng-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
@@ -173,22 +240,24 @@ const CNG = () => {
                             <Map />
                         </div>
                         <div className='pt-[30px]'>
-                            <div className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] font-semibold
-                            w-full'>
-                                <input type="radio" id='asaba' name='location' value='Asaba'/>
+                            <label htmlFor='asaba' className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] 
+                            font-semibold w-full cursor-pointer'>
+                                <input type="radio" id='asaba' name='location' value='Asaba'
+                                className="w-6 h-6 accent-[#002748]"/>
                                 <div>
                                     <p className='leading-4'>Delta State Innovation Hub</p>
                                     <p className='text-[#a09e9e]'>Asaba</p>
                                 </div>
-                            </div>
-                            <div className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] font-semibold
-                            w-full mt-[30px]'>
-                                <input type="radio" id='ibusa' name='location' value='Ibusa'/>
+                            </label>
+                            <label htmlFor='ibusa' className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] 
+                            font-semibold w-full mt-[30px] cursor-pointer'>
+                                <input type="radio" id='ibusa' name='location' value='Ibusa'
+                                className="w-6 h-6 accent-[#002748]"/>
                                 <div>
                                     <p className='leading-4'>Delta State Industrial Estate</p>
                                     <p className='text-[#a09e9e]'>Ibusa Road, Asaba</p>
                                 </div>
-                            </div>
+                            </label>
                         </div>
                     </div>
                     <div className='md:w-1/2'>
@@ -275,29 +344,42 @@ const CNG = () => {
             <h2 className='text-[30px] text-center font-semibold md:text-[48px]'>Frequently Asked Questions</h2>
             <p className="text-center text-[20px] md:text-[24px]">Find answers to common questions  about CNG  Conversion and its Benefits </p>
             <div className='pt-[30px] flex flex-col gap-5 md:gap-10 xl:gap-14'>
-                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
-                    <p className='text-[16px] md:text-[24px] font-semibold'>How much can I save on fuel with CNG?</p>
-                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
-                        <LuPlus className='text-white'/>
+                {/* <div className="bg-[#2FEAE4] rounded-xl">
+                    <div className="p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center">
+                    <p className="text-[16px] md:text-[24px] font-semibold">
+                        How much can I save on fuel with CNG?
+                    </p>
+                    <button
+                    onClick={toggleAnswer}
+                    className="bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center cursor-pointer transition-transform duration-200"
+                    aria-expanded={isOpen}
+                    aria-controls="faq-answer"
+                    type="button"
+                    >
+                        <span
+                            className={`text-white text-xl md:text-2xl transition-transform duration-200 ${
+                            isOpen ? 'rotate-45' : 'rotate-0'
+                            }`}
+                        >
+                            <LuPlus />
+                        </span>
+                    </button>
                     </div>
-                </div>
-                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
-                    <p className='text-[16px] md:text-[24px] font-semibold'>Is the conversion safe for my engine?</p>
-                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
-                        <LuPlus className='text-white'/>
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        isOpen ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'
+                        }`} id="faq-answer"
+                    >
+                        <p className="py-1 px-3 md:p-5 xl:px-[50px] xl:py-[22px] text-[16px] md:text-[24px] font-medium">
+                            CNG fuel costs up to 40% less than petrol and is more efficient for
+                            long-lasting driving.
+                        </p>
                     </div>
-                </div>
-                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
-                    <p className='text-[16px] md:text-[24px] font-semibold'>What happens if I run out of CNG?</p>
-                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
-                        <LuPlus className='text-white'/>
-                    </div>
-                </div>
-                <div className='bg-[#2FEAE4] p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center rounded-xl'>
-                    <p className='text-[16px] md:text-[24px] font-semibold'>Will I get a certificate?</p>
-                    <div className='bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center'>
-                        <LuPlus className='text-white'/>
-                    </div>
+                </div> */}
+
+                <div className="pt-[30px] flex flex-col gap-5 md:gap-10 xl:gap-14">
+                    {FAQs.map((item, index) => (
+                    <FAQItem key={index} question={item.question} answer={item.answer} />
+                    ))}
                 </div>
             </div>
         </div>
