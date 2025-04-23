@@ -64,8 +64,9 @@ const Homepage = () => {
 
             {/* Hero Section */}
             <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
-                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-60px] left-[620px] hidden min-[1300px]:block min-[1900px]:left-[940px]'/>
-                <img src="/assets/dots.svg" alt="" className='absolute top-[470px] left-[318px] hidden min-[1300px]:block'/>
+                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-60px] left-[600px] hidden min-[1300px]:block 
+                min-[1900px]:left-[940px]'/>
+                <img src="/assets/dots.svg" alt="" className='absolute top-[480px] left-[318px] hidden min-[1300px]:block'/>
                 <div className='flex flex-col '>
                     {/* <h1 className='text-[60px] md:text-[80px] font-bold text-[#111111] leading-[50px] md:leading-[81px]'>
                         Convert to CNG and  Save Up to 40%
@@ -73,7 +74,11 @@ const Homepage = () => {
                     {/* <p className='text-[24px] font-medium py-[15px] w-[508px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p> */}
-                    <h1 className='text-[60px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px]'>
+                    <h1 className='text-[60px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px] xl:hidden'>
+                        Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
+                    </h1>
+                    <h1 className='font-bold text-[#002748] leading-[60px] text-[60px] md:leading-[81px] hidden xl:block
+                    min-[1900px]:text-[69px]'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
                     <p className='text-[20px] pt-[15px] font-medium md:text-[24px]'>
@@ -150,7 +155,7 @@ const Homepage = () => {
             </div>
         </div>
         {/* Services */}
-        <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+        <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px]'>
@@ -160,8 +165,8 @@ const Homepage = () => {
                     hover:-translate-y-2'>
                         <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
-                            <h4 className='text-[18px] xl:text-[24px] font-semibold'>Book CNG Conversion</h4>
-                            <p className='text-[12px] xl:text-[17px]'>
+                            <h4 className='text-[18px] min-[1300px]:text-[24px] font-semibold'>Book CNG Conversion</h4>
+                            <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Save on fuel and go green with our certified CNG conversion service.
                             </p>
                             <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
@@ -176,8 +181,8 @@ const Homepage = () => {
                     hover:-translate-y-2'>
                         <img src="/assets/cng-training.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
-                            <h4 className='text-[18px] xl:text-[24px] font-semibold'>Join CNG Training</h4>
-                            <p className='text-[12px] xl:text-[17px]'>
+                            <h4 className='text-[18px] min-[1300px]:text-[24px] font-semibold'>Join CNG Training</h4>
+                            <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Master CNG conversion with our expert training. Get certified
                             </p>
                             <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
@@ -194,8 +199,8 @@ const Homepage = () => {
                     hover:-translate-y-2'>
                         <img src="/assets/cng-kits.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
-                            <h4 className='text-[18px] xl:text-[24px] font-semibold'>Buy CNG Kits</h4>
-                            <p className='text-[12px] xl:text-[17px]'>
+                            <h4 className='text-[18px] min-[1300px]:text-[24px] font-semibold'>Buy CNG Kits</h4>
+                            <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
                             </p>
                             <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
@@ -210,8 +215,8 @@ const Homepage = () => {
                     hover:-translate-y-2'>
                         <img src="/assets/cng-station.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
-                            <h4 className='text-[18px] xl:text-[24px] font-semibold'>Find CNG Refuelling Station</h4>
-                            <p className='text-[12px] xl:text-[17px]'>
+                            <h4 className='text-[18px] min-[1300px]:text-[24px] font-semibold'>Find CNG Refuelling Station</h4>
+                            <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Locate convenient and reliable CNG refueling stations near you. Fuel up and stay eco-friendly today!
                             </p>
                             <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
@@ -226,7 +231,7 @@ const Homepage = () => {
         </div>
 
         {/* Why choose us */}
-        <div className='mt-[50px] md:mt-[100px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+        <div className='mt-[50px] md:mt-[100px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
             <div className='flex items-center justify-center gap-3 md:gap-10 xl:gap-16'>
                 <img src="/assets/straight-dots.svg" alt="" />
                 <div>

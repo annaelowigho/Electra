@@ -44,7 +44,7 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className='relative' onMouseEnter={() => setIsDropdownOpen(true)}>
-            <NavLink to='' >
+            <NavLink>
               <div className='flex items-center hover:text-[#2FEAE4]'>
                 <p>Services</p>
                 <MdKeyboardArrowDown className='text-[24px]'/>
