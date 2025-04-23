@@ -110,8 +110,7 @@ const Nav = () => {
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(true)}>
-                    <NavLink className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
-                    >
+                    <NavLink >
                       <div className='flex items-center'>
                         <p>Services</p>
                         <MdKeyboardArrowDown className='text-[24px]'/>

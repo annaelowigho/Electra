@@ -64,7 +64,7 @@ const Homepage = () => {
 
             {/* Hero Section */}
             <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
-                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-60px] left-[600px] hidden min-[1300px]:block 
+                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-70px] left-[600px] hidden min-[1300px]:block 
                 min-[1900px]:left-[940px]'/>
                 <img src="/assets/dots.svg" alt="" className='absolute top-[480px] left-[318px] hidden min-[1300px]:block'/>
                 <div className='flex flex-col '>
@@ -77,7 +77,7 @@ const Homepage = () => {
                     <h1 className='text-[60px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px] xl:hidden'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
-                    <h1 className='font-bold text-[#002748] leading-[60px] text-[60px] md:leading-[81px] hidden xl:block
+                    <h1 className='font-bold text-[#002748] leading-[60px] text-[58px] md:leading-[81px] hidden xl:block
                     min-[1900px]:text-[69px]'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
