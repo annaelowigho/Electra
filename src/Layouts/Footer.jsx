@@ -15,7 +15,7 @@ const Footer = () => {
           <div className='flex flex-col gap-10 md:gap-0 md:flex-row md:justify-between'>
             <div className='w-full md:w-[245px]'>
               <img src="/assets/electra-logo.svg" alt="" />
-              <p className='text-white text-[14px] py-[15px] lg:py-[20px]'>
+              <p className='text-white text-[14px] xl:text-[18px] py-[15px] lg:py-[20px]'>
                 Electra Motors Limited, based in Nigeria, offers expert vehicle maintenance, repairs, and CNG conversion.
                 Committed to sustainability and exceptional service, it aims to lead the Nigerian automotive sector
               </p>
@@ -28,8 +28,8 @@ const Footer = () => {
             <div className='text-white'>
               <h5 className='text-[25px] font-semibold'>Company</h5>
               <div className='pt-4 flex flex-col gap-3'>
-                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>About Us</a>
-                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Services</a>
+                <a href="/electra" className='text-[18px] hover:text-[#2FEAE4]'>About Us</a>
+                <a href="/services" className='text-[18px] hover:text-[#2FEAE4]'>Services</a>
                 <a href="/careers" className='text-[18px] hover:text-[#2FEAE4]'>Careers</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>FAQs</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
