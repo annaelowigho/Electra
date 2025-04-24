@@ -6,6 +6,11 @@ import { MdHomeWork } from "react-icons/md";
 import { IoCalendarNumberOutline } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
+import { FaCar } from "react-icons/fa";
+import { PiCertificateBold } from "react-icons/pi";
+import { IoIosPeople } from "react-icons/io";
+import { LuPlus } from "react-icons/lu";
+
 
 const JobCard = [
     {
@@ -82,6 +87,114 @@ const JobCard = [
     }
 ]
 
+const ChooseUs = [
+    {
+        icon: FaCar,
+        title: "Pioneering EV & CNG Innovation in Nigeria",
+        description: "Join Nigeria's green transport revolution and shape Africa's mobility future."
+    },
+    {
+        icon: PiCertificateBold,
+        title: "Certified Training & Career Growth",
+        description: "Unlock learning with global certifications and career growth opportunities."
+    },
+    {
+        icon: FaCar,
+        title: "Sustainable & Impact-Driven Vision",
+        description: "Help cut carbon emissions and create a sustainable future for Nigeria"
+    },
+    {
+        icon: IoIosPeople,
+        title: "Supportive Team Culture",
+        description: "Be part of a team that champions innovation, inclusion, and work-life balance."
+    }
+]
+
+const Testimonials = [
+    {
+        image: "/assets/testimonial3.svg",
+        description: "Working at Electra Motors has been a career high—advancing Nigeria's sustainable future through innovative EV technology while growing professionally and personally.",
+        name: "Adeboye Johnson",
+        position: "Senior Engineer, 3 years"
+    },
+    {
+        image: "/assets/testimonial2.svg",
+        description: "At Electra Motors, I'm proud to help transform transportation in Nigeria—it's more than a job; it's a mission",
+        name: "Chioma Okafor",
+        position: "Marketing Specialist, 2 years"
+    },
+    {
+        image: "/assets/testimonial3.svg",
+        description: "Electra Motors' training elevated my career basic automotive skills to CNG conversion expertise &  shaped Nigeria's energy future.",
+        name: "Emmanuel Nwachukwu",
+        position: "CNG Technicians, 6 months"
+    }
+]
+
+const FAQs = [
+    {
+        question: "What is the Process like?",
+        answer: "Review the available job opportunities listed on our platform and click the apply now button corresponding to the job you're interested in.",
+        
+    },
+    {
+        question: "Where is the office located?",
+        answer: "The office is situated at Delta State Innovation Hub, No. 1 DBS Junction, Okpanam Road, Beside Zenith Bank, Asaba, Delta State, Nigeria."
+    },
+    {
+        question: "What are the training benefits?",
+        answer: "CNG conversion services for vehicles, Technical Training to enhance skills and meet industry demands, and Sales of high-quality conversion kits to streamline the CNG transition process."
+    },
+    {
+        question: "Can I apply without experience?",
+        answer: "Yes! Beginners are welcome. The focus is on yor interest and willingness to learn."
+    }
+]
+
+// FAQ Item Component
+function FAQItem({ question, answer }) {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleAnswer = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    // Create a unique ID for accessibility (use question as base, sanitized)
+    const answerId = `faq-answer-${question.toLowerCase().replace(/\s+/g, '-')}`;
+  
+    return (
+      <div className="bg-[#D9E8F4] rounded-xl">
+        <div className="p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center">
+          <p className="text-[16px] md:text-[24px] font-semibold">{question}</p>
+          <button
+            onClick={toggleAnswer}
+            className="bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center cursor-pointer transition-transform duration-200"
+            aria-expanded={isOpen}
+            aria-controls={answerId}
+            type="button"
+          >
+            <span
+              className={`text-white text-xl md:text-2xl transition-transform duration-200 ${
+                isOpen ? 'rotate-45' : 'rotate-0'
+              }`}
+            >
+              <LuPlus />
+            </span>
+          </button>
+        </div>
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          id={answerId}
+        >
+          <p className="py-1 px-3 md:p-5 xl:px-[50px] xl:py-[22px] text-[16px] md:text-[24px] font-medium">
+            {answer}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
 const Careers = () => {   
   
@@ -191,30 +304,133 @@ const Careers = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className='bg-[#002748] py-[20px] md:py-[50px] xl:py-[100px] px-[20px] md:px-[30px] xl:px-[150px]'>
+        <div className='bg-[#002748] py-[30px] md:py-[50px] xl:py-[100px] px-[20px] md:px-[30px] xl:px-[100px]'>
             <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-7 md:leading-12 xl:leading-14 text-white">
                 Why Choose Us
             </h2>
-            {/* <div className='pt-[30px] md:pt-[50px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[30px]'>          
-                {Courses.map((item, index) => {
+            <div className='pt-[30px] md:pt-[50px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[30px]'>          
+                {ChooseUs.map((item, index) => {
                     const Icon = item.icon
                     return (
-                        <div key={index} className='bg-white w-full h-[200px] md:h-[266px] rounded-2xl p-[15px] flex flex-col justify-between'>
-                            <div className='flex justify-center items-center bg-[#002748] w-[50px] h-[50px] rounded-full'>
-                                <Icon className='text-[24px] text-white'/>
+                        <div key={index} className='bg-white px-[18px] py-[30px] flex flex-col items-center rounded-xl
+                        h-[255px] xl:h-[270px] hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'>
+                            <div className='bg-[#002748] h-[50px] w-[50px] rounded-full flex items-center justify-center'>
+                                <Icon className='text-[30px] text-white'/>
                             </div>
-                            <h5 className='text-[17px] font-semibold'>{item.heading}</h5>
-                            <p className='text-[15px] font-semibold'>
-                                {item.description}
-                            </p>
-                            <button className='text-[#002748] flex items-center gap-2 text-[15px] font-semibold cursor-pointer'>
-                            <p>{item.button}</p>
-                            <PiGreaterThan className='text-[13px]'/>
-                            </button>
+                            <h4 className='text-[18px] font-semibold pt-5 text-center'>{item.title}</h4>
+                            <p className='text-center pt-5 text-[14px]'>{item.description}</p>
                         </div>
                     )         
                 })}
-            </div> */}
+            </div>
+        </div>
+
+        {/* General Application */}
+        <div className='py-[30px] md:py-[50px] xl:py-[100px] px-[20px] md:px-[30px] xl:px-[150px]'>
+            <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-7 md:leading-12 xl:leading-14">
+                General Application
+            </h2>
+            <p className="text-[20px] md:text-[24px] text-center pt-[10px]">No matching role? Submit your CV — we're always seeking talent</p>
+            <div className='bg-[#D9E8F4] mt-[30px] xl:pt-[50px] rounded-xl p-[20px] xl:p-[50px]'>
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <div className='text-[18px] md:text-[24px] font-semibold flex flex-col gap-2 w-full'>
+                        <label htmlFor="">Full-Name</label>
+                        <input type="text" className='bg-white rounded-md p-3'/>
+                    </div>
+                    <div className='text-[18px] md:text-[24px] font-semibold flex flex-col gap-2 w-full'>
+                        <label htmlFor="">Email Address</label>
+                        <input type="email" className='bg-white rounded-md p-3'/>
+                    </div>
+                </div>
+                <div className='flex flex-col md:flex-row gap-4 md:pt-4'>
+                    <div className='text-[18px] md:text-[24px] font-semibold flex flex-col gap-2 w-full pt-4 md:pt-0'>
+                        <label htmlFor="">Phone Number</label>
+                        <input type="text" className='bg-white rounded-md p-3'/>
+                    </div>
+                    <div className='text-[18px] md:text-[24px] font-semibold flex flex-col gap-2 w-full'>
+                        <label htmlFor="">Preferred Department</label>
+                        <div className='bg-white rounded-md p-3 font-normal'>
+                            <select name="" id="" className='w-full outline-none'>
+                                <option value="" hidden disabled>Select Department</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div className='pt-4 flex flex-col'>
+                    <label htmlFor="" className=' text-[18px] md:text-[24px] font-semibold pb-3'>Upload CV (PDF or DOC)</label>
+                    <div className='bg-white rounded-md p-3 flex justify-between items-center'>
+                        <input type="file" className=''/>
+                        <button className='bg-[#002748] px-3 py-2 rounded-md text-white hidden md:block'>
+                            Browse File
+                        </button>
+                    </div>
+                </div>
+                <div className='pt-4 flex flex-col'>
+                    <label htmlFor="" className=' text-[18px] md:text-[24px] font-semibold pb-3'>Cover Letter/Additional Information</label>
+                    <textarea name="" id="" className='bg-white rounded-md p-3 resize-none' rows='5'/>
+                </div>
+                <div className='pt-4 space-x-3 flex items-center'>
+                    <input type="checkbox" id='agree' className='w-[30px] md:w-[24px] h-[30px] md:h-[24px] cursor-pointer'/>
+                    <label htmlFor="agree" className='text-[18px] md:text-[24px] font-semibold cursor-pointer leading-5'>
+                        I agree to Electra Motors using my personal data for recruitment
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+        {/* Testimonials */}
+        <div className='pb-[30px] md:pb-[50px] xl:pb-[100px] px-[20px] md:px-[30px] xl:px-[150px]'>
+            <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-7 md:leading-12 xl:leading-14">
+                Testimonials
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-center gap-8 justify-center'>
+                {Testimonials.map((item, index) => {
+                    return (
+                        <div key={index} className='mt-[20px] xl:mt-[50px] flex flex-col items-center shadow-lg rounded-xl p-[35px] gap-5 
+                        text-[16px] font-semibold h-[255px] md:h-[360px] xl:h-[380px] hover:bg-[#002748] transition-all duration-300 
+                        hover:-translate-y-2 hover:text-white'>
+                            <img src={item.image} alt="" />
+                            <p className='text-center'>{item.description}</p>
+                            <div className='text-center'>
+                                <p>{item.name}</p>
+                                <p className='text-[gray]'>{item.position}</p>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className='px-[20px] pb-[20px] md:px-[30px] md:pb-[50px] xl:px-[200px] xl:pb-[150px]'>
+            <h2 className='text-[30px] text-center font-semibold md:text-[48px]'>Frequently Asked Questions</h2>
+            <p className="text-center text-[20px] md:text-[24px]">Find answers to common questions  about CNG  Conversion and its Benefits </p>
+            <div className='pt-[30px] flex flex-col gap-5 md:gap-10 xl:gap-14'>
+                <div className="pt-[30px] flex flex-col gap-5 md:gap-10 xl:gap-14">
+                    {FAQs.map((item, index) => (
+                    <FAQItem key={index} question={item.question} answer={item.answer} />
+                    ))}
+                </div> 
+            </div>
+        </div>
+
+        <div className='bg-[#2FEAE4] py-[30px] md:py-[50px] xl:py-[100px] px-[20px] md:px-[30px] xl:px-[150px] mb-[30px] 
+        md:mb-[50px] xl:mb-[100px]'>
+            <div className='flex flex-col space-y-4 items-center'>
+                <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-7 md:leading-12 xl:leading-14">
+                    Can't find a role that suits you?
+                </h2>
+                <p className="text-[20px] md:text-[24px] text-center pt-[10px]">
+                    Submit your CV anyway — we'd love to meet you and keep you in mind for future opportunities 
+                    that match your skills and interests.
+                </p>
+                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer px-6 py-4 text-center
+                mt-[15px] hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px]
+                hover:border-[#002748] hover:text-[#002748]'>
+                    Open Application Form
+                </button>
+            </div>
         </div>
     </>
   )

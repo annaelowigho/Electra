@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { BiCalendarCheck, BiSupport } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
 import { IoTimeOutline } from "react-icons/io5";
@@ -145,11 +146,13 @@ const Homepage = () => {
                                 </select>
                             </div>
                         </div>
-                        <button className='text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0
-                        rounded-lg cursor-pointer md:w-[400px] xl:w-[135px] text-[#002748] hover:shadow-lg transition-transform-y duration-500 
-                        hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
-                            Book Now
-                        </button>
+                        {/* <Link to='/book-now'> */}
+                            <button className='text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0
+                            rounded-lg cursor-pointer md:w-[400px] xl:w-[135px] text-[#002748] hover:shadow-lg transition-transform-y 
+                            duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
+                                Book Now
+                            </button>
+                        {/* </Link> */}
                     </div>
                 </div>
             </div>

@@ -14,6 +14,7 @@ import Careers from './Pages/Careers'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import BookNow from './Pages/BookNow'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <Route path='/training' element={<Training />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/careers' element={<Careers />} />
+            <Route path='/book-now' element={<BookNow />} />
           </Routes>
           <Footer />
       </Loader>

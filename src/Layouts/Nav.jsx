@@ -26,7 +26,7 @@ const Nav = () => {
     <>
       <header className={`bg-[#002748] w-full flex items-center justify-between px-[20px] md:px-[50px] xl:px-[101px] py-[20px]
       transition-all duration-500 ${isFixed ? "fixed top-0 left-0 shadow-lg z-50" : "" }`}>
-        <img src="/assets/electra-logo.svg" alt="" />
+        <Link to="/"><img src="/assets/electra-logo.svg" alt="" /></Link>
         <ul className='hidden xl:flex text-white gap-[45px] text-[18px] font-semibold font-primary'>
           <li className="hover:text-[#2FEAE4]">
             <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}>
@@ -73,11 +73,13 @@ const Nav = () => {
             </NavLink>
           </li>
         </ul>
-        <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer text-[#002748]
-        hidden xl:block hover:shadow-lg transition-all duration-500 hover:scale-105 hover:bg-transparent hover:border-[3px]
-        hover:border-[#2FEAE4] hover:text-white'>
-          Book Now
-        </button>
+        <Link to='/book-now'>
+          <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer text-[#002748]
+          hidden xl:block hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-transparent hover:border-[3px]
+          hover:border-[#2FEAE4] hover:text-white'>
+            Book Now
+          </button>
+        </Link>
 
         {/* Mobile menu */}
         <div className='xl:hidden'>
@@ -142,11 +144,13 @@ const Nav = () => {
                 </ul>
 
                 <div className='py-[30px] flex items-center justify-center'>
-                  <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
-                  hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px]
-                hover:border-[#2FEAE4] hover:text-white'>
-                    Book Now
-                  </button>
+                  <Link to='/book-now' onClick={() => setIsMenuOpen(false)}>
+                    <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
+                    hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px]
+                  hover:border-[#2FEAE4] hover:text-white'>
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             )}
