@@ -85,7 +85,7 @@ function FAQItem({ question, answer }) {
     const answerId = `faq-answer-${question.toLowerCase().replace(/\s+/g, '-')}`;
   
     return (
-      <div className="bg-[#2FEAE4] rounded-xl">
+      <div className="bg-[#D9E8F4] rounded-xl">
         <div className="p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center">
           <p className="text-[16px] md:text-[24px] font-semibold">{question}</p>
           <button
@@ -177,7 +177,7 @@ const CNG = () => {
                 <div className='lg:w-1/2 flex flex-col justify-between xl:justify-center xl:gap-10 pt-8 lg:pt-0'>
                     <div>
                         <h5 className='text-[24px] font-semibold'>Vehicle Type</h5>
-                        <div className="rounded-3xl bg-[#D9D9D9] w-full p-[20px] md:p-[30px] mt-3 text-[24px] ">
+                        <div className="rounded-3xl bg-[#D9E8F4] w-full p-[20px] md:p-[30px] mt-3 text-[24px] ">
                             <select
                                 name="serviceType"
                                 id="serviceType"
@@ -196,7 +196,7 @@ const CNG = () => {
                     </div>
                     <div className='pt-5 lg:pt-0'>
                         <h5 className='text-[24px] font-semibold'>Cylinder Type</h5>
-                        <div className="rounded-3xl bg-[#D9D9D9] w-full p-[20px] md:p-[30px] mt-3 text-[24px] ">
+                        <div className="rounded-3xl bg-[#D9E8F4] w-full p-[20px] md:p-[30px] mt-3 text-[24px] ">
                             <select
                                 name="cylinderType"
                                 id="cylinderType"
@@ -266,7 +266,7 @@ const CNG = () => {
                         <div className='flex flex-col space-y-5'>
                             <div>
                                 <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Date</p>
-                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl'>
+                                <div className='bg-[#D9E8F4] px-5 py-3 rounded-2xl'>
                                     <select
                                         name="date"
                                         id="date"
@@ -285,7 +285,7 @@ const CNG = () => {
                             </div>
                             <div>
                                 <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Time</p>
-                                <div className='bg-[#2FEAE4] px-5 py-3 rounded-2xl text-gray-500 flex items-center gap-4 text-[18px] w-[225px]'>
+                                <div className='bg-[#D9E8F4] px-5 py-3 rounded-2xl text-gray-500 flex items-center gap-4 text-[18px] w-[225px]'>
                                     <IoTimeOutline className='text-[28px]' />
                                     <DatePicker
                                     selected={time}
@@ -303,7 +303,7 @@ const CNG = () => {
                                 </div>
                             <div>
                                 <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Contact Information</p>
-                                <input type="text" className='bg-[#D9D9D9] px-5 py-3 rounded-2xl w-full xl:w-[385px]'/>
+                                <input type="text" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full xl:w-[385px]'/>
                             </div>
                             <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
                             cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0 lg:w-[162px] hover:shadow-lg 

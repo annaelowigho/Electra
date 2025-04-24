@@ -294,11 +294,11 @@ const Homepage = () => {
                 <div className='lg:w-1/2'>
                     <form action="submit">
                         <input type="email" placeholder='Email Address' 
-                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium'/>
+                        className='bg-[#D9E8F4] p-[20px] rounded-xl w-full text-[18px] font-medium'/>
                         <input type="text" placeholder='Full Name' 
-                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px]'/>
+                        className='bg-[#D9E8F4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px]'/>
                         <textarea name="message" id="message" placeholder='Message' rows='4'
-                        className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px] resize-none'></textarea>
+                        className='bg-[#D9E8F4] p-[20px] rounded-xl w-full text-[18px] font-medium mt-5 xl:mt-[30px] resize-none'></textarea>
                         <div className=''>
                         <button
                         className="text-[16px] md:text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 

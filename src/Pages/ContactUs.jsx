@@ -104,11 +104,11 @@ const ContactUs = () => {
         <div className='py-[20px] md:py-[50px] xl:py-[150px] px-[20px] md:px-[30px] xl:px-[100px] flex flex-col lg:flex-row lg:justify-center lg:gap-[50px] xl:gap-[100px]'>
             <div className='w-full lg:w-1/2'>
                 <form action="" className='space-y-[10px] xl:space-y-[30px]'>
-                    <input type="text" placeholder='Full Name' className='bg-[#2FEAE4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
-                    <input type="email" placeholder='Email Address' className='bg-[#2FEAE4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
-                    <input type="email" placeholder='Phone Number' className='bg-[#2FEAE4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
+                    <input type="text" placeholder='Full Name' className='bg-[#D9E8F4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
+                    <input type="email" placeholder='Email Address' className='bg-[#D9E8F4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
+                    <input type="email" placeholder='Phone Number' className='bg-[#D9E8F4] text-[18px] font-medium p-[25px] rounded-2xl w-full' />
                     <textarea name="message" id="message" placeholder='Message' rows='4'
-                    className='bg-[#2FEAE4] p-[20px] rounded-xl w-full text-[18px] font-medium resize-none'></textarea>
+                    className='bg-[#D9E8F4] p-[20px] rounded-xl w-full text-[18px] font-medium resize-none'></textarea>
                     <button className='font-primary text-[18px] md:text-[22px] text-white font-semibold bg-[#002748] rounded-lg 
                     cursor-pointer w-full xl:w-[203px] h-[52px] hover:bg-[#2FEAE4]
                     hover:border-[3px] hover:border-[#002748] hover:text-[#002748] hover:shadow-lg
@@ -117,7 +117,7 @@ const ContactUs = () => {
                     </button>
                 </form>
             </div>
-            <div className='bg-[#2FEAE4] p-[30px] xl:p-[50px] flex flex-col items-center justify-center rounded-2xl mt-[50px] w-full lg:w-1/2 lg:mt-0'>
+            <div className='bg-[#D9E8F4] p-[30px] xl:p-[50px] flex flex-col items-center justify-center rounded-2xl mt-[50px] w-full lg:w-1/2 lg:mt-0'>
                 <h5 className='text-[24px] font-semibold'>Our Newsletter</h5>
                 <p className='text-[18px] font-medium pt-[25px] text-center'>
                     Stay Ahead on the Road: Exclusive Updates on 
