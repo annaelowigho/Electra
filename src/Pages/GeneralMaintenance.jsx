@@ -16,32 +16,32 @@ const GeneralMaintenance = () => {
 
   const Maintenance = [
     {
-        icon: "FaOilCan",
+        icon: FaOilCan,
         title: "Regular Oil Changes",
         description: "Change your engine oil every 5,000-7,000 km to combat Nigeria's dusty environment & use high-quality tropical-grade oils like 5W-30 or 10W-40 for optimal performance."
     },
     {
-        icon: "PiTireBold",
+        icon: PiTireBold,
         title: "Tyre Maintenance",
         description: "Check tyre pressure monthly (30-35 PSI for most cars). Rotate tyres every 10,000 km and inspect for wear, as potholes and rough roads are common"
     },
     {
-        icon: "TbCarTurbine",
+        icon: TbCarTurbine,
         title: "Brake System Checks",
         description: "Inspect brake pads and fluid levels every 6 months. Heavy traffic in cities like Abuja and Lagos stresses brakes, so replace pads every 20,000-30,000 km."
     },
     {
-        icon: "PiCarBatteryBold",
+        icon: PiCarBatteryBold,
         title: "Battery Care",
         description: " Clean battery terminals monthly to prevent corrosion, common in humid areas. Check voltage (12.6V when off) and replace batteries every 2-3 years"
     },
     {
-        icon: "PiTireBold",
+        icon: PiTireBold,
         title: "Air Filter Replacement",
         description: "Replace air filters every 10,000 km or sooner in dusty regions like the North. Clogged filters reduce fuel efficiency and engine performance."
     },
     {
-        icon: "PiTireBold",
+        icon: PiTireBold,
         title: "Cooling System Maintenance",
         description: "Flush and refill coolant every 2 years to prevent overheating, critical in Nigeria’s hot climate. Check radiator and hoses for leaks regularly."
     }
@@ -79,12 +79,12 @@ const GeneralMaintenance = () => {
                 and prolong your car's life
             </p>
         </div>
-        <div className='bg-[#002748] py-[30px] md:py-[50px] xl:py-[80px] px-[20px] md:px-[30px] xl:px-[100px]'>
+        <div className='bg-[#002748] py-[30px] md:py-[50px] xl:py-[80px] px-[20px] md:px-[30px] xl:px-[150px]'>
             <h2 className="text-[30px] text-center font-semibold md:text-[48px] text-white leading-10 md:leading-14">
                 Essential Maintenance Tips
             </h2>
-            <div className='pt-[30px] md:pt-[50px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-[30px]'>          
-                {/* {ChooseUs.map((item, index) => {
+            <div className='pt-[30px] md:pt-[50px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px]'>          
+                {Maintenance.map((item, index) => {
                     const Icon = item.icon
                     return (
                         <div key={index} className='bg-white px-[18px] py-[30px] flex flex-col items-center rounded-xl
@@ -96,7 +96,96 @@ const GeneralMaintenance = () => {
                             <p className='text-center pt-5 text-[14px]'>{item.description}</p>
                         </div>
                     )         
-                })} */}
+                })}
+            </div>
+        </div>
+        <div className='py-[30px] md:py-[50px] xl:py-[80px] px-[20px] md:px-[30px] xl:px-[100px]'>
+            <h2 className="text-[30px] text-center font-semibold md:text-[48px] leading-10 md:leading-14">
+                Recommended Maintenance Schedule
+            </h2>
+            <div className='w-[600px] md:w-full overflow-x-scroll rounded-t-2xl xl:overflow-hidden mt-5 flex flex-col'>
+                <div className='bg-[#002748] text-white 
+                flex text-[24px] font-semibold justify-around xl:'>
+                    <h4>Tasks</h4>
+                    <h4>Frequency</h4>
+                    <h4>Notes</h4>
+                </div>
+                {/* <div className='pt-5 flex justify-around xl:justify-between px-[20px] xl:px-[50px] py-5 '>
+                    <div className='space-y-5 text-center'>
+                        <p>Oil Change</p>
+                        <p>Tyre Rotation</p>
+                        <p>Brake Inspection</p>
+                        <p>Battery Check</p>
+                        <p>Air Filter</p>
+                        <p>Coolant Flush</p>
+                    </div>
+                    <div className='space-y-5 text-center'>
+                        <p>Every 5,000-7,000 km</p>
+                        <p>Every 10,000 km</p>
+                        <p>Every 6 months</p>
+                        <p>Monthly</p>
+                        <p>Every 10 km</p>
+                        <p>Every 2 years</p>
+                    </div>
+                    <div className='space-y-5 text-center'>
+                        <p>Use synthetic oil for high temperatures.</p>
+                        <p>Balance and Align wheels.</p>
+                        <p>Check pads, disc, and fluid.</p>
+                        <p>Clean Terminal, check charge.</p>
+                        <p>Inspect more often in dusty areas.</p>
+                        <p>Use ethylene glycol-based coolant.</p>
+                    </div>
+                </div> */}
+            </div>
+            <div className='overflow-x-scroll md:overflow-x-hidden'>
+                <table className="w-[500px] md:w-full">
+                    <tbody className=" [&>tr>td]:pt-[10px]">
+                        <tr className='font-semibold'>
+                            <td>
+                                <p className="text-start text-[16px] md:text-[24px]">Basic CNG Installation</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">4 weeks</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">₦150,000</p>
+                            </td>
+                        </tr>
+                        <tr className='font-semibold'>
+                            <td>
+                                <p className="text-start text-[16px] md:text-[24px]">Advanced Conversion & Tuning</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">4 weeks</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">₦200,000</p>
+                            </td>
+                        </tr>
+                        <tr className='font-semibold'>
+                            <td>
+                                <p className="text-start text-[16px] md:text-[24px]">Station Operation & Management</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">4 weeks</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">₦300,000</p>
+                            </td>
+                        </tr>
+                        <tr className='font-semibold'>
+                            <td>
+                                <p className="text-start text-[16px] md:text-[24px]">Full Technician Bundle (All 3)</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">12 weeks</p>
+                            </td>
+                            <td className='px-3'>
+                                <p className="text-start text-[16px] md:text-[24px]">₦500,000</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </>

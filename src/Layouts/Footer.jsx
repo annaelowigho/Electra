@@ -28,7 +28,7 @@ const Footer = () => {
             <div className='text-white'>
               <h5 className='text-[25px] font-semibold'>Company</h5>
               <div className='pt-4 flex flex-col gap-3'>
-                <a href="/electra" className='text-[18px] hover:text-[#2FEAE4]'>About Us</a>
+                <a href="/electra" className='text-[18px] hover:text-[#2FEAE4]'>Electra</a>
                 {/* <Link to='/electra'>About Us</Link> */}
                 <a href="/services" className='text-[18px] hover:text-[#2FEAE4]'>Services</a>
                 <a href="/careers" className='text-[18px] hover:text-[#2FEAE4]'>Careers</a>
