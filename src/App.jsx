@@ -15,6 +15,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import BookNow from './Pages/BookNow'
+import GeneralMaintenance from './Pages/GeneralMaintenance'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
             <Route path='/electra' element={<AboutUs />}/>
             <Route path='/cng' element={<CNG />}/>
             <Route path='/services' element={<Services />} />
+            <Route path='/services/:id' element={<GeneralMaintenance />}/>
             <Route path='/training' element={<Training />} />
             <Route path='/contact-us' element={<ContactUs />} />
             <Route path='/careers' element={<Careers />} />

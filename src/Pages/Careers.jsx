@@ -196,7 +196,7 @@ function FAQItem({ question, answer }) {
     );
   }
 
-const Careers = () => {   
+const Careers = () => {    
   
     const [departments, setDepartments] = useState("");
 

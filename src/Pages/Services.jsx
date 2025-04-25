@@ -1,65 +1,76 @@
 import React from 'react'
 import { FiPhoneForwarded } from "react-icons/fi";
+import { Link } from 'react-router-dom'
 
 
 const Service = [
     {
+        id: "cng-conversion",
         image: "/assets/gas-white.svg",
         heading: "Certified CNG Conversion",
         description: "Professional CNG conversion service with government certification. Save on fuel cost while being environmental conscious",
         button: "Read More"
     },
     {
+        id: "cng-training",
         image: "/assets/training.svg",
         heading: "CNG Training",
         description: "Comprehensive training programs for mechanics & technicians on CNG system installation, maintenance, & troubleshooting",
         button: "Read More"
     },
     {
+        id: "cng-kits",
         image: "/assets/cng-kits.svg",
         heading: "Buy CNG Kits",
         description: "Buy top-quality CNG kits for all vehicles, with expert advice to find the perfect system",
         button: "Read More"
     },
     {
+        id: "refuelling-station",
         image: "/assets/refilling.svg",
         heading: "Find CNG Refuelling Station",
         description: "Locate CNG refueling stations with our directory to keep your vehicle running.",
         button: "Read More"
     },
     {
+        id: "body-repairs",
         image: "/assets/repair.svg",
         heading: "Body Repairs and Painting",
         description: "Restore your vehicle's exterior with expert painting and dent removal for a brand-new look.",
         button: "Read More"
     },
     {
+        id: "general-maintenance",
         image: "/assets/maintenance.svg",
         heading: "General Maintenance",
         description: "Regular maintenance: oil changes, filter replacements, fluid checks, and inspections to keep your vehicle smooth.",
         button: "Read More"
     },
     {
+        id: "spare-parts",
         image: "/assets/spare-parts.svg",
         heading: "Spare Parts Sale",
         description: "Genuine spare parts for all major brands. Quality parts ensure optimal vehicle performance.",
         button: "Read More"
     },
     {
+        id: "engine-refurbishing",
         image: "/assets/engine.svg",
         heading: "Engine Refurbishing",
         description: "Complete engine overhaul and rebuilding services to restore performance and extend the lifespan of your vehicle's power plant.",
         button: "Read More"
     },
     {
+        id: "vehicle-diagnostic",
         image: "/assets/diagnostics.svg",
         heading: "Vehicle Diagnostic",
         description: "Advanced computer diagnostics to identify and troubleshoot electrical and mechanical issues with precision and accuracy.",
         button: "Read More"
     },
     {
+        id: "quick-repair",
         image: "/assets/quick-repair.svg",
-        heading: "Certified CNG Conversion",
+        heading: "Quick Repair",
         description: "Fast and efficient repair services for minor issues, with most repairs completed while you wait to minimize downtime.",
         button: "Read More"
     },
@@ -91,11 +102,15 @@ const Services = () => {
                                 <p className='text-[12px] xl:text-[15px]'>
                                     {item.description}
                                 </p>
-                                <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                                    {item.button}
-                                </button>
+                                <Link to={`/services/${item.id}`}
+                                state={{ service: item }}
+                                aria-label={`Read more about ${item.heading}`}>
+                                    <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                                    w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                                    hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                                        {item.button}
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     )

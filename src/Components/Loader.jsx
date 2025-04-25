@@ -22,6 +22,9 @@ const Loader = ({ children }) => {
                 <img src="assets/electra-logo.svg" alt="Loading..." className="animate-bounce"/>
             </div>
         </div>
+        <div>
+          
+        </div>
     </>
   );
 };
