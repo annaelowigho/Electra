@@ -1,15 +1,15 @@
 import React from 'react';
-import { useParams, useLocation, Navigate } from 'react-router-dom';
+// import { useParams, useLocation, Navigate } from 'react-router-dom';
 
 const GeneralMaintenance = () => {
-  const { id } = useParams(); // Get the `id` from the URL
-  const { state } = useLocation(); // Get the state passed via Link
-  const service = state?.service; // Extract the service from state
+//   const { id } = useParams(); // Get the `id` from the URL
+//   const { state } = useLocation(); // Get the state passed via Link
+//   const service = state?.service; // Extract the service from state
 
-  // If no service data or ID doesn't match, redirect to /services
-  if (!service || service.id !== id) {
-    return <Navigate to="/services" replace />;
-  }
+//   // If no service data or ID doesn't match, redirect to /services
+//   if (!service || service.id !== id) {
+//     return <Navigate to="/services" replace />;
+//   }
 
   const Maintenance = [
     {
