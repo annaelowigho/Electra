@@ -74,13 +74,12 @@ const Nav = () => {
           </li>
         </ul>
         <Link to='/book-now'>
-          <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer text-[#002748]
-          hidden xl:block hover:shadow-lg transition-all duration-300 hover:scale-105 hover:bg-transparent hover:border-[3px]
-          hover:border-[#2FEAE4] hover:text-white'>
+          <button className='text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer text-[#002748] hidden 
+          w-[147px] h-[52px] xl:w-[150px] xl:flex items-center justify-center transition-transform duration-500 hover:scale-105 
+          hover:bg-transparent hover:border-[3px] hover:border-[#2FEAE4] hover:text-[#2FEAE4]'>
             Book Now
           </button>
         </Link>
-
         {/* Mobile menu */}
         <div className='xl:hidden'>
           <button
@@ -145,9 +144,9 @@ const Nav = () => {
 
                 <div className='py-[30px] flex items-center justify-center'>
                   <Link to='/book-now' onClick={() => setIsMenuOpen(false)}>
-                    <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer
-                    hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px]
-                  hover:border-[#2FEAE4] hover:text-white'>
+                    <button className='text-[18px] font-semibold bg-[#2FEAE4] px-[30px] py-[15px] rounded-lg cursor-pointer text-[#002748]
+                    h-[52px] w-[150px] flex items-center justify-center transition-transform duration-500 hover:scale-105 
+                    hover:bg-transparent hover:border-[3px] hover:border-[#2FEAE4] hover:text-[#2FEAE4]'>
                       Book Now
                     </button>
                   </Link>
