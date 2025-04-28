@@ -39,7 +39,7 @@ const BodyRepairs = () => {
                 <div className='pt-[20px] md:pt-[50px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center gap-[20px]'>
                     {ServiceOverview.map((item, index) => {
                         return (
-                            <div key={index} className='bg-white rounded-xl text-center px-[24px] py-[80px] h-[267px] w-full
+                            <div key={index} className='bg-white rounded-xl text-center px-[24px] py-[70px] h-[267px] w-full
                             hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'>
                                 <h5 className='text-[24px] font-semibold'>{item.title}</h5>
                                 <p className='text-[16px] font-medium'>{item.description}</p>
@@ -47,6 +47,14 @@ const BodyRepairs = () => {
                         ) 
                     })}
                 </div>
+            </div>
+        </div>
+        <div className='px-[20px] pb-[20px] md:px-[30px] md:pb-[50px] xl:px-[100px] xl:pb-[100px]'>
+            <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
+                Why Choose Us
+            </h2>
+            <div className='shadow-xl'>
+
             </div>
         </div>
     </>
