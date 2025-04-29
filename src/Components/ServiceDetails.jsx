@@ -1,6 +1,8 @@
 import { useParams, useLocation, Navigate } from 'react-router-dom';
 import GeneralMaintenance from '../Pages/GeneralMaintenance';
 import BodyRepairs from '../Pages/BodyRepairs';
+import SpareParts from '../Pages/SpareParts';
+import EngineRefurbishing from '../Pages/EngineRefurbishing';
 
 const ServiceDetails = () => {
   const { id } = useParams(); // Get the `id` from the URL
@@ -18,7 +20,10 @@ const ServiceDetails = () => {
         return <GeneralMaintenance />;
       case 'body-repairs':
         return <BodyRepairs />;
-      // You can add other cases for other services if needed
+      case 'spare-parts':
+        return <SpareParts />;
+      case 'engine-refurbishing':
+        return <EngineRefurbishing />;
       default:
         return (
           <div className="text-center p-10">
