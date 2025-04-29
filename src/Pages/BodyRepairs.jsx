@@ -19,6 +19,26 @@ const ServiceOverview = [
     },
 
 ]
+
+const ChooseUs =[
+    {
+        image: "/assets/repair-helmet.svg",
+        title: "Proven Expertise",
+        description: "With years of expertise, we provide reliable auto repair and painting built on trust"
+    },
+    {
+        image: "/assets/repair-tool.svg",
+        title: "Modern Tools",
+        description: "We use modern tools for precise and high-quality repairs and painting"
+    },
+    {
+        image: "/assets/repair-helmet.svg",
+        title: "Skilled Technicians",
+        description: "Our skilled team ensures exceptional results with expertise and attention to detail."
+    }
+]
+
+
 const BodyRepairs = () => {
 
   return (
@@ -40,7 +60,7 @@ const BodyRepairs = () => {
                     {ServiceOverview.map((item, index) => {
                         return (
                             <div key={index} className='bg-white rounded-xl text-center px-[24px] py-[70px] h-[267px] w-full
-                            hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'>
+                            hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748] '>
                                 <h5 className='text-[24px] font-semibold'>{item.title}</h5>
                                 <p className='text-[16px] font-medium'>{item.description}</p>
                             </div>
@@ -53,8 +73,47 @@ const BodyRepairs = () => {
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
                 Why Choose Us
             </h2>
-            <div className='shadow-xl'>
-
+            <div className='flex flex-col md:flex-row gap-[20px] pt-[20px] xl:pt-[50px]'>
+                {ChooseUs.map((item, index) => {
+                    return (
+                        <div key={index} className='shadow-lg flex flex-col items-center rounded-lg w-full px-[45px] py-[50px] space-y-3
+                         transition-all duration-300 hover:-translate-y-2 hover:bg-[#2FEAE4] hover:text-[#002748]'>
+                            <div className='bg-[#002748] w-[50px] h-[50px] rounded-full flex items-center justify-center'>
+                                <img src={item.image} alt="" />
+                            </div>
+                            <h4 className='text-center text-[24px] font-semibold'>{item.title}</h4>
+                            <p className='text-center'>{item.description}</p>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+        <div className='px-[20px] py-[20px] md:px-[30px] md:pb-[50px] xl:px-[100px] xl:pb-[100px]'>
+            <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
+                Explore our Gallery
+            </h2>
+        </div>
+        <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[240px] xl:py-[100px]'>
+            <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-16">Contact Us</h2>
+            <p className="text-center text-[20px] md:text-[24px] md:px-5 pt-5">
+                Get in touch for a free estimate or to book an appointment
+            </p>
+            <div className='flex items-center justify-center mt-[30px] md:mt-[50px]'>
+                <form action="" className='w-full space-y-3 xl:space-y-5'>
+                    <input type="text" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                    text-[24px] outline-none' placeholder='Full Name'/>
+                    <input type="email" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                    text-[24px] outline-none' placeholder='Email Address'/>
+                    <input type="number" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                    text-[24px] outline-none' placeholder='Phone Number'/>
+                    <textarea name="" id="" className='bg-[#D9E8F4] w-full rounded-xl p-3 resize-none px-[20px] md:px-[30px] py-[30px] text-[24px] 
+                    outline-none' rows='4' placeholder='Describe your needs'/>
+                    <button className='text-[18px] text-white font-semibold bg-[#002748] w-full rounded-xl cursor-pointer px-6 py-4 
+                    text-center hover:shadow-lg transition-transform duration-500 hover:scale-102 hover:bg-[#2FEAE4]
+                    hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                        Send Message
+                    </button>
+                </form>
             </div>
         </div>
     </>

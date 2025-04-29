@@ -68,21 +68,22 @@ const Homepage = () => {
                 <img src="/assets/arrow12.svg" alt="" className='absolute top-[-70px] left-[600px] hidden min-[1300px]:block 
                 min-[1900px]:left-[940px]'/>
                 <img src="/assets/dots.svg" alt="" className='absolute top-[480px] left-[318px] hidden min-[1300px]:block'/>
-                <div className='flex flex-col '>
+                <div className='flex flex-col items-center md:items-start'>
                     {/* <h1 className='text-[60px] md:text-[80px] font-bold text-[#111111] leading-[50px] md:leading-[81px]'>
                         Convert to CNG and  Save Up to 40%
                     </h1> */}
                     {/* <p className='text-[24px] font-medium py-[15px] w-[508px]'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p> */}
-                    <h1 className='text-[60px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px] xl:hidden'>
+                    <h1 className='text-[50px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px] xl:hidden
+                    text-center md:text-start'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
                     <h1 className='font-bold text-[#002748] leading-[60px] text-[58px] md:leading-[81px] hidden xl:block
                     min-[1900px]:text-[69px]'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
-                    <p className='text-[20px] pt-[15px] font-medium md:text-[24px]'>
+                    <p className='text-[20px] pt-[15px] font-medium md:text-[24px] text-center md:text-start'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
                     </p>
                     <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer w-[147px] 
