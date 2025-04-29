@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Parts = [
     {
         image: "/assets/brake-pads.png",

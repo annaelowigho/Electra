@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { LuPlus } from "react-icons/lu";
+
 
 const Services = [
     {
@@ -50,6 +52,66 @@ const Process = [
     }
 ]
 
+const FAQs = [
+    {
+        question: "How long does an engine overhaul take?",
+        answer: "A complete engine overhaul typically takes 3-7 days, depending on the vehicle's condition and parts availability."
+    },
+    {
+        question: "Do you offer a warranty?",
+        answer: "Yes, we provide a 60-day warranty on all engine refurbishing services."
+    },
+    {
+        question: "Can you service vehicles from any brand?",
+        answer: "Absolutely! We handle engines from all major brands, including Toyota, Honda, Ford, and more"
+    },
+]
+
+// FAQ Item Component
+function FAQItem({ question, answer }) {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleAnswer = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    // Create a unique ID for accessibility (use question as base, sanitized)
+    const answerId = `faq-answer-${question.toLowerCase().replace(/\s+/g, '-')}`;
+  
+    return (
+      <div className="bg-[#D9E8F4] rounded-xl">
+        <div className="p-3 md:p-5 xl:px-[50px] xl:py-[22px] flex justify-between items-center">
+          <p className="text-[16px] md:text-[24px] font-semibold">{question}</p>
+          <button
+            onClick={toggleAnswer}
+            className="bg-[#002748] w-[30px] h-[30px] md:w-[50px] md:h-[50px] rounded-xl flex items-center justify-center cursor-pointer transition-transform duration-200"
+            aria-expanded={isOpen}
+            aria-controls={answerId}
+            type="button"
+          >
+            <span
+              className={`text-white text-xl md:text-2xl transition-transform duration-200 ${
+                isOpen ? 'rotate-45' : 'rotate-0'
+              }`}
+            >
+              <LuPlus />
+            </span>
+          </button>
+        </div>
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          id={answerId}
+        >
+          <p className="py-1 px-3 md:p-5 xl:px-[50px] xl:py-[22px] text-[16px] md:text-[24px] font-medium">
+            {answer}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
 
 const EngineRefurbishing = () => {
   return (
@@ -86,7 +148,7 @@ const EngineRefurbishing = () => {
                 })}
             </div>
         </div>
-        <div className='bg-[#002748] px-[20px] py-[30px] md:px-[30px] md:py-[50px] xl:px-[100px] mb-[30px] md:mb-[80px]'>
+        <div className='bg-[#002748] px-[20px] py-[30px] md:px-[30px] md:py-[50px] xl:px-[100px] mb-[30px] md:mb-[100px]'>
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14 text-white">
                 Our Refurbishing Process
             </h2>
@@ -103,6 +165,48 @@ const EngineRefurbishing = () => {
                         </div>
                     )
                 })}
+            </div>
+        </div>
+        <div className='px-[20px] pb-[30px] md:px-[70px] md:pb-[50px] xl:px-[200px] xl:pb-[100px]'>
+            <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
+                Frequently Asked Question
+            </h2>
+            <div className="pt-[30px] flex flex-col gap-5 md:gap-8">
+                {FAQs.map((item, index) => (
+                <FAQItem key={index} question={item.question} answer={item.answer} />
+                ))}
+            </div> 
+        </div>
+        <div className='px-[20px] pb-[30px] md:px-[70px] md:pb-[50px] xl:px-[300px] xl:pb-[100px]'>
+            <div className='p-[50px] shadow-md rounded-xl'>
+                <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
+                    Book for Refurbishing
+                </h2>
+                <div className='pt-[20px]'>
+                    <form action="" className='w-full space-y-3 xl:space-y-5'>
+                        <input type="text" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                        text-[24px] outline-none' placeholder='Full Name'/>
+                        <input type="text" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                        text-[24px] outline-none' placeholder='Phone Number'/>
+                        <input type="email" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                        text-[24px] outline-none' placeholder='Email Address'/>
+                        <div className=' px-[20px] md:px-[30px] bg-[#D9E8F4] rounded-xl'>
+                            <select name="" id="" className='w-full h-[70px] md:h-[90px]
+                            text-[24px] outline-none'>
+                                <option value="">Select Service</option>
+                                <option value="">Complete Engine Overhaul</option>
+                                <option value="">Engine Diagnostics</option>
+                                <option value="">Engine Tuning</option>
+                                <option value="">Turbocharger Repair</option>
+                            </select>
+                        </div>
+                        <button className='text-[18px] text-white font-semibold bg-[#002748] w-full rounded-xl cursor-pointer px-6 py-4 
+                        text-center hover:shadow-lg transition-transform duration-500 hover:scale-102 hover:bg-[#2FEAE4]
+                        hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </>
