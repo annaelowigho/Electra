@@ -3,6 +3,8 @@ import GeneralMaintenance from '../Pages/GeneralMaintenance';
 import BodyRepairs from '../Pages/BodyRepairs';
 import SpareParts from '../Pages/SpareParts';
 import EngineRefurbishing from '../Pages/EngineRefurbishing';
+import VehicleDiagnostics from '../Pages/VehicleDiagnostics';
+import QuickRepairs from '../Pages/QuickRepairs';
 
 const ServiceDetails = () => {
   const { id } = useParams(); // Get the `id` from the URL
@@ -24,6 +26,10 @@ const ServiceDetails = () => {
         return <SpareParts />;
       case 'engine-refurbishing':
         return <EngineRefurbishing />;
+      case 'vehicle-diagnostic':
+        return <VehicleDiagnostics/>;
+      case 'quick-repair':
+        return <QuickRepairs />;
       default:
         return (
           <div className="text-center p-10">

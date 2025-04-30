@@ -111,7 +111,7 @@ const Nav = () => {
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(true)}>
-                    <NavLink >
+                    <NavLink>
                       <div className='flex items-center'>
                         <p>Services</p>
                         <MdKeyboardArrowDown className='text-[24px]'/>
@@ -124,7 +124,8 @@ const Nav = () => {
                         <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
                         <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
                         <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
-                        <Link to='/services'><li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link>
+                        <li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'><Link to='/services'>Explore More</Link></li>
+                        {/* <Link to='/services'><li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link> */}
                       </ul>
                     )}
                   </li>

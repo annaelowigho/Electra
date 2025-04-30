@@ -43,9 +43,9 @@ const BodyRepairs = () => {
 
   return (
     <>
-        <div className="bg-[url(/assets/body-repairs-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
+        <div className="bg-[url(/assets/body-repairs-bg.png)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
             <div className="text-center">
-                <h2 className="text-white text-[60px] font-bold leading-16">Body Repairs & Painting</h2>
+                <h2 className="text-white text-[48px] md:text-[60px] font-bold leading-14 md:leading-16">Body Repairs & Painting</h2>
                 <p className="text-white text-[20px] md:text-[24px] md:px-5 pt-5">
                     Professional repairs and painting for all vehicle makes and models
                 </p>
@@ -92,6 +92,20 @@ const BodyRepairs = () => {
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
                 Explore our Gallery
             </h2>
+            <div className='flex flex-col md:flex-row items-center gap-[25px] justify-center pt-[20px] md:pt-[50px]'>
+                <div className=''>
+                    <img src="/assets/gallery-one.png" alt="" />
+                </div>
+                <div className=''>
+                    <img src="/assets/gallery-one.png" alt="" />
+                </div>
+                <div className=''>
+                    <img src="/assets/gallery-one.png" alt="" />
+                </div>
+                <div className=''>
+                    <img src="/assets/gallery-one.png" alt="" />
+                </div>
+            </div>
         </div>
         <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[240px] xl:py-[100px]'>
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-16">Contact Us</h2>

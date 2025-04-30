@@ -67,7 +67,7 @@ const Team = [
 const AboutUs = () => {
   return (
     <>
-        <div className="bg-[url(/assets/about-us-bg.svg)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
+        <div className="bg-[url(/assets/about-us-bg.png)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
             <div className="text-center">
                 <h2 className="text-white text-[60px] font-bold">About Us</h2>
                 <p className="text-white text-[20px] md:text-[24px]">Keeping your vehicle running at its best</p>
