@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FaInstagram } from "react-icons/fa";
 import { SlSocialYoutube } from "react-icons/sl";
 import { BsTwitterX } from "react-icons/bs";
@@ -14,7 +15,7 @@ const Footer = () => {
         bg-[url(/assets/footer-bg-cover.svg)]'>
           <div className='flex flex-col gap-10 md:gap-0 md:flex-row md:justify-between'>
             <div className='w-full md:w-[245px]'>
-              <img src="/assets/electra-logo.svg" alt="" />
+              <Link to='/'><img src="/assets/electra-logo.svg" alt="" /></Link>
               <p className='text-white text-[14px] xl:text-[18px] py-[15px] lg:py-[20px]'>
                 Electra Motors Limited, based in Nigeria, offers expert vehicle maintenance, repairs, and CNG conversion.
                 Committed to sustainability and exceptional service, it aims to lead the Nigerian automotive sector

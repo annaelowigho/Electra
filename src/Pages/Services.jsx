@@ -19,7 +19,7 @@ const Service = [
         button: "Read More"
     },
     {
-        id: "cng-kits",
+        id: "buy-cng-kits",
         image: "/assets/cng-kits.svg",
         heading: "Buy CNG Kits",
         description: "Buy top-quality CNG kits for all vehicles, with expert advice to find the perfect system",

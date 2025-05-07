@@ -92,7 +92,7 @@ const Homepage = () => {
                         Read More
                     </button>
                 </div>
-                <img src="/assets/hero-new.svg" alt="" />
+                <img src="/assets/hero.png" alt="" />
             </div>
 
             {/* Book Services */}
@@ -147,19 +147,20 @@ const Homepage = () => {
                                 </select>
                             </div>
                         </div>
-                        {/* <Link to='/book-now'> */}
-                            <button className='text-[16px] xl:text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0
-                            rounded-lg cursor-pointer md:w-[400px] xl:w-[135px] text-[#002748] hover:shadow-lg transition-transform-y 
-                            duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
+                        <Link to='/book-now'>
+                            <button className='text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0 flex 
+                            items-center justify-center rounded-lg cursor-pointer w-full md:w-[400px] xl:w-[135px] h-[58px] text-[#002748] 
+                            hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px] 
+                            hover:border-[#2FEAE4] hover:text-white'>
                                 Book Now
                             </button>
-                        {/* </Link> */}
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
         {/* Services */}
-        <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+        <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px]'>
