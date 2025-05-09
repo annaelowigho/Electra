@@ -46,15 +46,23 @@ const CNGStation = () => {
             </div>
         </div>
         <div className='overflow-x-scroll md:overflow-hidden my-[20px] md:my-[50px]'>
-            <table className='w-full'>
+            <table className='w-[700px] md:w-full'>
                 <thead>
                     <tr className="bg-[#002748] text-white text-[18px] md:text-[24px] font-semibold">
-                        <th className="w-full md:w-1/4 py-4">State</th>
-                        <th className="w-full md:w-1/4 py-4 ">Station</th>
-                        <th className="w-full md:w-1/4 py-4">Address</th>
-                        <th className="w-full md:w-1/4 py-4">Action</th>
+                        <th className="md:w-1/4 py-4">State</th>
+                        <th className="md:w-1/4 py-4 ">Station</th>
+                        <th className="md:w-1/4 py-4">Address</th>
+                        <th className="md:w-1/4 py-4">Action</th>
                     </tr>
                 </thead>
+                <tbody className='text-[14px] md:text-[16px] xl:text-[24px] font-semibold'>
+                    <tr>
+                        <td className="py-3 px-4 text-center">Lagos</td>
+                        <td className="py-3 px-4 text-center">NNPC Mega Station</td>
+                        <td className="py-3 px-4 text-center">NNPC Mega Station</td>
+                        <td className="py-3 px-4 text-center"><button>Locate</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </>

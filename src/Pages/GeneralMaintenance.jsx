@@ -133,9 +133,9 @@ const GeneralMaintenance = () => {
                             <tbody className="bg-white text-[14px] md:text-[16px]">
                                 {MaintenanceTasks.map((item, index) => (
                                     <tr key={index} className="border-b last:border-b-0">
-                                    <td className="py-3 px-4 text-center">{item.task}</td>
-                                    <td className="py-3 px-4 text-center">{item.frequency}</td>
-                                    <td className="py-3 px-4 text-center">{item.notes}</td>
+                                        <td className="py-3 px-4 text-center">{item.task}</td>
+                                        <td className="py-3 px-4 text-center">{item.frequency}</td>
+                                        <td className="py-3 px-4 text-center">{item.notes}</td>
                                     </tr>
                                 ))}
                             </tbody>
