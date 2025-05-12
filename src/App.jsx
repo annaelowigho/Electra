@@ -17,6 +17,7 @@ import 'aos/dist/aos.css'
 import BookNow from './Pages/BookNow'
 import ServiceDetails from './Components/ServiceDetails'
 import TermsPolicy from './Pages/TermsPolicy'
+import PrivacyPolicy from './Pages/PrivacyPolicy'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
             <Route path='/careers' element={<Careers />} />
             <Route path='/book-now' element={<BookNow />} />
             <Route path='/terms-policy' element={<TermsPolicy />}/>
+            <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
           </Routes>
           <Footer />
       </Loader>
