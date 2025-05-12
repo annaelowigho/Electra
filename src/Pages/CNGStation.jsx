@@ -1,5 +1,23 @@
 import React from 'react'
 
+const Station = [
+    {
+        state: "Lagos",
+        station: "NNPC Mega Station",
+        address: "NNPC Mega Station",
+    },
+    {
+        state: "Lagos",
+        station: "NNPC Mega Station",
+        address: "NNPC Mega Station",
+    },
+    {
+        state: "Lagos",
+        station: "NNPC Mega Station",
+        address: "NNPC Mega Station",
+    }
+]
+
 const CNGStation = () => {
   return (
     <>
@@ -56,12 +74,20 @@ const CNGStation = () => {
                     </tr>
                 </thead>
                 <tbody className='text-[14px] md:text-[16px] xl:text-[24px] font-semibold'>
-                    <tr>
-                        <td className="py-3 px-4 text-center">Lagos</td>
-                        <td className="py-3 px-4 text-center">NNPC Mega Station</td>
-                        <td className="py-3 px-4 text-center">NNPC Mega Station</td>
-                        <td className="py-3 px-4 text-center"><button>Locate</button></td>
-                    </tr>
+                    {Station.map((item, index) => (
+                        <tr key={index}>
+                            <td className="py-3 px-4 text-center">{item.state}</td>
+                            <td className="py-3 px-4 text-center">{item.station}</td>
+                            <td className="py-3 px-4 text-center">{item.address}</td>
+                            <td className="py-3 px-4 text-center">
+                                <button className='bg-[#002748] px-8 py-2 text-white rounded-lg cursor-pointer hover:bg-[#2FEAE4] 
+                                border-[#002748] border-[3px] hover:text-[#002748] hover:shadow-lg transition-transform duration-500 
+                                hover:scale-105'>
+                                    Locate
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
