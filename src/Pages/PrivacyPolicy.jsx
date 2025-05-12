@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
                 All third parties are required to maintain the confidentiality and security of your data.
             </p>
         </div>
-        <div className='pt-[30px] md:pt-[50px] xl:pt-[80px] pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
             <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
                 Data Security
             </h1>
