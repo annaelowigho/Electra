@@ -43,7 +43,7 @@ const Nav = () => {
               CNG
             </NavLink>
           </li>
-          <li className='relative' onMouseEnter={() => setIsDropdownOpen(true)}>
+          <li className='relative' onMouseEnter={() => setIsDropdownOpen(true)} >
             <NavLink>
               <div className='flex items-center hover:text-[#2FEAE4]'>
                 <p>Services</p>

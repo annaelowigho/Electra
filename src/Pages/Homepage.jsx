@@ -65,8 +65,8 @@ const Homepage = () => {
 
             {/* Hero Section */}
             <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
-                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-70px] left-[600px] hidden min-[1300px]:block 
-                min-[1900px]:left-[940px]'/>
+                <img src="/assets/arrow12.svg" alt="" className='absolute top-[-70px] left-[550px] hidden min-[1300px]:block 
+                min-[1900px]:left-[780px]'/>
                 <img src="/assets/dots.svg" alt="" className='absolute top-[480px] left-[318px] hidden min-[1300px]:block'/>
                 <div className='flex flex-col items-center md:items-start'>
                     {/* <h1 className='text-[60px] md:text-[80px] font-bold text-[#111111] leading-[50px] md:leading-[81px]'>
@@ -80,8 +80,8 @@ const Homepage = () => {
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
                     <h1 className='font-bold text-[#002748] leading-[60px] text-[58px] md:leading-[81px] hidden xl:block
-                    min-[1900px]:text-[69px]'>
-                        Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
+                    min-[1700px]:text-[69px]'>
+                        Convert to CNG <br /> and Save Up to <span className='text-[#D50808] font-black'>40%</span>
                     </h1>
                     <p className='text-[20px] pt-[15px] font-medium md:text-[24px] text-center md:text-start'>
                         Book a Conversion, Join Training, Buy Kits, Find Refueling Station
@@ -149,7 +149,7 @@ const Homepage = () => {
                         </div>
                         <Link to='/book-now'>
                             <button className='text-[18px] font-semibold bg-[#2FEAE4] px-[20px] py-[20px] md:py-0 flex 
-                            items-center justify-center rounded-lg cursor-pointer w-full md:w-[400px] xl:w-[135px] h-[58px] text-[#002748] 
+                            items-center justify-center rounded-lg cursor-pointer w-full md:w-[180px] xl:w-[135px] h-[58px] text-[#002748] 
                             hover:shadow-lg transition-transform-y duration-500 hover:scale-105 hover:bg-[#002748] hover:border-[3px] 
                             hover:border-[#2FEAE4] hover:text-white'>
                                 Book Now
@@ -159,12 +159,14 @@ const Homepage = () => {
                 </div>
             </div>
         </div>
+
+
         {/* Services */}
         <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
-            <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px]'>
-                <div className='flex flex-col md:flex-row gap-[20px]'>
+            <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px] items-center justify-center'>
+                <div className='flex flex-col md:flex-row gap-[20px] w-full'>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
@@ -174,11 +176,13 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Save on fuel and go green with our certified CNG conversion service.
                             </p>
-                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                                Book Now
-                            </button>
+                            <Link to='/book-now'>
+                                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                                w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                                    Book Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
@@ -190,15 +194,17 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Master CNG conversion with our expert training. Get certified
                             </p>
-                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                                Join Now
-                            </button>
+                            <Link to='/training'>
+                                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                                w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                                    Join Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row gap-[20px]'>
+                <div className='flex flex-col md:flex-row gap-[20px] w-full'>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
@@ -208,11 +214,13 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
                             </p>
-                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                            w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                                Buy Now
-                            </button>
+                            <Link>
+                                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                                w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                                    Buy Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
@@ -224,8 +232,8 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Locate convenient and reliable CNG refueling stations near you. Fuel up and stay eco-friendly today!
                             </p>
-                            <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                            w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                            <button className='text-[17px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer
+                            w-[150px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                             hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                 Find Station Now
                             </button>
@@ -233,6 +241,15 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
+            <Link to='/services'>
+                <div className='flex justify-center items-center pt-[20px] md:pt-[30px] xl:pt-[50px]'>
+                    <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                    w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                    hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                        Explore More
+                    </button>
+                </div>
+            </Link>
         </div>
 
         {/* Why choose us */}
