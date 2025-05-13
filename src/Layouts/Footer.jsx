@@ -6,6 +6,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiEnvelope } from "react-icons/bi";
+import { FaTurnUp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -53,12 +54,26 @@ const Footer = () => {
                   <BiEnvelope className='text-[25px] lg:text-[20px]'/>
                   <p className='text-[18px]'>info@electramotors.ng</p>
                 </div>
+                <div
+                  className="flex justify-end animate-bounce cursor-pointer"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  role="button"
+                  aria-label="Scroll to top"
+                  tabIndex={0}
+                  onKeyDown={(e) => e.key === 'Enter' && window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  <div className="flex items-center justify-center border-2 border-white w-[80px] h-[80px] rounded-xl hover:bg-[#2FEAE4] 
+                  hover:border-[#002748] transition-all duration-300 text-[25px] text-white hover:text-[#002748]">
+                    <FaTurnUp className="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <img src="/assets/footer-line.svg" alt="" className='w-full'/>
       </div>
+      
     </>
   )
 }
