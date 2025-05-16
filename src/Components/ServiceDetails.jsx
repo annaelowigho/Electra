@@ -7,6 +7,8 @@ import VehicleDiagnostics from '../Pages/VehicleDiagnostics';
 import QuickRepairs from '../Pages/QuickRepairs';
 import BuyCngKits from '../Pages/BuyCngKits';
 import CNGStation from '../Pages/CNGStation';
+import CNG from '../Pages/CNG';
+import Training from '../Pages/Training';
 
 const ServiceDetails = () => {
   const { id } = useParams(); // Get the `id` from the URL
@@ -32,10 +34,14 @@ const ServiceDetails = () => {
         return <VehicleDiagnostics/>;
       case 'quick-repair':
         return <QuickRepairs />;
-      case 'buy-cng-kits':
+      case 'buy-cng-kits': 
         return <BuyCngKits />;
       case 'refuelling-station':
         return <CNGStation />;
+      case 'cng-conversion':
+        return <CNG />;
+      case 'cng-training':
+        return <Training />
       default:
         return (
           <div className="text-center p-10">

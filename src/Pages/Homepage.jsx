@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { BiCalendarCheck, BiSupport } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
 import { IoTimeOutline } from "react-icons/io5";
-// import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
 import Map from '../Components/Map';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { motion } from "framer-motion"
+// import { motion } from "framer-motion"
 
 const Choose = [
     {
@@ -53,20 +53,55 @@ const Feedback = [
     },
 ]
 
-const Images = [
-  "/assets/hero-img1.png",
-  "/assets/hero-img2.png",
-  "/assets/hero-img3.png",
-  "/assets/hero-img4.png",
-];
+// const Images = [
+//   "/assets/hero-img1.png",
+//   "/assets/hero-img2.png",
+//   "/assets/hero-img3.png",
+//   "/assets/hero-img4.png",
+// ];
 
 const Homepage = () => {
+
+
+        const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+        useEffect(() => {
+            const updateCountdown = () => {
+            const now = new Date();
+            const target = new Date('2025-05-20T00:00:00'); // Fixed date: May 20, 2025, 00:00:00 WAT
+            const diff = target - now; // Difference in milliseconds
+
+            if (diff <= 0) {
+                // Countdown finished, set to zeros
+                setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            setTimeLeft({
+                days: days < 10 ? `0${days}` : days,
+                hours: hours < 10 ? `0${hours}` : hours,
+                minutes: minutes < 10 ? `0${minutes}` : minutes,
+                seconds: seconds < 10 ? `0${seconds}` : seconds,
+            });
+            };
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+            return () => clearInterval(interval); // Cleanup on unmount
+        }, []);
 
     // const [date, setDate] = useState("");
     // const [time, setTime] = useState("")
     // const [serviceType, setServiceType] = useState("");
 
   return (
+    
+
     <>
         
         <div>
@@ -163,43 +198,85 @@ const Homepage = () => {
         </div>
         
         {/* Updated Hero Section */}
-        <div className='bg-[#002748] px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] hero-section'>
-            <div className='flex items-center justify-between'>
-                <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
-                <div>
-                    <h1 className='text-[38px] md:text-[40px] lg:text-[55px] xl:text-[60px] font-black text-white text-center leading-[50px]
-                    md:leading-[55px] lg:leading-[70px] xl:leading-[85px]'>
-                        Convert to CNG and <br />
-                        <span className='text-[#2FEAE4]'> Save up to <span className='text-[#D50808]'>40%</span></span>
-                    </h1>
+        <div className='bg-[#002748] bg-[url(/assets/hero-bg.png)] bg-cover bg-no-repeat bg-center'>
+            {/* <img src="/assets/Eco Fuel -left.png" alt="" className='absolute bottom-[-200px] left-[-250px]'/>
+            <img src="/assets/3D Repair Icon Model-right.png" alt="" className='absolute top-[200px] right-0'/> */}
+            <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] relative hero-section'>
+                <div className='flex items-center justify-center md:justify-between'>
+                    <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
+                    <div>
+                        <h1 className='text-[38px] md:text-[40px] lg:text-[55px] xl:text-[60px] font-black text-white text-center leading-[50px]
+                        md:leading-[55px] lg:leading-[70px] xl:leading-[85px]'>
+                            Convert to CNG and <br />
+                            <span className='text-[#2FEAE4]'> Save up to 40% </span>
+                        </h1>
+                    </div>
+                    <img src="/assets/3D Repair Icon Model 1.svg" alt="" className='hidden md:block'/>
                 </div>
-                <img src="/assets/3D Repair Icon Model 1.svg" alt="" className='hidden md:block'/>
-            </div>
-            <p className='text-white text-center pt-[30px] text-[18px] md:text-[20px] xl:text-[24px] font-medium'>
-                Book a Conversion, Join Training, Buy Kits, <br /> Find Refueling Station
-            </p>
-            {/* <div className='flex items-center justify-center'>
-                <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 
-                place-items-center gap-8 md:gap-10'>
-                    <img src="/assets/hero-img1.png" alt="Hero Image 1" className='' />
-                    <img src="/assets/hero-img2.png" alt="Hero Image 2" className='' />
-                    <img src="/assets/hero-img3.png" alt="Hero Image 3" className='' />
-                    <img src="/assets/hero-img4.png" alt="Hero Image 4" className='' />
+                <p className='text-white text-center pt-[30px] text-[18px] md:text-[20px] xl:text-[24px] font-medium'>
+                    Book a Conversion, Join Training, Buy Kits, <br /> Find Refueling Station
+                </p>
+                {/* <div className='flex items-center justify-center'>
+                    <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 
+                    place-items-center gap-8 md:gap-10'>
+                        <img src="/assets/hero-img1.png" alt="Hero Image 1" className='' />
+                        <img src="/assets/hero-img2.png" alt="Hero Image 2" className='' />
+                        <img src="/assets/hero-img3.png" alt="Hero Image 3" className='' />
+                        <img src="/assets/hero-img4.png" alt="Hero Image 4" className='' />
+                    </div>
+                </div> */}
+                {/* <div className='flex items-center justify-center'>
+                    <div className="overflow-hidden w-full pt-[30px] md:pt-[50px] xl:pt-[70px] ">
+                    <motion.div
+                    className="flex space-x-10 w-max"
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{ repeat: Infinity, duration: 30, ease: "linear" }}>
+                        {[...Images, ...Images].map((img, index) => (
+                        <img key={index} src={img} alt={`Scrolling image ${index + 1}`} />
+                        ))}
+                    </motion.div>
                 </div>
-            </div> */}
-            <div className='flex items-center justify-center'>
-                <div className="overflow-hidden w-full pt-[30px] md:pt-[50px] xl:pt-[70px] ">
-                <motion.div
-                className="flex space-x-10 w-max"
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}>
-                    {[...Images, ...Images].map((img, index) => (
-                    <img key={index} src={img} alt={`Scrolling image ${index + 1}`} />
-                    ))}
-                </motion.div>
-            </div>
+                </div> */}
+                <div className='flex flex-col md:flex-row mt-[30px] md:mt-[50px] lg:mt-[80px] xl:mt-[100px] text-[#002748]'>
+                    <div className='bg-white rounded-tr-[27px] rounded-bl-0 md:rounded-tr-[0px] rounded-tl-[27px] md:rounded-bl-[27px] 
+                    py-[30px] lg:py-[50px] w-full md:w-1/2 flex items-center justify-center'>
+                        <p className='text-center md:text-start font-bold text-[38px] lg:text-[48px]'>
+                            We are <br /> Launching!!!</p>
+                    </div>
+                    <div className='bg-[#2FEAE4] rounded-bl-[27px] rounded-tr-0 md:rounded-bl-[0px] md:rounded-tr-[27px] rounded-br-[27px] py-[30px] 
+                    lg:py-[50px] w-full md:w-1/2 flex flex-col justify-center items-center'>
+                        <div className='flex'>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.days}</p>
+                                <p className='text-[15px]'>DAYS</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.hours}</p>
+                                <p className='text-[15px]'>HOURS</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.minutes}</p>
+                                <p className='text-[15px]'>MINUTES</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.seconds}</p>
+                                <p className='text-[15px]'>SECONDS</p>
+                            </div>
+                        </div>
+                        <p className='pt-[10px] text-[40px]'>20:05:2025</p>
+                    </div>
+                </div>
+                <div className='flex flex-col items-center justify-center pt-[20px] md:pt-[50px] text-white text-[20px]'>
+                    <img src="/assets/location-icon.png" alt="" />
+                    <p className='text-center'>Delta State Innovation Hub</p>
+                    <p className='text-center'>#1 DBS Junction, Okpanam Road, Asaba, Delta State.</p>
+                </div>
             </div>
         </div>
+        
 
         {/* Services */}
         <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
@@ -254,7 +331,7 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
                             </p>
-                            <Link>
+                            <Link >
                                 <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                                 w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                                 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
