@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { BiCalendarCheck, BiSupport } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
 import { IoTimeOutline } from "react-icons/io5";
-import { useState } from 'react';
+// import { useState } from 'react';
 import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
@@ -54,27 +54,21 @@ const Feedback = [
 
 const Homepage = () => {
 
-    const [date, setDate] = useState("");
-    const [time, setTime] = useState("")
-    const [serviceType, setServiceType] = useState("");
+    // const [date, setDate] = useState("");
+    // const [time, setTime] = useState("")
+    // const [serviceType, setServiceType] = useState("");
 
   return (
     <>
         
-        <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] xl:px-[150px] xl:py-[100px] relative'>
+        <div>
 
             {/* Hero Section */}
-            <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
+            {/* <div className=' flex flex-col xl:flex-row items-center justify-between gap-10'>
                 <img src="/assets/arrow12.svg" alt="" className='absolute top-[-70px] left-[550px] hidden min-[1300px]:block 
                 min-[1900px]:left-[780px]'/>
                 <img src="/assets/dots.svg" alt="" className='absolute top-[480px] left-[318px] hidden min-[1300px]:block'/>
                 <div className='flex flex-col items-center md:items-start'>
-                    {/* <h1 className='text-[60px] md:text-[80px] font-bold text-[#111111] leading-[50px] md:leading-[81px]'>
-                        Convert to CNG and  Save Up to 40%
-                    </h1> */}
-                    {/* <p className='text-[24px] font-medium py-[15px] w-[508px]'>
-                        Book a Conversion, Join Training, Buy Kits, Find Refueling Station
-                    </p> */}
                     <h1 className='text-[50px] font-bold text-[#002748] leading-[60px] md:text-[80px] md:leading-[81px] xl:hidden
                     text-center md:text-start'>
                         Convert to CNG and  Save Up to <span className='text-[#D50808] font-black'>40%</span>
@@ -93,10 +87,10 @@ const Homepage = () => {
                     </button>
                 </div>
                 <img src="/assets/hero.png" alt="" />
-            </div>
+            </div> */}
 
             {/* Book Services */}
-            <div className='mx-auto mt-[20px] md:mt-[40px] lg:mt-[50px] min-[1280px]:mt-[100px] xl:mt-0'>
+            {/* <div className='mx-auto mt-[20px] md:mt-[40px] lg:mt-[50px] min-[1280px]:mt-[100px] xl:mt-0'>
                 <div className='bg-[#002748] mx-auto text-white px-[20px] xl:px-[50px] pt-[15px] pb-[46px] rounded-2xl w-full xl:w-[921px]
                 min-[1300px]:absolute bottom-[-50px] left-[290px] right-[290px] min-[1900px]:left-[310px] min-[1900px]:right-[310px] 
                 min-[1900px]:bottom-[10px]'>
@@ -157,12 +151,37 @@ const Homepage = () => {
                         </Link>
                     </div>
                 </div>
+            </div> */}
+        </div>
+        
+        {/* Updated Hero Section */}
+        <div className='bg-[#002748] px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] hero-section'>
+            <div className='flex items-center justify-between'>
+                <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
+                <div>
+                    <h1 className='text-[38px] md:text-[40px] lg:text-[55px] xl:text-[60px] font-black text-white text-center leading-[50px]
+                    md:leading-[55px] lg:leading-[70px] xl:leading-[85px]'>
+                        Convert to CNG and <br />
+                        <span className='text-[#2FEAE4]'> Save up to <span className='text-[#D50808]'>40%</span></span>
+                    </h1>
+                </div>
+                <img src="/assets/3D Repair Icon Model 1.svg" alt="" className='hidden md:block'/>
+            </div>
+            <p className='text-white text-center pt-[30px] text-[18px] md:text-[20px] xl:text-[24px] font-medium'>
+                Book a Conversion, Join Training, Buy Kits, <br /> Find Refueling Station
+            </p>
+            <div className='flex items-center justify-center'>
+                <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-8 md:gap-10'>
+                    <img src="/assets/hero-img1.png" alt="Hero Image 1" className='' />
+                    <img src="/assets/hero-img2.png" alt="Hero Image 2" className='' />
+                    <img src="/assets/hero-img3.png" alt="Hero Image 3" className='' />
+                    <img src="/assets/hero-img4.png" alt="Hero Image 4" className='' />
+                </div>
             </div>
         </div>
 
-
         {/* Services */}
-        <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
+        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px] items-center justify-center'>

@@ -139,8 +139,8 @@ const Services = () => {
                             </div>
                         </div>
                         <button className='font-primary text-[18px] font-semibold bg-[#2FEAE4] rounded-lg px-[20px] py-[10px] 
-                        cursor-pointer text-[#002748] hover:shadow-lg transition-all duration-500 
-                        hover:scale-105 hover:bg-[#002748] hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
+                        cursor-pointer text-[#002748] hover:shadow-lg transition-transform duration-500 
+                        hover:scale-105 hover:bg-transparent hover:border-[3px] hover:border-[#2FEAE4] hover:text-white'>
                             Book Appointment
                         </button>
                     </div>

@@ -65,7 +65,7 @@ const BookNow = () => {
                             </div>
                         </div>
                         <button className='text-[18px] text-white font-semibold bg-[#002748] w-full rounded-lg cursor-pointer px-6 py-4 text-center
-                        mt-[15px] hover:shadow-lg transition-all duration-500 hover:scale-100 hover:bg-[#2FEAE4] hover:border-[3px]
+                        mt-[15px] hover:shadow-lg transition-transform duration-500 hover:scale-102 hover:bg-[#2FEAE4] hover:border-[3px]
                         hover:border-[#002748] hover:text-[#002748]'>
                             Open Application Form
                         </button>

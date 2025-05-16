@@ -40,4 +40,17 @@ body{
     animation: colorChangeReverse 5s infinite;
   }
 
-  
+
+  @media only screen and (min-width: 1300px) {
+      .hero-section{
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+  }
+
+  @media only screen and (min-width: 1700px) {
+      .hero-section{
+        padding-left: 350px;
+        padding-right: 350px;
+      }
+  }

@@ -87,7 +87,7 @@ const AboutUs = () => {
                 </p>
             </div>
             <div className=''>
-                <img src="/assets/about-us-img.svg" alt="" className='md:h-[400px] lg:w-full lg:h-[470px]'/>
+                <img src="/assets/about-us-img.svg" alt="" className='md:h-[400px] md:w-full lg:h-[470px]'/>
             </div>
         </div>
         <div className='bg-[#2FEAE4] mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
@@ -96,7 +96,7 @@ const AboutUs = () => {
                 {SpecializeIn.map((item, index) => {
                     const Icon = item.icon
                     return (
-                        <div key={index} className='bg-white px-[15px] py-[35px] w-full rounded-xl md:w-[360px] lg:w-[400px]
+                        <div key={index} className='bg-white px-[15px] py-[35px] w-full rounded-xl lg:w-[400px]
                         cursor-pointer transition-all duration-300 hover:-translate-y-2'>
                             <div className='flex items-center gap-[20px]'>
                                 <div className='bg-[#002748] w-[50px] h-[50px] flex items-center justify-center rounded-full'>
@@ -117,12 +117,12 @@ const AboutUs = () => {
         <div className='mt-[50px] xl:mt-[150px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'> 
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Our Mission & Vision</h3>
             <div className='pt-[30px] lg:pt-[50px] flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-center'>
-                <img src="/assets/refilling.svg" alt="" className='lg:w-1/2 xl:w-[580px] xl:h-[458px]'/>
+                <img src="/assets/refilling.svg" alt="" className='md:h-[400px] lg:w-1/2 xl:w-[580px] xl:h-[458px]'/>
                 <div className='flex flex-col gap-3 lg:gap-5 xl:justify-between xl:w-[610px]'>
                     <div className='bg-[#2FEAE4] px-[20px] py-[15px] rounded-xl h-[210px] md:h-[180px] xl:h-[220px]
                     xl:px-[30px] xl:py-[35px] text-[#002748] animate-colorChange'>
                         <h5 className='text-[24px] font-semibold'>Our Mission</h5>
-                        <p className='text-[18px]'>
+                        <p className='text-[18px]'> 
                             To empower Nigerians with affordable, reliable, and eco-friendly 
                             transport solutions through innovation in CNG and EV technologies.
                         </p>
