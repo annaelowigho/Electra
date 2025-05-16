@@ -41,6 +41,7 @@ const ChooseUs =[
 
 const BodyRepairs = () => {
 
+    // const [galleryDisplay, setGalleryDisplay] = useState
   return (
     <>
         <div className="bg-[url(/assets/body-repairs-bg.png)] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
@@ -92,22 +93,28 @@ const BodyRepairs = () => {
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
                 Explore our Gallery
             </h2>
-            <div className='flex flex-col md:flex-row items-center gap-[25px] justify-center pt-[20px] md:pt-[50px]'>
+            <div className='flex flex-col md:flex-row flex-wrap items-center gap-[25px] justify-center pt-[20px] md:pt-[50px]'>
                 <div className=''>
                     <img src="/assets/gallery-one.png" alt="" />
                 </div>
-                <div className=''>
-                    <img src="/assets/gallery-one.png" alt="" />
+                <div className='rotate-17'>
+                    <img src="/assets/gallery-two.png" alt="" />
                 </div>
-                <div className=''>
-                    <img src="/assets/gallery-one.png" alt="" />
+                <div className='-rotate-20'>
+                    <img src="/assets/gallery-three.png" alt="" />
                 </div>
-                <div className=''>
-                    <img src="/assets/gallery-one.png" alt="" />
+                <div className='rotate-12'>
+                    <img src="/assets/gallery-four.png" alt="" />
                 </div>
             </div>
+            {/* <div className='relative pt-[150px] pb-[250px] flex items-center justify-center'>
+                <img src="/assets/gallery-one.png" alt="" className='absolute'/>
+                <img src="/assets/gallery-two.png" alt="" className='absolute' />
+                <img src="/assets/gallery-three.png" alt="" className='absolute' />
+                <img src="/assets/gallery-four.png" alt="" className='absolute' />
+            </div> */}
         </div>
-        <div className='px-[20px] py-[20px] md:px-[30px] md:py-[50px] xl:px-[240px] xl:py-[100px]'>
+        <div className='px-[20px] pb-[20px] md:px-[30px] md:pb-[50px] xl:px-[240px] xl:pb-[100px]'>
             <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-16">Contact Us</h2>
             <p className="text-center text-[20px] md:text-[24px] md:px-5 pt-5">
                 Get in touch for a free estimate or to book an appointment

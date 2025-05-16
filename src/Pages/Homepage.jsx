@@ -10,6 +10,7 @@ import Partner from '../Components/Partner';
 import Map from '../Components/Map';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { motion } from "framer-motion"
 
 const Choose = [
     {
@@ -51,6 +52,13 @@ const Feedback = [
         customer: "Martin Okumagba"
     },
 ]
+
+const Images = [
+  "/assets/hero-img1.png",
+  "/assets/hero-img2.png",
+  "/assets/hero-img3.png",
+  "/assets/hero-img4.png",
+];
 
 const Homepage = () => {
 
@@ -170,13 +178,26 @@ const Homepage = () => {
             <p className='text-white text-center pt-[30px] text-[18px] md:text-[20px] xl:text-[24px] font-medium'>
                 Book a Conversion, Join Training, Buy Kits, <br /> Find Refueling Station
             </p>
-            <div className='flex items-center justify-center'>
-                <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 place-items-center gap-8 md:gap-10'>
+            {/* <div className='flex items-center justify-center'>
+                <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 
+                place-items-center gap-8 md:gap-10'>
                     <img src="/assets/hero-img1.png" alt="Hero Image 1" className='' />
                     <img src="/assets/hero-img2.png" alt="Hero Image 2" className='' />
                     <img src="/assets/hero-img3.png" alt="Hero Image 3" className='' />
                     <img src="/assets/hero-img4.png" alt="Hero Image 4" className='' />
                 </div>
+            </div> */}
+            <div className='flex items-center justify-center'>
+                <div className="overflow-hidden w-full pt-[30px] md:pt-[50px] xl:pt-[70px] ">
+                <motion.div
+                className="flex space-x-10 w-max"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ repeat: Infinity, duration: 30, ease: "linear" }}>
+                    {[...Images, ...Images].map((img, index) => (
+                    <img key={index} src={img} alt={`Scrolling image ${index + 1}`} />
+                    ))}
+                </motion.div>
+            </div>
             </div>
         </div>
 
