@@ -266,7 +266,7 @@ const Homepage = () => {
                                 <p className='text-[15px]'>SECONDS</p>
                             </div>
                         </div>
-                        <p className='pt-[10px] text-[40px]'>20:05:2025</p>
+                        <p className='pt-[10px] text-[40px]'>20/05/2025</p>
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center pt-[20px] md:pt-[50px] text-white text-[20px]'>
