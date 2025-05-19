@@ -8,8 +8,8 @@ import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
 import Map from '../Components/Map';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 // import { motion } from "framer-motion"
 
 const Choose = [
@@ -268,12 +268,21 @@ const Homepage = () => {
                         </div>
                         <p className='pt-[10px] text-[40px]'>20/05/2025</p>
                     </div>
+                    
                 </div>
                 <div className='flex flex-col items-center justify-center pt-[20px] md:pt-[50px] text-white text-[20px]'>
                     <img src="/assets/location-icon.png" alt="" />
                     <p className='text-center'>Delta State Innovation Hub</p>
                     <p className='text-center'>#1 DBS Junction, Okpanam Road, Asaba, Delta State.</p>
                 </div>
+
+
+                {/* We are Live  */}
+                {/* <div className='py-20 bg-[url(public/assets/Live-bg.png)] bg-center bg-contain bg-no-repeat flex items-center justify-center'>
+                    <p className='text-center md:text-start font-bold text-[38px] lg:text-[48px]'>We are Now Live</p>
+                </div> */}
+
+                
             </div>
         </div>
         
@@ -281,10 +290,12 @@ const Homepage = () => {
         {/* Services */}
         <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
-            <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Servces</p>
+            <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Services</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px] items-center justify-center'>
                 <div className='flex flex-col md:flex-row gap-[20px] w-full'>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    <div
+                    data-aos="fade-right"
+                    data-aos-delay="100" className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
@@ -302,7 +313,10 @@ const Homepage = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    <div 
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-training.svg" alt="" className='w-[120px] lg:w-[176px]'/>
@@ -322,14 +336,18 @@ const Homepage = () => {
                     </div>
                 </div>
                 <div className='flex flex-col md:flex-row gap-[20px] w-full'>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    <div 
+                    data-aos="fade-right"
+                    data-aos-delay="100"
+                    className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-kits.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
                             <h4 className='text-[18px] min-[1300px]:text-[24px] font-semibold'>Buy CNG Kits</h4>
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
-                                Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel efficiency and reduced emissions
+                                Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel 
+                                efficiency and reduced emissions
                             </p>
                             <Link >
                                 <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
@@ -340,7 +358,10 @@ const Homepage = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
+                    <div 
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
                     md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/cng-station.svg" alt="" className='w-[120px] lg:w-[176px]'/>
@@ -384,6 +405,8 @@ const Homepage = () => {
                     const Icon = item.icon; // Store the icon component
                     return (
                     <div
+                        data-aos='fade-up'
+                        data-aos-delay="100"
                         key={index}
                         className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
                          cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#002748] hover:text-white"

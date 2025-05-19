@@ -112,7 +112,7 @@ const BuyCngKits = () => {
                                 w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[20px] hover:shadow-lg transition-transform-y duration-500 
                                 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
                                     Book Now
-                                </button>
+                                </button> 
                             </div>
                         </div>
                     )

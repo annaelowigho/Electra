@@ -188,9 +188,9 @@ const CNG = () => {
                             <option value="" disabled hidden>
                                 Select Vehicle Type
                             </option>
-                            <option value="toyota">Toyota</option>
-                            <option value="lexus">Lexus</option>
-                            <option value="tricycle">Tricycle</option>
+                            <option value="toyota">Salon (Sedan)</option>
+                            <option value="lexus">SUVs</option>
+                            <option value="tricycle">others</option>
                             </select>
                         </div>
                     </div>
@@ -205,11 +205,11 @@ const CNG = () => {
                                 className="outline-none w-full text-gray-700 bg-transparent"
                             >
                             <option value="" disabled hidden>
-                                Select Cylinder Type
+                                Select Engine Type
                             </option>
-                            <option value="50kg">50kg</option>
-                            <option value="100kg">100kg</option>
-                            <option value="70kg">70kg</option>
+                            <option value="50kg">4 cylinders</option>
+                            <option value="100kg">6 cylinders</option>
+                            <option value="70kg">8 cylinders</option>
                             </select>
                         </div>
                     </div>

@@ -18,6 +18,7 @@ import BookNow from './Pages/BookNow'
 import ServiceDetails from './Components/ServiceDetails'
 import TermsPolicy from './Pages/TermsPolicy'
 import PrivacyPolicy from './Pages/PrivacyPolicy'
+import Inquiries from './Pages/Inquiries'
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
             <Route path='/book-now' element={<BookNow />} />
             <Route path='/terms-policy' element={<TermsPolicy />}/>
             <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
+            <Route path='/inquiries' element={<Inquiries />}/>
           </Routes>
           <Footer />
       </Loader>
