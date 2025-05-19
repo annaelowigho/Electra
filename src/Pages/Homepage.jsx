@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { BiCalendarCheck, BiSupport } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
 import { IoTimeOutline } from "react-icons/io5";
-import { useState, useEffect } from 'react';
+// import {  useEffect } from 'react';
 import { MdOutlineVerifiedUser, MdOutlineTimer } from "react-icons/md";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import Partner from '../Components/Partner';
@@ -63,37 +63,37 @@ const Feedback = [
 const Homepage = () => {
 
 
-        const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        // const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-        useEffect(() => {
-            const updateCountdown = () => {
-            const now = new Date();
-            const target = new Date('2025-05-20T00:00:00'); // Fixed date: May 20, 2025, 00:00:00 WAT
-            const diff = target - now; // Difference in milliseconds
+        // useEffect(() => {
+        //     const updateCountdown = () => {
+        //     const now = new Date();
+        //     const target = new Date('2025-05-20T00:00:00'); // Fixed date: May 20, 2025, 00:00:00 WAT
+        //     const diff = target - now; // Difference in milliseconds
 
-            if (diff <= 0) {
-                // Countdown finished, set to zeros
-                setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
-                return;
-            }
+        //     if (diff <= 0) {
+        //         // Countdown finished, set to zeros
+        //         setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+        //         return;
+        //     }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        //     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        //     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        //     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-            setTimeLeft({
-                days: days < 10 ? `0${days}` : days,
-                hours: hours < 10 ? `0${hours}` : hours,
-                minutes: minutes < 10 ? `0${minutes}` : minutes,
-                seconds: seconds < 10 ? `0${seconds}` : seconds,
-            });
-            };
+        //     setTimeLeft({
+        //         days: days < 10 ? `0${days}` : days,
+        //         hours: hours < 10 ? `0${hours}` : hours,
+        //         minutes: minutes < 10 ? `0${minutes}` : minutes,
+        //         seconds: seconds < 10 ? `0${seconds}` : seconds,
+        //     });
+        //     };
 
-            updateCountdown();
-            const interval = setInterval(updateCountdown, 1000);
-            return () => clearInterval(interval); // Cleanup on unmount
-        }, []);
+        //     updateCountdown();
+        //     const interval = setInterval(updateCountdown, 1000);
+        //     return () => clearInterval(interval); // Cleanup on unmount
+        // }, []);
 
     // const [date, setDate] = useState("");
     // const [time, setTime] = useState("")
