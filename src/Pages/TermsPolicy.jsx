@@ -86,9 +86,6 @@ const TermsPolicy = () => {
       </div>
 
       <div className='px-[20px] py-[30px] md:px-[70px] md:py-[50px] xl:px-[200px] xl:py-[100px]'>
-        <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
-          Frequently Asked Questions
-        </h2>
         <div className="pt-[30px] flex flex-col gap-5 md:gap-8">
           {FAQs.map((item, index) => (
             <FAQItem

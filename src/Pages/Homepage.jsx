@@ -198,9 +198,7 @@ const Homepage = () => {
         </div>
         
         {/* Updated Hero Section */}
-        <div className='bg-[#002748] bg-[url(/assets/hero-bg.png)] bg-cover bg-no-repeat bg-center'>
-            {/* <img src="/assets/Eco Fuel -left.png" alt="" className='absolute bottom-[-200px] left-[-250px]'/>
-            <img src="/assets/3D Repair Icon Model-right.png" alt="" className='absolute top-[200px] right-0'/> */}
+        <div className='bg-[#002748] bg-[url("/assets/bkg.png")] bg-cover bg-no-repeat bg-center'>
             <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] relative hero-section'>
                 <div className='flex items-center justify-center md:justify-between'>
                     <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
@@ -237,52 +235,28 @@ const Homepage = () => {
                     </motion.div>
                 </div>
                 </div> */}
-                <div className='flex flex-col md:flex-row mt-[30px] md:mt-[50px] lg:mt-[80px] xl:mt-[100px] text-[#002748]'>
-                    <div className='bg-white rounded-tr-[27px] rounded-bl-0 md:rounded-tr-[0px] rounded-tl-[27px] md:rounded-bl-[27px] 
-                    py-[30px] lg:py-[50px] w-full md:w-1/2 flex items-center justify-center'>
-                        <p className='text-center md:text-start font-bold text-[38px] lg:text-[48px]'>
-                            We are <br /> Launching!!!</p>
+                <div className="mt-5 bg-[url('/assets/live-now.png')] bg-contain bg-center bg-no-repeat py-10 flex flex-col items-center justify-center">
+                    {/* Centered GIF */}
+                    <img
+                        src="/assets/lottie.gif"
+                        alt="celebration"
+                        className="absolute w-[800px] xl:w-[1000px]"
+                    />
+
+                    {/* Live Announcement Text */}
+                    <div className="text-center px-5">
+                        <h1 className="text-[36px] md:text-[48px] lg:text-[60px] font-bold drop-shadow-md">
+                        We Are Now Live!
+                        </h1>
+                        <p className="text-[18px] md:text-[22px] font-medium max-w-xl mx-auto">
+                        We've officially launched!
+                        </p>
                     </div>
-                    <div className='bg-[#2FEAE4] rounded-bl-[27px] rounded-tr-0 md:rounded-bl-[0px] md:rounded-tr-[27px] rounded-br-[27px] py-[30px] 
-                    lg:py-[50px] w-full md:w-1/2 flex flex-col justify-center items-center'>
-                        <div className='flex'>
-                            <div className='flex flex-col items-center justify-center'>
-                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.days}</p>
-                                <p className='text-[15px]'>DAYS</p>
-                            </div>
-                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
-                            <div className='flex flex-col items-center justify-center'>
-                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.hours}</p>
-                                <p className='text-[15px]'>HOURS</p>
-                            </div>
-                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
-                            <div className='flex flex-col items-center justify-center'>
-                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.minutes}</p>
-                                <p className='text-[15px]'>MINUTES</p>
-                            </div>
-                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
-                            <div className='flex flex-col items-center justify-center'>
-                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.seconds}</p>
-                                <p className='text-[15px]'>SECONDS</p>
-                            </div>
-                        </div>
-                        <p className='pt-[10px] text-[40px]'>20/05/2025</p>
-                    </div>
-                    
                 </div>
+
                 <div className='flex flex-col items-center justify-center pt-[20px] md:pt-[50px] text-white text-[20px]'>
-                    <img src="/assets/location-icon.png" alt="" />
-                    <p className='text-center'>Delta State Innovation Hub</p>
-                    <p className='text-center'>#1 DBS Junction, Okpanam Road, Asaba, Delta State.</p>
-                </div>
-
-
-                {/* We are Live  */}
-                {/* <div className='py-20 bg-[url(public/assets/Live-bg.png)] bg-center bg-contain bg-no-repeat flex items-center justify-center'>
-                    <p className='text-center md:text-start font-bold text-[38px] lg:text-[48px]'>We are Now Live</p>
-                </div> */}
-
-                
+                    <p className='text-center'>Explore our features and stay connected.</p>
+                </div>                
             </div>
         </div>
         

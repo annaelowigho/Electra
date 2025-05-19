@@ -1,105 +1,156 @@
-import React from 'react';
-import FAQItem from '../Components/FAQItems';
+import React from 'react'
 
-const FAQs = [
-  {
-    question: "Introduction",
-    answer: "Welcome to Electra Motors. These Terms and Conditions govern the provision of Compressed Natural Gas (CNG) conversion services, maintenance, and related products offered by Electra Motors Limited. By engaging our services, you agree to be bound by these terms."
-  },
-  {
-    question: "Scope of Services",
-    answer: "Electra provides CNG conversion services for petrol-powered vehicles, including installation of CNG kits, high-pressure cylinders, regulators, and fuel injectors."
-  },
-  {
-    question: "Scope of Services",
-    answers: [
-      "Electra provides CNG conversion services for petrol-powered vehicles, including installation of CNG kits, high-pressure cylinders, regulators, and fuel injectors.",
-      "Services include vehicle inspections, conversions, testing, and post-conversion maintenance, subject to bookings and appointments on our website.",
-      "Electra may supply CNG conversion kits and spare parts, such as air/gas mixers, pressure regulators, and CNG tanks, as approved by the Standards Organization of Nigeria (SON)."
-    ]
-  },
-  {
-    question: "Customer Obligations",
-    answers: [
-      "You must provide accurate information about your vehicle, including make, model, and condition, to ensure compatibility with CNG conversion.",
-      "Vehicles must be in good mechanical condition before conversion. Electra reserves the right to refuse service if the vehicle does not meet our safety or technical requirements.",
-      "You agree to comply with all safety guidelines provided by Electra, including proper handling and refueling of CNG vehicles."
-    ]
-  },
-  {
-    question: "Payment Terms",
-    answers: [
-      "A non-refundable payment of the quoted conversion cost is required before conversion.",
-      "Payments can be made via bank transfer, POS, or other methods specified. All payments are subject to applicable taxes, including Value Added Tax (VAT), unless waived under the VAT Modification Order 2024.",
-    ]
-  },
-  {
-    question: "Warranties and Guarantees",
-    answers: [
-      "Electra warrants that all CNG conversion kits and installations meet industry standards and are free from defects in materials and workmanship for a period of one (1) month from the date of completion.",
-      "The warranty covers repairs or replacements of defective parts, provided the vehicle is maintained according to Electra guidelines.",
-      "The warranty does not cover damages resulting from misuse, accidents, unauthorized repairs, or failure to follow guidelines and safety protocols.",
-      "Any claims under the warranty must be reported in writing to Electra within 2 days of discovering the issue."
-    ]
-  },
-  {
-    question: "Liability",
-    answers: [
-      "Electra shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services or products.",
-      "Our liability for direct damages is limited to the cost of the conversion service or product purchased.",
-      "Electra is not responsible for accidents or damages caused by improper handling of CNG systems by the Customer or third parties.",
-    ]
-  },
-  {
-    question: "Safety and Compliance",
-    answers: [
-      "All conversions adhere to safety standards set by NMDPRA, SON, and the Nigerian Automotive Design and Development Council (NADDC).",
-      "Customers must ensure CNG tanks are inspected annually by certified technicians to maintain safety compliance.",
-    ]
-  },
-  {
-    question: "Cancellations and Refunds",
-    answers: [
-      "A Cancellations made before work begins are subject to a 20% administrative fee on the deposit.",
-      "No refunds are issued for cancellations after conversion work has commenced.",
-      "Refunds for defective products are processed within 7 days, subject to inspection and verification by Electra.",
-    ]
-  },
-  {
-    question: "Force Majeure",
-    answer: "Electra shall not be liable for delays or failure to perform services due to events beyond our control, including but not limited to natural disasters, government regulations, or supply chain disruptions."
-  },
-];
-
-const TermsPolicy = () => {
+const PrivacyPolicy = () => {
   return (
-    <>
-      <div className="bg-[#002748] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
-        <div className="text-center">
-          <h2 className="text-white text-[44px] md:text-[60px] font-bold leading-14 md:leading-16">
-            Terms Policy
-          </h2>
-          <p className="text-white text-[20px] md:text-[24px] px-5 pt-5">
-            Ensuring Transparency and Trust in Our Terms
-          </p>
+         <>
+        <div className="bg-[#002748] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
+            <div className="text-center">
+                <h2 className="text-white text-[44px] md:text-[60px] font-bold leading-14 md:leading-16">
+                    Privacy Policy
+                </h2>
+                <p className="text-white text-[20px] md:text-[24px] px-5 pt-5">
+                    Protecting Your Data with Trust & Transparency. 
+                </p>
+            </div> 
         </div>
-      </div>
-
-      <div className='px-[20px] py-[30px] md:px-[70px] md:py-[50px] xl:px-[200px] xl:py-[100px]'>
-        <h2 className="text-center text-[30px] md:text-[48px] font-bold leading-8 md:leading-14">
-          Frequently Asked Questions
-        </h2>
-        <div className="pt-[30px] flex flex-col gap-5 md:gap-8">
-          {FAQs.map((item, index) => (
-            <FAQItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-              answers={item.answers}
-            />
-          ))}
+        <div className='pt-[30px] md:pt-[50px] xl:pt-[80px] pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">Introduction</h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px]'>
+                At Electra Motors Limited, your privacy is important to us. This Privacy Policy explains how we collect, use, share,
+                and protect your personal information when you engage with our Compressed Natural Gas (CNG) vehicle
+                conversion services in Nigeria. By using our services, visiting our office, or interacting with our website,  you 
+                agree to the terms of this Privacy Policy
+            </p>
         </div>
-      </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Information We Collect
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pb-[10px]'>
+                We may collect the following types of information:
+            </p>
+            <ul className='text-justify text-[18px] md:text-[20px] xl:text-[24px] list-decimal pl-[10px] md:pl-[20px] space-y-3'>
+                <li>
+                    Personal Information: Full name, phone number, email address, home address, and government-approved 
+                    valid identification.
+                </li>
+                <li>
+                    Vehicle Information: Vehicle type, make, model, year, and engine specifications.
+                </li>
+                <li>
+                    Transaction Details: Payment information, invoices, and service history.
+                </li>
+                <li>
+                    Digital Data: IP address, browser type, and device information when you visit our website.
+                </li>
+            </ul>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                How We Use Your Information
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pb-[10px]'>
+                We use your information to:
+            </p>
+            <ul className='text-justify text-[18px] md:text-[20px] xl:text-[24px] list-decimal pl-[10px] md:pl-[20px] space-y-3'>
+                <li>
+                     Provide and manage CNG conversion services.
+                </li>
+                <li>
+                    Communicate with you about your appointments and inquiries.
+                </li>
+                <li>
+                    Issue invoices and process payments.
+                </li>
+                <li>
+                    Maintain service records for warranty and safety tracking.
+                </li>
+                <li>
+                    Improve our services and customer experience.
+                </li>
+                <li>
+                    Comply with legal and regulatory obligations.
+                </li>
+            </ul>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Sharing of Information
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pb-[10px]'>
+                We do not sell or rent your personal data. We may share your information with:
+            </p>
+            <ul className='text-justify text-[18px] md:text-[20px] xl:text-[24px] list-decimal pl-[10px] md:pl-[20px] space-y-3'>
+                <li>
+                     Government agencies or regulators (as required by law).
+                </li>
+                <li>
+                     Authorized service providers assisting in operations (e.g., payment processors, IT service providers).
+                </li>
+                <li>
+                     Law enforcement authorities if required by legal obligation.
+                </li>
+            </ul>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pt-[10px]'>
+                All third parties are required to maintain the confidentiality and security of your data.
+            </p>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Data Security
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px]'>
+                We implement industry-standard security measures to protect your data against unauthorized access
+            </p>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Your Rights
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px]'>
+                You have the right to:
+            </p>
+            <ul className='text-justify text-[18px] md:text-[20px] xl:text-[24px] list-decimal pl-[10px] md:pl-[20px] space-y-3'>
+                <li>
+                    Request access to your personal data.
+                </li>
+                <li>
+                    Ask for corrections or updates to your information.
+                </li>
+                <li>
+                    Withdraw consent or request deletion of your data (subject to legal and contractual restrictions).
+                </li>
+            </ul>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pt-[10px]'>
+                To exercise any of these rights, please contact us using the information provided below.
+            </p>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Data Retention
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pt-[10px]'>
+                We retain your personal and vehicle information for as long as necessary to satisfy the purposes outlined 
+                in this policy or as required by law. After the retention period, your data will be securely deleted.
+            </p>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Changes to this Privacy Policy
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pt-[10px]'>
+                We may update this Privacy Policy from time to time. If significant changes are made, we will notify you 
+                via email or through our website. Please review this policy periodically for the latest information.
+            </p>
+        </div>
+        <div className='pb-[50px] md:pb-[80px] xl:pb-[100px] px-[20px] md:px-[50px] xl:px-[150px]'>
+            <h1 className="text-[38px] md:text-[48px] font-bold leading-14 md:leading-16 text-center xl:pb-[10px]">
+                Legal Compliance
+            </h1>
+            <p className='text-justify text-[18px] md:text-[20px] xl:text-[24px] pt-[10px]'>
+                We comply with NDPR and other Nigerian data privacy laws.
+            </p>
+        </div>
         <div className='flex flex-col items-center justify-center bg-[#D9E8F4] mx-[20px] mt-0 mb-[50px] p-10 rounded-lg md:mx-[80px]
         md:mb-[80px] lg:mb-[100px] xl:mb-[150px] lg:mx-[100px] min-[1280px]:mx-[150px] xl:mx-[250px]'>
             <h2 className="text-[38px] md:text-[48px] font-bold text-center">For inquiries, contact:</h2>
@@ -113,7 +164,41 @@ const TermsPolicy = () => {
             </a>
         </div>
     </>
-  );
-};
+  )
+}
 
-export default TermsPolicy;
+export default PrivacyPolicy
+
+
+{/* <div className='flex flex-col md:flex-row mt-[30px] md:mt-[50px] lg:mt-[80px] xl:mt-[100px] text-[#002748]'>
+                    <div className='bg-white rounded-tr-[27px] rounded-bl-0 md:rounded-tr-[0px] rounded-tl-[27px] md:rounded-bl-[27px] 
+                    py-[30px] lg:py-[50px] w-full md:w-1/2 flex items-center justify-center'>
+                        <p className='text-center md:text-start font-bold text-[38px] lg:text-[48px]'>
+                            We are <br /> Launching!!!</p>
+                    </div>
+                    <div className='bg-[#2FEAE4] rounded-bl-[27px] rounded-tr-0 md:rounded-bl-[0px] md:rounded-tr-[27px] rounded-br-[27px] py-[30px] 
+                    lg:py-[50px] w-full md:w-1/2 flex flex-col justify-center items-center'>
+                        <div className='flex'>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.days}</p>
+                                <p className='text-[15px]'>DAYS</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.hours}</p>
+                                <p className='text-[15px]'>HOURS</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.minutes}</p>
+                                <p className='text-[15px]'>MINUTES</p>
+                            </div>
+                            <span className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>:</span>
+                            <div className='flex flex-col items-center justify-center'>
+                                <p className='text-[48px] lg:text-[67.56px] font-bold leading-10 md:leading-14 lg:leading-16'>{timeLeft.seconds}</p>
+                                <p className='text-[15px]'>SECONDS</p>
+                            </div>
+                        </div>
+                        <p className='pt-[10px] text-[40px]'>20/05/2025</p>
+                    </div>
+                </div> */}

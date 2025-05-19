@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaChevronDown } from "react-icons/fa6";
 
-function FAQItem({ question, answer, answers }) {
+function FAQItem({ question, answer, answers,answerTwo }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAnswer = () => {
@@ -36,6 +36,7 @@ function FAQItem({ question, answer, answers }) {
               ))}
             </ul>
           )}
+          {answerTwo && <p>{answerTwo}</p>}
         </div>
       </div>
     </div>
