@@ -90,7 +90,7 @@ const Nav = () => {
             </button>
 
             {isMenuOpen && (
-              <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/70 rounded-b-3xl z-50">
+              <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/90 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
                   <li className="hover:text-[#2FEAE4]">
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
