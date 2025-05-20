@@ -192,7 +192,7 @@ const AboutUs = () => {
         </div>
 
         {/* Meet the Team */}
-        <div className='mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
+        {/* <div className='mt-[50px] xl:mt-[100px] px-[20px] py-[20px] md:px-[30px] xl:px-[150px] xl:py-[50px]'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 {Team.map((item, index) => (
                     <div key={index} className="flex flex-col items-center transition-all duration-500 ease-linear 
@@ -204,7 +204,7 @@ const AboutUs = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </div> */}
 
         {/* Trusted Partners */}
         <div className='mb-[50px] xl:mb-[100px]'>

@@ -198,7 +198,7 @@ const Homepage = () => {
         </div>
         
         {/* Updated Hero Section */}
-        <div className='bg-[#002748] bg-[url("/assets/bkg.png")] bg-cover bg-no-repeat bg-center'>
+        <div className='bg-[#002748] bg-[url("/assets/bkg.png")] bg-cover bg-no-repeat bg-center overflow-hidden w-full'>
             <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] relative hero-section'>
                 <div className='flex items-center justify-center md:justify-between'>
                     <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
@@ -245,7 +245,7 @@ const Homepage = () => {
 
                     {/* Live Announcement Text */}
                     <div className="text-center px-5">
-                        <h1 className="text-[36px] md:text-[48px] lg:text-[60px] font-bold drop-shadow-md">
+                        <h1 className="text-[28px] md:text-[48px] lg:text-[60px] font-bold drop-shadow-md">
                         We Are Now Live!
                         </h1>
                         <p className="text-[18px] md:text-[22px] font-medium max-w-xl mx-auto">

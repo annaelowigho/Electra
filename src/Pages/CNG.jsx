@@ -188,9 +188,9 @@ const CNG = () => {
                             <option value="" disabled hidden>
                                 Select Vehicle Type
                             </option>
-                            <option value="toyota">Salon (Sedan)</option>
-                            <option value="lexus">SUVs</option>
-                            <option value="tricycle">others</option>
+                            <option value="toyota">Bicycle</option>
+                            <option value="lexus">Tricycle</option>
+                            <option value="tricycle">Vehicle</option>
                             </select>
                         </div>
                     </div>
@@ -207,9 +207,11 @@ const CNG = () => {
                             <option value="" disabled hidden>
                                 Select Engine Type
                             </option>
+                            <option value="50kg">2 cylinders</option>
                             <option value="50kg">4 cylinders</option>
                             <option value="100kg">6 cylinders</option>
                             <option value="70kg">8 cylinders</option>
+                            <option value="70kg">12 cylinders</option>
                             </select>
                         </div>
                     </div>
@@ -249,7 +251,7 @@ const CNG = () => {
                                 </div>
                             </label>
                             <label htmlFor='ibusa' className='flex items-center gap-5 border px-5 py-3 rounded-2xl text-[18px] 
-                            font-semibold w-full mt-[30px] cursor-pointer'>
+                            font-semibold w-full mt-[30px] md:mt-[40px] cursor-pointer'>
                                 <input type="radio" id='ibusa' name='location' value='Ibusa'
                                 className="w-6 h-6 accent-[#002748]"/>
                                 <div>
@@ -260,12 +262,12 @@ const CNG = () => {
                         </div>
                     </div>
                     <div className='md:w-1/2'>
-                        <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">
+                        <p className="text-[20px] md:text-[24px] font-semibold pb-[3px]">
                             Select Date and Time
                         </p>
-                        <div className='flex flex-col space-y-5'>
+                        <div className='flex flex-col space-y-3'>
                             <div>
-                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Date</p>
+                                <p className="text-[20px] md:text-[20px] font-semibold pb-[5px] xl:pb-[2px]">Date</p>
                                 <div className='bg-[#D9E8F4] px-5 py-3 rounded-2xl'>
                                     <select
                                         name="date"
@@ -275,7 +277,7 @@ const CNG = () => {
                                         className="outline-none w-full text-gray-700 bg-transparent"
                                     >
                                     <option value="" disabled hidden>
-                                        Select Date
+                                        Select Day
                                     </option>
                                     <option value="toyota">Tuesday</option>
                                     <option value="lexus">Thursday</option>
@@ -284,7 +286,7 @@ const CNG = () => {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Time</p>
+                                <p className="text-[20px] md:text-[20px] font-semibold pb-[5px]">Time</p>
                                 <div className='bg-[#D9E8F4] px-5 py-3 rounded-2xl text-gray-500 flex items-center gap-4 text-[18px] w-[225px]'>
                                     <IoTimeOutline className='text-[28px]' />
                                     <DatePicker
@@ -302,8 +304,9 @@ const CNG = () => {
                                 </div>
                                 </div>
                             <div>
-                                <p className="text-[20px] md:text-[24px] font-semibold pb-[5px]">Contact Information</p>
-                                <input type="text" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full xl:w-[385px]'/>
+                                <p className="text-[20px] md:text-[20px] font-semibold pb-[5px]">Contact Information</p>
+                                <input type="email" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full' placeholder='Email'/>
+                                <input type="text" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full mt-3' placeholder='Phone number' required/>
                             </div>
                             <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
                             cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0 lg:w-[162px] hover:shadow-lg 
