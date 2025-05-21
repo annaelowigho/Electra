@@ -198,7 +198,7 @@ const Homepage = () => {
         </div>
         
         {/* Updated Hero Section */}
-        <div className='bg-[#002748] bg-[url("/assets/bkg.png")] bg-cover bg-no-repeat bg-center overflow-hidden w-full min-w-[400px] md:min-w-full'>
+        <div className='bg-[#002748] bg-[url("/assets/bkg.png")] bg-cover bg-no-repeat bg-center overflow-hidden w-full'>
             <div className='px-[20px] py-[50px] md:px-[30px] md:py-[100px] lg:px-[80px] xl:px-[100px] xl:py-[100px] relative hero-section'>
                 <div className='flex items-center justify-center md:justify-between'>
                     <img src="/assets/Eco Fuel 1.svg" alt="" className='hidden md:block'/>
@@ -321,7 +321,7 @@ const Homepage = () => {
                                 Upgrade to a greener drive! Purchase top-quality, certified CNG kits for improved fuel 
                                 efficiency and reduced emissions
                             </p>
-                            <Link >
+                            <Link to="/services/buy-cng-kits">
                                 <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
                                 w-[120px] xl:w-[147px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
                                 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
@@ -342,11 +342,13 @@ const Homepage = () => {
                             <p className='text-[12px] min-[1300px]:text-[17px]'>
                                 Locate convenient and reliable CNG refueling stations near you. Fuel up and stay eco-friendly today!
                             </p>
-                            <button className='text-[17px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer
-                            w-[150px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                            hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                                Find Station Now
-                            </button>
+                            <Link to="/services/refuelling-station">
+                                <button className='text-[17px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer
+                                w-[150px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                                    Find Station Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -381,7 +383,7 @@ const Homepage = () => {
                         data-aos-delay="100"
                         key={index}
                         className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
-                         cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#002748] hover:text-white"
+                         cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#002748] hover:text-white"
                     >
                         <div className="bg-[#2FEAE4] w-[50px] h-[50px] rounded-full flex items-center justify-center">
                         <Icon className="text-[24px]" /> 

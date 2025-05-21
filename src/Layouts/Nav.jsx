@@ -44,7 +44,7 @@ const Nav = () => {
             </NavLink>
           </li>
           <li className='relative' onMouseEnter={() => setIsDropdownOpen(true)} >
-            <NavLink>
+            <NavLink to='/services'>
               <div className='flex items-center hover:text-[#2FEAE4]'>
                 <p>Services</p>
                 <MdKeyboardArrowDown className='text-[24px]'/>
@@ -53,11 +53,21 @@ const Nav = () => {
             {isDropdownOpen && (
               <ul className='absolute top-[60px] bg-white text-black w-[300px] shadow-lg z-50 px-10 py-10 '
               onClick={() => setIsDropdownOpen(false)} onMouseLeave={() => setIsDropdownOpen(false)}>
-                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
-                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
-                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
-                <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
-                <Link to='/services'><li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link>
+                <Link to='/book-now'>
+                  <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
+                </Link>
+                <Link to='/training'>
+                  <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
+                </Link>
+                <Link to="/services/buy-cng-kits">
+                  <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
+                </Link>
+                <Link to="/services/refuelling-station">
+                  <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
+                </Link>
+                <Link to='/services'>
+                  <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li>
+                </Link>
               </ul>
             )}
             
@@ -120,12 +130,21 @@ const Nav = () => {
                     {isDropdownOpen && (
                       <ul className=' bg-white text-black w-[300px] shadow-lg z-50 px-6 py-5 mt-2'
                       onClick={() => setIsMenuOpen(false)}>
-                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
-                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
-                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
-                        <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
-                        <li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'><Link to='/services'>Explore More</Link></li>
-                        {/* <Link to='/services'><li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li></Link> */}
+                        <Link to='/book-now'>
+                          <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Book CNG Conversion</li>
+                        </Link>
+                        <Link to='/training'>
+                          <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Join CNG Training</li>
+                        </Link>
+                        <Link to="/services/buy-cng-kits">
+                          <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Buy CNG Kits</li>
+                        </Link>
+                        <Link to="/services/refuelling-station">
+                          <li className='hover:bg-[#002748] cursor-pointer hover:text-white duration-500 w-full p-3'>Find Refueling Station</li>
+                        </Link>
+                        <Link to='/services'>
+                          <li className='hover:bg-[#2FEAE4] cursor-pointer hover:text-white duration-500 w-full p-3'>Explore More</li>
+                        </Link>
                       </ul>
                     )}
                   </li>

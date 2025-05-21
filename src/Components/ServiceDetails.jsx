@@ -38,7 +38,7 @@ const ServiceDetails = () => {
         return <BuyCngKits />;
       case 'refuelling-station':
         return <CNGStation />;
-      case 'cng-conversion':
+      case 'cng-conversion': 
         return <CNG />;
       case 'cng-training':
         return <Training />
