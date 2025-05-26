@@ -34,7 +34,7 @@ const Footer = () => {
                 {/* <Link to='/electra'>About Us</Link> */}
                 <a href="/services" className='text-[18px] hover:text-[#2FEAE4]'>Services</a>
                 <a href="/careers" className='text-[18px] hover:text-[#2FEAE4]'>Careers</a>
-                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>FAQs</a>
+                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>News and Events</a>
                 <a href="/inquiries" className='text-[18px] hover:text-[#2FEAE4]'>Inquiries</a>
                 <a href="/terms-policy" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
                 <a href="/privacy-policy" className='text-[18px] hover:text-[#2FEAE4]'>Privacy Policy</a>

@@ -54,10 +54,10 @@ const Feedback = [
 ]
 
 const Images = [
-  "/assets/hero-img1.png",
-  "/assets/hero-img2.png",
-  "/assets/hero-img3.png",
-  "/assets/hero-img4.png",
+  "/assets/hero-image1.png",
+  "/assets/hero-image2.png",
+  "/assets/hero-image3.png",
+  "/assets/hero-image4.png",
 ];
 
 const Homepage = () => {
@@ -206,7 +206,7 @@ const Homepage = () => {
                         <h1 className='text-[38px] md:text-[40px] lg:text-[55px] xl:text-[60px] font-black text-white text-center leading-[50px]
                         md:leading-[55px] lg:leading-[70px] xl:leading-[85px]'>
                             Convert to CNG and <br />
-                            <span className='text-[#2FEAE4]'> Save up to 40% </span>
+                            <span className='text-[#2FEAE4]'> Save up to 80% </span>
                         </h1>
                     </div>
                     <img src="/assets/3D Repair Icon Model 1.svg" alt="" className='hidden md:block'/>
@@ -221,7 +221,7 @@ const Homepage = () => {
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{ repeat: Infinity, duration: 30, ease: "linear" }}>
                         {[...Images, ...Images].map((img, index) => (
-                        <img key={index} src={img} alt={`Scrolling image ${index + 1}`} />
+                        <img key={index} src={img} alt={`Scrolling image ${index + 1}`} className='w-[300px] h-[250px] object-cover rounded-xl'/>
                         ))}
                     </motion.div>
                 </div>
