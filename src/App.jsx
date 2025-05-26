@@ -49,7 +49,7 @@ function App() {
             <Route path='/electra' element={<AboutUs />}/>
             <Route path='/cng' element={<CNG />}/>
             <Route path='/services' element={<Services />}>
-              <Route index element={<Services />} />
+              {/* <Route index element={<Services />} /> */}
               <Route path="cng-conversion" element={<CNG />}/>
               <Route path="cng-training" element={<Training />} />
               <Route path="buy-cng-kits" element={<BuyCngKits />} />

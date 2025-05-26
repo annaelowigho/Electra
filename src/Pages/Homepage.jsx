@@ -10,7 +10,7 @@ import Partner from '../Components/Partner';
 import Map from '../Components/Map';
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Choose = [
     {
@@ -53,12 +53,12 @@ const Feedback = [
     },
 ]
 
-// const Images = [
-//   "/assets/hero-img1.png",
-//   "/assets/hero-img2.png",
-//   "/assets/hero-img3.png",
-//   "/assets/hero-img4.png",
-// ];
+const Images = [
+  "/assets/hero-img1.png",
+  "/assets/hero-img2.png",
+  "/assets/hero-img3.png",
+  "/assets/hero-img4.png",
+];
 
 const Homepage = () => {
 
@@ -214,16 +214,7 @@ const Homepage = () => {
                 <p className='text-white text-center pt-[30px] text-[18px] md:text-[20px] xl:text-[24px] font-medium'>
                     Book a Conversion, Join Training, Buy Kits, <br /> Find Refueling Station
                 </p>
-                {/* <div className='flex items-center justify-center'>
-                    <div className='pt-[30px] md:pt-[50px] xl:pt-[70px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 
-                    place-items-center gap-8 md:gap-10'>
-                        <img src="/assets/hero-img1.png" alt="Hero Image 1" className='' />
-                        <img src="/assets/hero-img2.png" alt="Hero Image 2" className='' />
-                        <img src="/assets/hero-img3.png" alt="Hero Image 3" className='' />
-                        <img src="/assets/hero-img4.png" alt="Hero Image 4" className='' />
-                    </div>
-                </div> */}
-                {/* <div className='flex items-center justify-center'>
+                <div className='flex items-center justify-center'>
                     <div className="overflow-hidden w-full pt-[30px] md:pt-[50px] xl:pt-[70px] ">
                     <motion.div
                     className="flex space-x-10 w-max"
@@ -234,8 +225,8 @@ const Homepage = () => {
                         ))}
                     </motion.div>
                 </div>
-                </div> */}
-                <div className="mt-5 bg-[url('/assets/live-now.png')] bg-contain bg-center bg-no-repeat py-10 flex flex-col items-center justify-center">
+                </div>
+                {/* <div className="mt-5 bg-[url('/assets/live-now.png')] bg-contain bg-center bg-no-repeat py-10 flex flex-col items-center justify-center">
                     <img
                         src="/assets/lottie.gif"
                         alt="celebration"
@@ -254,13 +245,13 @@ const Homepage = () => {
 
                 <div className='flex flex-col items-center justify-center pt-[20px] md:pt-[50px] text-white text-[20px]'>
                     <p className='text-center'>Explore our features and stay connected.</p>
-                </div>                
+                </div> */}
             </div>
         </div>
         
 
         {/* Services */}
-        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
+        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px] overflow-hidden'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Services</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px] items-center justify-center'>
