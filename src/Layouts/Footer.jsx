@@ -7,7 +7,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiEnvelope } from "react-icons/bi";
 import { FaTurnUp } from "react-icons/fa6";
-import { FiFacebook } from "react-icons/fi";
+import { LuFacebook } from "react-icons/lu";
 
 const Footer = () => {
   return (
@@ -23,9 +23,11 @@ const Footer = () => {
                 Committed to sustainability and exceptional service, it aims to lead the Nigerian automotive sector
               </p>
               <div className='text-white text-[25px] flex gap-5 items-center'>
-                <FaInstagram className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                <a href="https://www.instagram.com/electramotorshq?igsh=MWhvNHc1N2xkaWY0cQ%3D%3D&utm_source=qr">
+                  <FaInstagram className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                </a>
                 <a href="https://www.facebook.com/profile.php?id=61576083733329">
-                  <FiFacebook className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                  <LuFacebook className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
                 </a>
                 <SlSocialYoutube className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />
                 <BsTwitterX className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />

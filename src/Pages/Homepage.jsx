@@ -427,7 +427,7 @@ const Homepage = () => {
                         <button
                         className="text-[16px] md:text-[18px] text-white font-semibold bg-[#002748] px-[20px] py-[15px] 
                             rounded-lg cursor-pointer mt-[10px] xl:mt-[30px] w-full lg:w-[162px] hover:shadow-lg 
-                            transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                            transition-all duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
                             hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 
                             focus:outline-none focus:ring-2 focus:ring-[#2FEAE4]"
                         >
