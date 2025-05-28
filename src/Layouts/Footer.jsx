@@ -7,6 +7,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BiEnvelope } from "react-icons/bi";
 import { FaTurnUp } from "react-icons/fa6";
+import { FiFacebook } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -23,6 +24,9 @@ const Footer = () => {
               </p>
               <div className='text-white text-[25px] flex gap-5 items-center'>
                 <FaInstagram className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                <a href="https://www.facebook.com/profile.php?id=61576083733329">
+                  <FiFacebook className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125'/>
+                </a>
                 <SlSocialYoutube className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />
                 <BsTwitterX className='hover:text-[#2FEAE4] cursor-pointer transition-transform duration-300 transform hover:scale-125' />
               </div>
@@ -36,8 +40,8 @@ const Footer = () => {
                 <a href="/careers" className='text-[18px] hover:text-[#2FEAE4]'>Careers</a>
                 <a href="" className='text-[18px] hover:text-[#2FEAE4]'>News and Events</a>
                 <a href="/inquiries" className='text-[18px] hover:text-[#2FEAE4]'>Inquiries</a>
-                <a href="/terms-policy" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
-                <a href="/privacy-policy" className='text-[18px] hover:text-[#2FEAE4]'>Privacy Policy</a>
+                {/* <a href="/terms-policy" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
+                <a href="/privacy-policy" className='text-[18px] hover:text-[#2FEAE4]'>Privacy Policy</a> */}
               </div>
             </div>
             <div className='text-white'>
@@ -68,6 +72,22 @@ const Footer = () => {
                     <FaTurnUp className="" />
                   </div>
                 </div>
+              </div>
+            </div>
+            
+          </div>
+          <div className='pt-5 md:pt-10 w-full'>
+            <hr className='border-1 border-white w-full'></hr>
+            <div className='pt-3 md:pt-4 text-white flex flex-col gap-2 md:flex-row md:gap-30 lg:justify-between'>
+              <p className='text-[18px] font-medium'>All rights reserved © Copyright 2024 - 2025</p>
+              <div className='space-x-2'>
+                <a href="/terms-policy" className='text-[18px] hover:text-[#2FEAE4]'>Terms Policy</a>
+                <span className='border-1 border-white'></span>
+                <a href="/privacy-policy" className='text-[18px] hover:text-[#2FEAE4]'>Privacy Policy</a>
+                <span className='border-1 border-white'></span>
+                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Refund Policy</a>
+                <span className='border-1 border-white'></span>
+                <a href="" className='text-[18px] hover:text-[#2FEAE4]'>Safeguarding Policy</a>
               </div>
             </div>
           </div>
