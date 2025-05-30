@@ -11,6 +11,7 @@ import Map from '../Components/Map';
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
 import { motion } from "framer-motion"
+import { DiSnapSvg } from 'react-icons/di';
 
 const Choose = [
     {
@@ -368,21 +369,23 @@ const Homepage = () => {
             <div className="pt-[50px] flex flex-col md:flex-row flex-wrap items-center justify-center gap-[30px]">
                 {Choose.map((item, index) => {
                     const Icon = item.icon; // Store the icon component
-                    return (
+                    return ( 
                     <div
-                        data-aos='fade-up'
-                        data-aos-delay="100"
-                        key={index}
-                        className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
-                         cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 hover:bg-[#002748] hover:text-white"
-                    >
-                        <div className="bg-[#2FEAE4] w-[50px] h-[50px] rounded-full flex items-center justify-center">
-                        <Icon className="text-[24px]" /> 
+                    data-aos='fade-up'
+                    data-aos-delay="100">
+                        <div
+                            key={index}
+                            className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
+                            cursor-pointer transition-all hover:-translate-y-2 duration-300 hover:shadow-xl hover:bg-[#002748] hover:text-white">
+                            <div className="bg-[#2FEAE4] w-[50px] h-[50px] rounded-full flex items-center justify-center">
+                            <Icon className="text-[24px]" /> 
+                            </div>
+                            <h5 className="text-[24px] font-semibold text-center">{item.heading}</h5>
+                            <p className="text-center text-[16px] font-medium pt-[15px]">
+                            {item.description}
+                            </p>
+                            
                         </div>
-                        <h5 className="text-[24px] font-semibold text-center">{item.heading}</h5>
-                        <p className="text-center text-[16px] font-medium pt-[15px]">
-                        {item.description}
-                        </p>
                     </div>
                     );
                 })}

@@ -7,7 +7,7 @@ const BookNow = () => {
     const [email, setEmail] = useState('');
     const [vehicleRegNum, setVehicleRegNum] = useState('');
 
-  return (
+  return ( 
     <>
         <div className='py-[30px] md:py-[50px] px-[20px] md:px-[30px] xl:px-[100px]'>
             {/* <p className='text-[20px] md:text-[24px] font-medium text-center'>
