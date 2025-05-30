@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Inquiries = () => {
 
@@ -76,10 +77,10 @@ const Inquiries = () => {
                         <div className='mt-2 px-[20px] md:px-[15px] rounded-2xl border-1 border-black/50'>
                             <select name="" id="" className='w-full h-[60px] text-[18px] text-black/50 font-medium outline-none'>
                                 <option value="" disabled>Please Select an Option</option>
-                                <option value="">Complete Engine Overhaul</option>
-                                <option value="">Engine Diagnostics</option>
-                                <option value="">Engine Tuning</option>
-                                <option value="">Turbocharger Repair</option>
+                                <option value="">CNG Conversion Services</option>
+                                <option value="">EV Purchase/Prototype</option>
+                                <option value="">Vehicle Maintenance</option>
+                                <option value="">Training and Certification</option>
                             </select>
                         </div> 
                     </div>
@@ -94,10 +95,10 @@ const Inquiries = () => {
                         <div className='mt-2 px-[20px] md:px-[15px] rounded-2xl border-1 border-black/50'>
                             <select name="" id="" className='w-full h-[60px] text-[18px] text-black/50 font-medium outline-none'>
                                 <option value="" disabled>Please Select an Option</option>
-                                <option value="">Complete Engine Overhaul</option>
-                                <option value="">Engine Diagnostics</option>
-                                <option value="">Engine Tuning</option>
-                                <option value="">Turbocharger Repair</option>
+                                <option value="">Personal Use</option>
+                                <option value="">Business/Commercial</option>
+                                <option value="">Government/Institution</option>
+                                <option value="">NGO or Clean Energy Project</option>
                             </select>
                         </div> 
                     </div>
@@ -106,10 +107,11 @@ const Inquiries = () => {
                         <div className='mt-2 px-[20px] md:px-[15px] rounded-2xl border-1 border-black/50'>
                             <select name="" id="" className='w-full h-[60px] text-[18px] text-black/50 font-medium outline-none'>
                                 <option value="" disabled>Please Select an Option</option>
-                                <option value="">Complete Engine Overhaul</option>
-                                <option value="">Engine Diagnostics</option>
-                                <option value="">Engine Tuning</option>
-                                <option value="">Turbocharger Repair</option>
+                                <option value="">Email</option>
+                                <option value="">Phone</option>
+                                <option value="">WhatsApp</option>
+                                <option value="">In-person meeting</option>
+                                <option value="">Virtual call</option>
                             </select>
                         </div> 
                     </div>
@@ -124,11 +126,13 @@ const Inquiries = () => {
                         </p>
                     </label>
                 </div>
-                <button className='text-[18px] text-white font-semibold bg-[#002748] w-full rounded-lg cursor-pointer px-6 py-4 text-center
-                hover:shadow-lg transition-transform duration-500 hover:scale-101 hover:bg-[#2FEAE4] hover:border-[3px]
-                hover:border-[#002748] hover:text-[#13202b]'>
-                    Submit Inquiry
-                </button>
+                <Link to='/service-request-form'>
+                    <button className='text-[18px] text-white font-semibold bg-[#002748] w-full rounded-lg cursor-pointer px-6 py-4 text-center
+                    hover:shadow-lg transition-transform duration-500 hover:scale-101 hover:bg-[#2FEAE4] hover:border-[3px]
+                    hover:border-[#002748] hover:text-[#13202b]'>
+                        Submit Inquiry
+                    </button>
+                </Link>
             </form>
         </div>
     </>
