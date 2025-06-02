@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 
 
@@ -22,6 +22,19 @@ const Services = [
 ]
 
 const InquiryServiceReqForm = () => {
+
+    const [selectedService, setSelectedService] = useState(null);
+    const [showModal, setShowModal] = useState(false)
+
+    const openModal = (service) => {
+        setSelectedService(service);
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        setSelectedService(null);
+    };
   return (
     <>
         <div className='shadow-xl mx-[20px] my-[20px] md:mx-[50px] md:my-[40px] lg:mx-[100px] lg:my-[100px] xl:mx-[150px] rounded-2xl'>
@@ -48,18 +61,21 @@ const InquiryServiceReqForm = () => {
                 </div>
                 <div className='px-3 md:px-5 lg:px-10 pt-5'>
                     <p className='text-[18px] font-semibold md:text-[20px] lg:text-[24px]'>1. Service Inquiry Type</p>
-                    <div className='flex flex-col md:flex-row items-center justify-center gap-[30px] md:gap-[15px] lg:gap-[45px] pt-7 px-8 md:px-0'>
-                        {Services.map((item, index) => {
-                            return (
-                                <div key={index} className='flex flex-col items-center justify-center w-full md:w-[160px] lg:w-[178.94px] h-[150.92px] shadow-lg
-                                rounded-xl'>
-                                    <div className='w-[50px] h-[50px] rounded-full bg-[#002748] flex items-center justify-center'>
-                                        <img src={item.image} alt="" />
-                                    </div>
-                                    <h4 className='text-[20px] font-medium'>{item.title}</h4>
+                    <div className='relative'>
+                    {/* Services list */}
+                        <div className='flex flex-col md:flex-row items-center justify-center gap-[30px] md:gap-[15px] lg:gap-[45px] pt-7 px-8 md:px-0'>
+                            {Services.map((item, index) => (
+                            <div
+                                key={index}
+                                onClick={() => openModal(item)}
+                                className='flex flex-col items-center justify-center w-full md:w-[160px] lg:w-[178.94px] h-[150.92px] shadow-lg rounded-xl cursor-pointer hover:shadow-xl transition'
+                            >
+                                <div className='w-[50px] h-[50px] rounded-full bg-[#002748] flex items-center justify-center'>
+                                <img src={item.image} alt={item.title} />
                                 </div>
-                            )
-                        })}
+                                <h4 className='text-[20px] font-medium'>{item.title}</h4>
+                            </div>
+                            ))}
                     </div>
                     <div className='flex items-center justify-end pt-10'>
                         <div className='flex items-center justify-center gap-3 bg-[#002748] text-white text-[20px] py-2 px-7
@@ -72,6 +88,30 @@ const InquiryServiceReqForm = () => {
                     </div>
                 </div>
             </div>       
+            </div>
+            {showModal && selectedService && (
+            <div className='fixed inset-0 bg-black/50 flex items-center justify-center z-50'>
+                <div className='bg-white p-6 rounded-lg w-[90%] md:w-[500px] relative'>
+                    <button
+                    onClick={closeModal}
+                    className='absolute top-3 right-3 text-xl font-bold text-red-500'
+                    >
+                    &times;
+                    </button>
+                    <h2 className='text-2xl font-semibold mb-4'>{selectedService.title} Form</h2>
+                    
+                    {/* 👇 Custom form for the service */}
+                    <form className='flex flex-col gap-3'>
+                    <input type="text" placeholder="Your Name" className='p-2 border rounded-md'/>
+                    <input type="email" placeholder="Your Email" className='p-2 border rounded-md'/>
+                    <textarea placeholder="Message" rows="4" className='p-2 border rounded-md'/>
+                    <button type="submit" className='bg-[#002748] text-white py-2 rounded-md mt-2'>
+                        Submit
+                    </button>
+                    </form>
+                </div>
+            </div>
+            )}
         </div>
     </>
   )
