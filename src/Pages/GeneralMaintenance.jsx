@@ -159,7 +159,7 @@ const GeneralMaintenance = () => {
                 Looking for certified mechanics in Delta State? 
                 Electra offers expert maintenance and reliable service to keep your vehicle running smoothly
             </p>
-            <a href="/book-now" className="mt-[20px] font-primary text-[18px] text-white font-semibold bg-[#002748] rounded-lg cursor-pointer 
+            <a href="/contact-us" className="mt-[20px] font-primary text-[18px] text-white font-semibold bg-[#002748] rounded-lg cursor-pointer 
             px-10 py-6 h-[60px] flex items-center justify-center hover:shadow-lg transition-transform duration-500 hover:scale-105 
             hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]">
                 Contact Us

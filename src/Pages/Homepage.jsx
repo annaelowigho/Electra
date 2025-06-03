@@ -12,6 +12,8 @@ import Map from '../Components/Map';
 // import "react-datepicker/dist/react-datepicker.css";
 import { motion } from "framer-motion"
 import { DiSnapSvg } from 'react-icons/di';
+import { IoArrowForwardSharp } from "react-icons/io5";
+
 
 const Choose = [
     {
@@ -276,15 +278,15 @@ const Homepage = () => {
         
 
         {/* Services */}
-        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px] overflow-hidden'>
+        <div className='bg-[#2FEAE4] px-[10px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px] overflow-hidden'>
             <h3 className='text-[30px] text-center font-semibold md:text-[48px]'>Services</h3>
             <p className='text-center text-[20px] md:text-[24px] font-medium'>Explore our Services</p>
             <div className='pt-[20px] md:pt-[50px] flex flex-col gap-[20px] items-center justify-center'>
-                <div className='flex flex-col md:flex-row gap-[20px] w-full'>
+                <div className='flex flex-col items-center justify-center md:flex-row gap-[20px] w-full'>
                     <div
                     data-aos="fade-right"
-                    data-aos-delay="100" className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 w-full 
-                    md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
+                    data-aos-delay="100" className='bg-white px-[10px] py-[15px] xl:px-[30px] xl:py-[36px] rounded-xl flex items-center gap-5 
+                    w-full md:w-[370px] lg:w-[470px] xl:w-full h-[190px] xl:h-[250px] cursor-pointer transition-all duration-300 hover:shadow-2xl 
                     hover:-translate-y-2'>
                         <img src="/assets/gas-green.svg" alt="" className='w-[120px] lg:w-[176px]'/>
                         <div >
@@ -323,7 +325,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col md:flex-row gap-[20px] w-full'>
+                <div className='flex flex-col items-center justify-center md:flex-row gap-[20px] w-full'>
                     <div 
                     data-aos="fade-right"
                     data-aos-delay="100"
@@ -477,14 +479,32 @@ const Homepage = () => {
             <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
                 {Events.map((item, index) => {
                     return (
-                        <div key={index} className='bg-white px-4 py-5 lg:px-7 rounded-xl w-full md:w-[398px]'>
+                        <div key={index} className='bg-white px-4 py-5 lg:px-7 rounded-xl w-[330px] md:w-[398px]'>
                             <img src={item.image} alt="" />
                             <p className='pt-1 text-[14px]'>{item.date}</p>
                             <h4 className='text-[16px] lg:text-[18px] font-semibold leading-5 lg:leading-6 pt-2'>{item.title}</h4>
-                            <p className='text-black/70 pt-1'>{item.description}</p>
+                            <p className='text-black/70 pt-1 text-[16px]'>{item.description}</p>
+                            <div className='flex justify-end pt-3 cursor-pointer'>
+                                <div className='flex justify-center items-center gap-2 text-[14px] xl:text-[16px] text-white font-semibold 
+                                bg-[#002748]  rounded-lg cursor-pointer w-[120px] xl:w-[140px] h-[40px] lg:h-[45px] hover:shadow-lg 
+                                transition-transform-y duration-500 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                                hover:border-[#002748] hover:text-[#002748]'>
+                                    <button className=''>
+                                        Read More
+                                    </button>
+                                    <IoArrowForwardSharp />
+                                </div>
+                            </div>
                         </div>
                     )
                 })}
+            </div>
+            <div className='flex justify-center items-center pt-[20px] md:pt-[30px] xl:pt-[50px]'>
+                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                    Explore More
+                </button>
             </div>
         </div>
     </>

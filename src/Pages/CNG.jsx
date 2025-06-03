@@ -13,6 +13,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { IoTimeOutline } from "react-icons/io5";
 import { LiaTimesSolid } from "react-icons/lia";
+import { Link } from 'react-router-dom'
 
 
 const Process = [
@@ -308,13 +309,15 @@ const CNG = () => {
                                 <input type="email" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full' placeholder='Email'/>
                                 <input type="text" className='bg-[#D9E8F4] px-5 py-3 rounded-2xl w-full mt-3' placeholder='Phone number' required/>
                             </div>
-                            <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
-                            cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0 lg:w-[162px] hover:shadow-lg 
-                            transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
-                            hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 
-                            focus:outline-none focus:ring-2 focus:ring-[#2FEAE4]'>
-                                Book Now
-                            </button>
+                            <Link to='/book-now'>
+                                <button className='font-primary text-[18px] text-white font-semibold bg-[#002748]  rounded-lg 
+                                cursor-pointer w-[147px] h-[52px] mb-6 md:mb-0 lg:w-[162px] hover:shadow-lg 
+                                transition-all duration-300 hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] 
+                                hover:border-[#002748] hover:text-[#002748] border-[3px] border-transparent 
+                                focus:outline-none focus:ring-2 focus:ring-[#2FEAE4]'>
+                                    Book Now
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

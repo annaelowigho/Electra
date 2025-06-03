@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { LuPhoneForwarded } from "react-icons/lu";
 import { BiEnvelope } from "react-icons/bi";
+import { Link } from 'react-router-dom'
 
 const BookNow = () => {
 
@@ -78,7 +79,7 @@ const BookNow = () => {
                             <label className='flex items-center gap-3 cursor-pointer'>
                                 <input type="checkbox" className='w-[20px] h-[20px] cursor-pointer' />
                                 <p className='text-[14px] md:text-[18px] font-semibold m-0'>
-                                I agree to the Company's <span className='italic font-light'>Terms and Conditions.</span>
+                                I agree to the Company's <Link to='/terms-policy'><span className='italic font-light'>Terms and Conditions.</span></Link>
                                 </p>
                             </label>
                         </div>
