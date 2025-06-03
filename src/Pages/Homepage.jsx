@@ -61,6 +61,30 @@ const Images = [
   "/assets/hero-image4.png",
 ];
 
+const Events = [
+    {
+        image: "/assets/new-img.png",
+        date: "May 19,2025",
+        title: "Electra Motors to Launch CNG Conversion Centre in Delta State, Nigeria",
+        description: "Launching May 20, 2025, the centre will provide CNG retrofitting, training, and promote clean energy for greener transport in Nigeria.",
+        button: "Read More"
+    },
+    {
+        image: "/assets/new-img.png",
+        date: "May 19,2025",
+        title: "Electra Motors to Launch CNG Conversion Centre in Delta State, Nigeria",
+        description: "Launching May 20, 2025, the centre will provide CNG retrofitting, training, and promote clean energy for greener transport in Nigeria.",
+        button: "Read More"
+    },
+    {
+        image: "/assets/new-img.png",
+        date: "May 19,2025",
+        title: "Electra Motors to Launch CNG Conversion Centre in Delta State, Nigeria",
+        description: "Launching May 20, 2025, the centre will provide CNG retrofitting, training, and promote clean energy for greener transport in Nigeria.",
+        button: "Read More"
+    }
+]
+
 const Homepage = () => {
 
 
@@ -444,6 +468,23 @@ const Homepage = () => {
                 </div>
             </div>
             
+        </div>
+
+        {/* News and Events */}
+        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
+            <h4 className='text-[30px] text-center font-semibold md:text-[48px] pb-3 md:pb-5 lg:pb-8'>News and Events</h4>
+            <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
+                {Events.map((item, index) => {
+                    return (
+                        <div key={index} className='bg-white px-4 py-5 lg:px-7 rounded-xl w-full md:w-[398px]'>
+                            <img src={item.image} alt="" />
+                            <p className='pt-1 text-[14px]'>{item.date}</p>
+                            <h4 className='text-[16px] lg:text-[18px] font-semibold leading-5 lg:leading-6 pt-2'>{item.title}</h4>
+                            <p className='text-black/70 pt-1'>{item.description}</p>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     </>
   )
