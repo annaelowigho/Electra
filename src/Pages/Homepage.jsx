@@ -471,7 +471,8 @@ const Homepage = () => {
         </div>
 
         {/* News and Events */}
-        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px]'>
+        <div className='bg-[#2FEAE4] px-[20px] py-[20px] md:px-[30px] xl:px-[100px] xl:py-[50px] mb-[30px] md:mb-[50px] 
+        lg:mb-[80px] xl:mb-[100px]'>
             <h4 className='text-[30px] text-center font-semibold md:text-[48px] pb-3 md:pb-5 lg:pb-8'>News and Events</h4>
             <div className='flex flex-col md:flex-row items-center justify-center gap-6'>
                 {Events.map((item, index) => {
