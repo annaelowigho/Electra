@@ -499,13 +499,15 @@ const Homepage = () => {
                     )
                 })}
             </div>
-            <div className='flex justify-center items-center pt-[20px] md:pt-[30px] xl:pt-[50px]'>
-                <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
-                w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
-                hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
-                    Explore More
-                </button>
-            </div>
+            <Link to='/news-and-events'>
+                <div className='flex justify-center items-center pt-[20px] md:pt-[30px] xl:pt-[50px]'>
+                    <button className='text-[18px] text-white font-semibold bg-[#002748]  rounded-lg cursor-pointer 
+                    w-[170px] h-[40px] xl:h-[52px] mt-[10px] hover:shadow-lg transition-transform-y duration-500 
+                    hover:scale-105 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]'>
+                        Explore More
+                    </button>
+                </div>
+            </Link>
         </div>
     </>
   )

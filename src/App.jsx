@@ -28,6 +28,7 @@ import EngineRefurbishing from './Pages/EngineRefurbishing'
 import VehicleDiagnostics from './Pages/VehicleDiagnostics'
 import QuickRepairs from './Pages/QuickRepairs'
 import InquiryServiceReqForm from './Pages/InquiryServiceReqForm'
+import NewEvents from './Pages/NewEvents'
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
             <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
             <Route path='/inquiries' element={<Inquiries />}/>
             <Route path='/service-request-form' element={<InquiryServiceReqForm />} />
+            <Route path='/news-and-events' element={<NewEvents />} />
           </Routes>
           <Footer />
       </Loader>
