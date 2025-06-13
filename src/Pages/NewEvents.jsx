@@ -64,7 +64,7 @@ const NewEvents = () => {
             <div className='flex justify-end'>
                 <div className='border border-black/50 rounded-lg px-2 py-3 w-[206px] flex justify-between items-center'>
                     <select name="" id="" className='w-full outline-none'>
-                        <option value="" disabled>Sort by</option>
+                        <option value="" >Sort by</option>
                         <option value="">Latest News</option>
                         <option value="">All News</option>
                     </select>
@@ -94,33 +94,69 @@ const NewEvents = () => {
                 })}
             </div>
             <div className='pt-[30px] lg:pt-[50px] flex justify-end gap-[8px] md:gap-[15px] items-center'>
-                <button className='bg-[#D9E8F4] px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer'>
+                <button className='bg-[#D9E8F4] px-3 md:px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer
+                hover:bg-[#002748] hover:text-white duration-500 hover:scale-90'>
                     Prev
                 </button>
                 <div className='flex gap-2'>
-                    <div className='w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg
-                    border-black/50 cursor-pointer ac'>
-                        <p>1</p>
+                    <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                    text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Toggle button">
+                        1
                     </div>
-                    <div className='w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg
-                    border-black/50 cursor-pointer'>
-                        <p>2</p>
+                    <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                    text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Toggle button">
+                        2
                     </div>
-                    <div className='w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg
-                    border-black/50 cursor-pointer'>
-                        <p>3</p>
+                    <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                    text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Toggle button">
+                        3
                     </div>
-                    <div className='w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg
-                    border-black/50 cursor-pointer'>
-                        <p>4</p>
+                    <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                    text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Toggle button">
+                        4
                     </div>
-                    <div className='w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg
-                    border-black/50 cursor-pointer'>
-                        <p>5</p>
+                    <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                    text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Toggle button">
+                        5
                     </div>
                 </div>
-                <button className='bg-[#D9E8F4] px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer'>
+                <button className='bg-[#D9E8F4] px-3 md:px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer
+                hover:bg-[#002748] hover:text-white duration-500 hover:scale-90'>
                     Next
+                </button>
+            </div>
+        </div>
+        <div className='flex flex-col items-center justify-center bg-[#D9E8F4] mx-[20px] mt-0 mb-[50px] px-5 py-10 md:p-10 lg:p-16 rounded-lg 
+        md:mx-[80px] md:mb-[80px] lg:mb-[100px] xl:mb-[150px] lg:mx-[100px] min-[1280px]:mx-[100px] xl:mx-[200px]'>
+            <h2 className="text-[28px] md:text-[48px] font-bold text-center leading-9 md:leading-14">
+                Stay Updated with Our Newsletter
+            </h2>
+            <p className="text-[18px] md:text-[24px] text-center pt-5">
+                Subscribe for the latest news, events, and clean energy innovations from Electra Motors.
+                Stay ahead with exclusive updates
+            </p>
+            <div className='flex flex-col lg:flex-row items-center justify-center pt-[25px] gap-[25px] w-full'>
+                <input type="text" placeholder='Enter email address' 
+                className='bg-white py-[16.5px] px-[35px] w-full lg:w-[388px] h-[60px] rounded-lg'/>
+                <button className="font-primary text-[18px] text-white font-semibold bg-[#002748] rounded-lg cursor-pointer 
+                px-10 py-6 h-[60px] flex items-center justify-center hover:shadow-lg transition-transform duration-500 hover:scale-105 
+                hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]">
+                    Subscribe
                 </button>
             </div>
         </div>
