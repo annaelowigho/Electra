@@ -93,7 +93,7 @@ const NewEvents = () => {
                     )
                 })}
             </div>
-            <div className='pt-[30px] lg:pt-[50px] flex justify-end gap-[8px] md:gap-[15px] items-center'>
+            <div className='pt-[30px] lg:pt-[50px] flex justify-center md:justify-end gap-[8px] md:gap-[15px] items-center'>
                 <button className='bg-[#D9E8F4] px-3 md:px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer
                 hover:bg-[#002748] hover:text-white duration-500 hover:scale-90'>
                     Prev
