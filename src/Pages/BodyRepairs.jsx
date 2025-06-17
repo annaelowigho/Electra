@@ -125,7 +125,7 @@ const BodyRepairs = () => {
                     text-[24px] outline-none' placeholder='Full Name'/>
                     <input type="email" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
                     text-[24px] outline-none' placeholder='Email Address'/>
-                    <input type="number" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
+                    <input type="text" className='bg-[#D9E8F4] w-full h-[70px] md:h-[90px] rounded-xl px-[20px] md:px-[30px]
                     text-[24px] outline-none' placeholder='Phone Number'/>
                     <textarea name="" id="" className='bg-[#D9E8F4] w-full rounded-xl p-3 resize-none px-[20px] md:px-[30px] py-[30px] text-[24px] 
                     outline-none' rows='4' placeholder='Describe your needs'/>
