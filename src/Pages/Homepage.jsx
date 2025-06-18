@@ -40,19 +40,22 @@ const Choose = [
 
 const Feedback = [
     {
-        image: "/assets/feedback1.svg",
-        feedback: "I converted my car to CNG at Electra Motors. The process was smooth, and now my car runs efficiently. Great team and unmatched expertise!",
-        customer: "Kingsley Okoro"
+        image: "/assets/feedback1.png",
+        feedback: "Thanks to Electra Motors, my vehicle now runs on CNG. I used to buy ₦30,000 worth of fuel daily, but now I spend less than ₦7,000 on gas. More profit, less headache!",
+        customer: "Ebube",
+        job: "Commercial Driver, Asaba"
     },
     {
-        image: "/assets/feedback2.svg",
-        feedback: "Electra Motors revived my car with engine refurbishing. It runs like new exceptional service and attention to detail",
-        customer: "Stephanie Igho"
+        image: "/assets/feedback2.png",
+        feedback: "Electra Motors installed CNG on our fleet of vehicles. Enabling us cut our logistics service charge to customers by over 60%",
+        customer: "Chisom",
+        job: "Logistics Company Manager, Warri"
     },
     {
-        image: "/assets/feedback3.svg",
-        feedback: "Electra Motors repainted my car after an accident—now it looks showroom-new! Their maintenance keeps it in top shape",
-        customer: "Martin Okumagba"
+        image: "/assets/feedback3.png",
+        feedback: "Electra Motors helped me convert my salon car to run on both petrol and CNG. I now spend one-quarter of what I used to on fuel every month. Smooth ride, zero regrets",
+        customer: "Efosa",
+        job: "Civil Servant, Benin City"
     },
 ]
 
@@ -424,14 +427,15 @@ const Homepage = () => {
             <h4 className='text-[30px] text-center font-semibold md:text-[48px] text-white'>Customer Feedback</h4>
             <div className='pt-[50px] flex flex-col md:flex-row xl:justify-center gap-[20px]'>
                 {Feedback.map((item, index) => (
-                <div
-                    key={index}
-                    className='bg-white flex flex-col items-center justify-center px-[31px] py-[24px] rounded-lg gap-[15px] w-full md:w-[384px]
-                    cursor-pointer hover:bg-[#2FEAE4] transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'
-                >
+                <div key={index}
+                className='bg-white flex flex-col items-center justify-center px-[31px] py-[24px] rounded-lg gap-[15px] w-full md:w-[384px]
+                cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:text-[#002748]'>
                     <img src={item.image} alt={`${item.customer}'s feedback`} />
                     <p className='text-[16px] text-center'>{item.feedback}</p>
-                    <p className='text-[18px] font-semibold'>{item.customer}</p>
+                    <div className='text-center'>
+                        <p className='text-[18px] font-semibold'>{item.customer}</p>
+                        <p className='text-black/50'>{item.job}</p>
+                    </div>
                 </div>
                 ))}
             </div>
