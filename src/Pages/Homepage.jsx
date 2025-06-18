@@ -57,10 +57,10 @@ const Feedback = [
 ]
 
 const Images = [
-  "/assets/hero-image1.png",
+  "/assets/hero-image6.png",
   "/assets/hero-image2.png",
   "/assets/hero-image3.png",
-  "/assets/hero-image4.png",
+  "/assets/hero-image5.png",
 ];
 
 const Events = [
@@ -436,6 +436,35 @@ const Homepage = () => {
             </div>
         </div>
 
+        {/* Gallery */}
+        <div className='px-[20px] py-[40px] md:px-[30px] md:py-[50px] lg:px-[80px] lg:py-[100px] xl:px-[100px]'>
+            <h3 className='text-[30px] text-center font-semibold md:text-[48px] pb-[20px] md:pb-[50px]'>Our Gallery</h3>
+            <div className='grid grid-cols-1 gap-5 md:hidden'>
+                <img src="/assets/gallery1.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+                <img src="/assets/gallery2.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+                <img src="/assets/gallery3.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+                <img src="/assets/gallery4.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+                <img src="/assets/gallery5.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+                <img src="/assets/gallery6.png" alt="" className='w-full h-[301px] object-cover rounded-2xl'/>
+            </div>
+            <div className='hidden md:grid xl:hidden grid-cols-[repeat(3,220px)] grid-rows-[repeat(3, 301px)] lg:grid-cols-[repeat(3,280px)] 
+            gap-4 justify-center items-center'>
+                <img src="/assets/gallery1.png" alt="" className='col-span-2 row-start-1 w-full h-[301px] object-cover rounded-3xl'/>
+                <img src="/assets/gallery2.png" alt="" className='col-start-3 row-start-1 w-full h-[301px] object-cover rounded-3xl'/>
+                <img src="/assets/gallery3.png" alt="" className='col-start-1 row-start-2 xl:row-start-1 w-full h-[301px] object-cover rounded-3xl'/>
+                <img src="/assets/gallery4.png" alt="" className='col-span-2 col-start-2 row-start-2 w-full h-[301px] object-cover rounded-3xl'/>
+                <img src="/assets/gallery5.png" alt="" className='col-span-2 col-start-1 row-start-3 w-full h-[301px] object-cover rounded-3xl'/>
+                <img src="/assets/gallery6.png" alt="" className='col-start-3 row-start-3 w-full h-[301px] object-cover rounded-3xl'/>
+            </div>
+            <div className='hidden xl:grid grid-cols-[repeat(4,290px)] grid-rows-[repeat(2,301px)] gap-4 justify-center items-center'>
+                <img src="/assets/gallery1.png" alt="" className='col-span-2 row-start-1 w-full h-[301px] object-cover'/>
+                <img src="/assets/gallery2.png" alt="" className='start-3 row-start-1 w-full h-[301px] object-cover'/>
+                <img src="/assets/gallery3.png" alt="" className='col-start-4 row-start-1 w-full h-[301px] object-cover'/>
+                <img src="/assets/gallery4.png" alt="" className='col-start-1 row-start-2 w-full h-[301px] object-cover'/>
+                <img src="/assets/gallery5.png" alt="" className='col-start-2 row-start-2 w-full h-[301px] object-cover'/>
+                <img src="/assets/gallery6.png" alt="" className='col-span-2 col-start-3 row-start-2 w-full h-[301px] object-cover'/>
+            </div>
+        </div>
 
         {/* Trusted Partners */}
         <Partner />
