@@ -396,13 +396,14 @@ const Homepage = () => {
                 {Choose.map((item, index) => {
                     const Icon = item.icon; // Store the icon component
                     return ( 
-                    <div
+                    <div className='w-full md:w-[277px] xl:w-[298px]'
                     data-aos='fade-up'
                     data-aos-delay="100">
                         <div
                             key={index}
-                            className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl px-5
-                            cursor-pointer transition-all hover:-translate-y-2 duration-300 hover:shadow-xl hover:bg-[#002748] hover:text-white">
+                            className="shadow-lg w-full md:w-[277px] xl:w-[298px] h-[238px] flex flex-col items-center justify-center rounded-xl 
+                            px-5 cursor-pointer transition-all hover:-translate-y-2 duration-300 hover:shadow-xl hover:bg-[#002748] 
+                            hover:text-white">
                             <div className="bg-[#2FEAE4] w-[50px] h-[50px] rounded-full flex items-center justify-center">
                             <Icon className="text-[24px]" /> 
                             </div>
