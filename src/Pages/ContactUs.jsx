@@ -11,17 +11,17 @@ const Center = [
     {
         icon: HiOutlineBuildingOffice2,
         office: "Head Office",
-        location: "108 3RD Avenue, Gwarimpa, FCT Abuja",
+        location: "108 3rd Avenue, Gwarimpa, FCT Abuja",
     },
     {
         icon: HiOutlineBuildingOffice2,
-        office: "Training Center",
-        location: "#1, DBS Junction, Okpanam Road Beside Zenith Bank Plc, Asaba",
+        office: "Workshop and Training Location",
+        location: "Delta State Innovation Hub #1, DBS Road By Okpanam Road, Asaba",
     },
     {
         icon: HiOutlineBuildingOffice2,
-        office: "Production Facility",
-        location: "Plot 12, Block 3, Delta State Industrial Estate,Ibusa Road, Asaba, Delta State",
+        office: "Factory Address",
+        location: "Plot 12, Block 3, Delta State Industrial Estate, Ibusa Road, Asaba, Delta State",
     }
 ]
 

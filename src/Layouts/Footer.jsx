@@ -51,7 +51,9 @@ const Footer = () => {
               <div className='pt-4 flex flex-col gap-3'>
                 <div className='flex items-center gap-3 cursor-pointer hover:text-[#2FEAE4] xl:gap-5'>
                   <IoLocationOutline className='text-[40px] md:text-[30px] lg:text-[25px]'/>
-                  <p className='text-[18px] md:w-[250px] xl:w-[380px]'># 1, Dbs Junction, Okpanam Road Beside Zenith Bank Plc, Asaba</p>
+                  <p className='text-[18px] md:w-[250px] xl:w-[380px]'>
+                    Delta State Innovation Hub #1, DBS Road By Okpanam Road, Asaba
+                  </p>
                 </div>
                 <div className='flex items-center gap-3 cursor-pointer hover:text-[#2FEAE4] xl:gap-5'>
                   <FiPhoneCall className='text-[25px] lg:text-[20px]'/>
