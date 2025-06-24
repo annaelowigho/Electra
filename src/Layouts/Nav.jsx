@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { CgMenu } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
@@ -12,6 +12,8 @@ const Nav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isFixed, setIsFixed] = useState(false);
+  const menuRef = useRef(null);
+  const toggleButtonRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,25 @@ const Nav = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle clicks outside the mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        toggleButtonRef.current &&
+        !toggleButtonRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false); // Close the menu
+        setIsDropdownOpen(false); // Close the dropdown if open
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMenuOpen]);
 
 
   return (
@@ -93,6 +114,7 @@ const Nav = () => {
         {/* Mobile menu */}
         <div className='xl:hidden'>
           <button
+              ref={toggleButtonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="xl:hidden text-[30px] md:text-[40px] rounded-md p-2 md:p-3 bg-[#2FEAE4]"
             >
@@ -100,7 +122,8 @@ const Nav = () => {
             </button>
 
             {isMenuOpen && (
-              <div className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/90 rounded-b-3xl z-50">
+              <div ref={menuRef}
+               className="fixed top-[90px] md:top-[100px] left-0 w-full p-5 bg-[#002748]/90 rounded-b-3xl z-50">
                 <ul className='text-white flex flex-col gap-[25px] text-[18px] font-semibold font-primary'>
                   <li className="hover:text-[#2FEAE4]">
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
