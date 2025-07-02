@@ -140,7 +140,7 @@ const Nav = () => {
                   <li className='hover:text-[#2FEAE4]'>
                     <NavLink to='/cng' className={({ isActive }) => isActive ? "text-[#2FEAE4]" : "text-inherit"}
                     onClick={() => setIsMenuOpen(false)}>
-                      CNG
+                      <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                     </NavLink>
                   </li>
                   <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
@@ -150,7 +150,7 @@ const Nav = () => {
                         <MdKeyboardArrowDown className='text-[24px]'/>
                       </div>
                     </NavLink>  
-                    {isDropdownOpen && (
+                    {isDropdownOpen && ( 
                       <ul className=' bg-white text-black w-[300px] shadow-lg z-50 px-6 py-5 mt-2'
                       onClick={() => setIsMenuOpen(false)}>
                         <Link to='/book-now'>
