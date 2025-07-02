@@ -12,7 +12,7 @@ const Events = [
     },
     {
         image: "/assets/new-img.png",
-        date: "May 19,2025",
+        date: "May 19,2025", 
         title: "Electra Motors to Launch CNG Conversion Centre in Delta State, Nigeria",
         description: "Launching May 20, 2025, the centre will provide CNG retrofitting, training, and promote clean energy for greener transport in Nigeria.",
         button: "Read More"
@@ -48,6 +48,9 @@ const Events = [
 ]
 
 const NewEvents = () => {
+
+    
+
   return (
     <>
         <div className="bg-[#002748] w-full h-[355px] bg-cover bg-center flex justify-center items-center">
@@ -64,7 +67,7 @@ const NewEvents = () => {
             <div className='flex justify-end'>
                 <div className='border border-black/50 rounded-lg px-2 py-3 w-[206px] flex justify-between items-center'>
                     <select name="" id="" className='w-full outline-none'>
-                        <option value="" >Sort by</option>
+                        <option value="" disabled>Sort by</option>
                         <option value="">Latest News</option>
                         <option value="">All News</option>
                     </select>
@@ -98,7 +101,7 @@ const NewEvents = () => {
                 hover:bg-[#002748] hover:text-white duration-500 hover:scale-90'>
                     Prev
                 </button>
-                <div className='flex gap-2'>
+                {/* <div className='flex gap-2'>
                     <div class="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
                     text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
                     tabindex="0"
@@ -134,6 +137,16 @@ const NewEvents = () => {
                     aria-label="Toggle button">
                         5
                     </div>
+                </div> */}
+                <div className='flex gap-2'>
+                    {[1,2,3,4,5].map(num => (
+                        <div key={num} 
+                        className="w-[28px] md:w-[43px] h-[38px] md:h-[47px] border flex items-center justify-center rounded-lg border-black/50 
+                        text-[18px] font-semibold cursor-pointer focus:bg-[#002748] focus:text-white"
+                        tabIndex="0" role="button" aria-label={`Page ${num}`}>
+                            {num}
+                        </div>
+                    ))}
                 </div>
                 <button className='bg-[#D9E8F4] px-3 md:px-5 py-2 text-[18px] md:text-[24px] font-semibold rounded-lg cursor-pointer
                 hover:bg-[#002748] hover:text-white duration-500 hover:scale-90'>
@@ -154,7 +167,7 @@ const NewEvents = () => {
                 <input type="text" placeholder='Enter email address' 
                 className='bg-white py-[16.5px] px-[35px] w-full lg:w-[388px] h-[60px] rounded-lg'/>
                 <button className="font-primary text-[18px] text-white font-semibold bg-[#002748] rounded-lg cursor-pointer 
-                px-10 py-6 h-[60px] flex items-center justify-center hover:shadow-lg transition-transform duration-500 hover:scale-105 
+                w-[148px] h-[58px] flex items-center justify-center hover:shadow-lg transition-transform duration-500 hover:scale-105 
                 hover:bg-[#2FEAE4] hover:border-[3px] hover:border-[#002748] hover:text-[#002748]">
                     Subscribe
                 </button>

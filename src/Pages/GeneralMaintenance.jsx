@@ -129,7 +129,7 @@ const GeneralMaintenance = () => {
                                     <th className="w-1/3 py-4 px-4">Frequency</th>
                                     <th className="w-1/3 py-4 px-4">Notes</th>
                                 </tr>
-                            </thead>
+                            </thead> 
                             <tbody className="bg-white text-[14px] md:text-[16px]">
                                 {MaintenanceTasks.map((item, index) => (
                                     <tr key={index} className="border-b last:border-b-0">
