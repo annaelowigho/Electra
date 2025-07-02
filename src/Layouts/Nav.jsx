@@ -143,7 +143,7 @@ const Nav = () => {
                       CNG
                     </NavLink>
                   </li>
-                  <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(true)}>
+                  <li className='hover:text-[#2FEAE4]' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                     <NavLink>
                       <div className='flex items-center'>
                         <p>Services</p>
